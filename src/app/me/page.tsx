@@ -1,9 +1,10 @@
 import profilePic from '@/assets/avatar.svg';
 import CardFooter from "@/components/Card/CardFooter";
 import CardHeader from "@/components/Card/CardHeader";
+import content from '@/content/content.json';
 
 const classNames = {
-  body: 'flex flex-row justify-around p-6',
+  body: 'flex flex-row justify-around pt-6',
 };
 
 export default function Page() {
@@ -11,28 +12,15 @@ export default function Page() {
     <>
       <CardHeader
         imgSrc={profilePic}
-        header="Welcome to my site! 👋🏽"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum dapibus magna in maximus. Curabitur scelerisque dui vitae neque consectetur feugiat"
+        imgAlt="This is me!"
+        imgSize={250}
+        header={content.me.header}
+        description={content.me.description}
       />
 
       {/* CARD BODY */}
-      <div className={classNames.body}>
-        <div>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-        </div>
-
-        <div>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-          <p><b>email:</b> email@domain.com</p>
-        </div>
-      </div>
+      {/* <div className={classNames.body}>
+      </div> */}
 
       <CardFooter skills traits />
     </>

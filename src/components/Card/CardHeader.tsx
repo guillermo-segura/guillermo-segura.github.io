@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image";
+import { ImageProps } from "next/image";
 import PolaroidImg from "../PolaroidImg/PolaroidImg";
 
 const classNames = {
@@ -11,14 +11,15 @@ interface CardHeaderProps {
   imgSrc?: string | ImageProps['src'];
   header: string;
   description: string;
+  imgAlt?: string;
+  imgSize?: number;
 }
 
-export default function CardHeader({ imgSrc, header, description }: CardHeaderProps) {
-  const polaroid = true;
+export default function CardHeader({ imgSrc, imgAlt, imgSize, header, description }: CardHeaderProps) {
   return (
     <div className={classNames.container}>
       {imgSrc && (
-        <PolaroidImg imgSrc={imgSrc} imgAlt="This is me" size={250} />
+        <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={imgSize} />
       )}
       <div className={classNames.headerContainer}>
         <div>

@@ -4,7 +4,7 @@ import IconLink from "../IconLink/IconLink";
 import ButtonLink from '../ButtonLink/ButtonLink';
 
 const classNames = {
-  container: 'flex flex-row justify-between items-center mt-4 border-t px-6 py-4 shadow-inner',
+  container: 'flex flex-row justify-between items-center mt-6 border-t px-6 py-4 shadow-inner',
 };
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/g-segura/';
