@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Card from "@/components/Card/Card";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const classNames = {
+  container: 'flex min-h-screen flex-col items-center justify-between p-24',
+};
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className={classNames.container}>
+          <Card>
+            {children}
+          </Card>
+        </main>
+      </body>
     </html>
   );
 }
