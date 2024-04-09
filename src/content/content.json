@@ -6,5 +6,9 @@
   "skills": {
     "description": "I've been working as a Software Engineer for the past 5 years, being Rooser the company where I kicked off my career.",
     "header": "These are my skills 💪🏽"
+  },
+  "traits": {
+    "description": "I see myself as a calm and friendly person that always see the good intent in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think. A bit of a shy extrovert, I'm comfortable in small groups but I get a bit nervous in front of big audiences. However, that hasn't stopped me from speaking in from of people when it was required.",
+    "header": "These are my traits"
   }
 }

@@ -5,7 +5,7 @@ const classNames = {
 };
 
 export interface BodyHeaderProps {
-  children: string;
+  children: string | React.ReactNode;
   description?: string;
 }
 
