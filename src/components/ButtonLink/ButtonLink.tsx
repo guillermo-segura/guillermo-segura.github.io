@@ -16,10 +16,12 @@ const twPrimaryClasses = [
   'cursor-pointer',
   '-rotate-2',
   'transform-gpu',
-
+  'max-h-12',
+  'box-border',
   'bg-gradient-to-tr',
   'from-blue-500',
   'to-sky-500',
+  'font-mono',
 
   'hover:to-sky-700',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
@@ -39,40 +41,43 @@ const twPrimaryClasses = [
 ];
 
 const twSecondaryClasses = [
-  'bg-white',
   'flex',
-  'text-black',
-  'border',
-  'font-medium',
-  'border-dashed',
-  'border-black',
-  'rounded-lg',
   'justify-center',
+  'text-black',
+  'font-medium',
   'px-4 py-2.5',
   'relative',
+  'rounded-lg',
   'text-center',
   'cursor-pointer',
-  'shadow-md',
-  'drop-shadow-lg',
   '-rotate-2',
   'transform-gpu',
+  'max-h-12',
+  'box-border',
+  'bg-gradient-to-tr',
+  'from-white',
+  'to-slate-100',
+  'font-mono',
+  
+  'border',
+  'border-dashed',
+  'border-black',
 
-  'hover:border-transparent',
+  'hover:to-slate-200',
+  'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
 
   "after:content-['']",
   'after:absolute',
   'after:border',
   'after:border-black',
   'after:rounded-lg',
-  'after:bottom-1',
-  'after:left-1',
-  'after:w-full',
-  'after:h-full',
+  'after:bottom-0.5',
+  'after:left-0.5',
+  'after:w-[101%]',
+  'after:h-[101%]',
 
   'hover:after:bottom-0',
   'hover:after:left-0',
-  'hover:after:shadow-lg',
-  'hover:after:drop-shadow-xl',
 ];
 
 const classnames = {
