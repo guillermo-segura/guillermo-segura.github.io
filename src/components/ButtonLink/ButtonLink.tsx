@@ -23,7 +23,7 @@ const twPrimaryClasses = [
   'to-sky-500',
   'font-mono',
 
-  'hover:to-sky-700',
+  'hover:to-sky-600',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
 
   "after:content-['']",
