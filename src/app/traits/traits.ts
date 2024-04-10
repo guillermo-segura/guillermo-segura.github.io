@@ -11,6 +11,7 @@ const data = {
     "Not a fan of": [
       'Watching Sports',
       'Pubs',
+      'Beer',
     ],
   },
 };
