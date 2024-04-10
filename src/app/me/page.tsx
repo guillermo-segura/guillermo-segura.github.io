@@ -21,8 +21,6 @@ export default function Page() {
       {/* CARD BODY */}
       <div className={classNames.body}>
         <div className="flex justify-center items-center h-36">SLIDES WIP</div>
-        <div className="flex justify-center items-center h-36">LANG SWITCH WIP</div>
-        <div className="flex justify-center items-center h-36">CONTACT WIP</div>
       </div>
 
       <CardFooter skills traits />

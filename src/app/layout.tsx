@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const classNames = {
   container: 'flex min-h-screen flex-col items-center justify-between p-24',
-  body: `${gradientBg} bg-4xl`,
+  body: gradientBg,
 };
 
 export const metadata: Metadata = {

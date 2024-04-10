@@ -2,7 +2,7 @@ import { ImageProps } from "next/image";
 import PolaroidImg from "../PolaroidImg/PolaroidImg";
 
 const classNames = {
-  container: 'flex flex-row space-x-4 px-6 pt-6',
+  container: 'flex flex-row space-x-4 px-12 pt-12',
   headerContainer: 'self-center w-full flex space-y-4 flex-col',
   header: 'font-bold text-6xl font-mono',
 };

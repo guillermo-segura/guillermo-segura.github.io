@@ -8,7 +8,7 @@ import Link from "@/components/Link/Link";
 import LoadingBar from "@/components/LoadingBar/LoadingBar";
 
 const classNames = {
-  body: 'flex flex-col px-6 space-y-6',
+  body: 'flex flex-col px-12 space-y-6',
 };
 
 export default function Page() {

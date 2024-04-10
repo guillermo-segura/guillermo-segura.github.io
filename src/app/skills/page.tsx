@@ -5,7 +5,7 @@ import content from '@/content/content.json';
 import data from './skills';
 
 const classNames = {
-  body: 'flex flex-col px-6 space-y-6',
+  body: 'flex flex-col px-12 space-y-6',
 };
 
 export default function Page() {
