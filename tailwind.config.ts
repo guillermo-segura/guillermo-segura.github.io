@@ -9,8 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      flex: {
+        '0-100': '0 0 100%',
+      },
+      padding: {
+        '1/2': '50%',
+        '3/4': '75%',
+      },
       backgroundSize: {
-        "4xl": "300%"
+        '4xl': '300%'
       },
       animation: {
         'bg-gradient': 'gradient 15s ease infinite',
