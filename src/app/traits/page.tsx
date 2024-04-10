@@ -27,7 +27,7 @@ export default function Page() {
         />
         <BodyHeader>Personality <Link href="https://www.16personalities.com/intj-personality">INTJ-A</Link></BodyHeader>
         <div className="w-2/3 self-center space-y-6">
-          <LoadingBar rightLabel="Introverted" leftLabel="Extraverted" status={51} right />
+          <LoadingBar leftLabel="Introverted" rightLabel="Extraverted" status={51} />
           <LoadingBar leftLabel="Intuitive" rightLabel="Observant" status={76} />
           <LoadingBar leftLabel="Thinking" rightLabel="Feeling" status={55} />
           <LoadingBar leftLabel="Judging" rightLabel="Prospecting" status={71} />

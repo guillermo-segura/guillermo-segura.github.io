@@ -12,64 +12,32 @@ export interface LoadingBarProps {
   leftLabel: string;
   rightLabel: string;
   status?: number;
-  right?: boolean;
 }
 
-export default function LoadingBar({ leftLabel = '', rightLabel = '', status = 0, right = false }: LoadingBarProps) {
+export default function LoadingBar({ leftLabel = '', rightLabel = '', status = 0 }: LoadingBarProps) {
   return (
     <div>
-      {right && (
-        <>
-          <div className={classNames.container}>
-            <div className={classNames.label}>
-                <span>{100 - status}%</span>
-              </div>
-            <div className={classNames.progressContainer}>
-              <div className={classNames.progressBarR} style={{ width: `${status}%`}}></div>
-            </div>
-            <div className={classNames.label}>
-              <span className={classNames.labelHighlighted}>
-                {status}%
-              </span>
-            </div>
+      <div className={classNames.container}>
+        <div className={classNames.label}>
+            <span className={classNames.labelHighlighted}>{status}%</span>
           </div>
+        <div className={classNames.progressContainer}>
+          <div className={classNames.progressBarL} style={{ width: `${status}%`}}></div>
+        </div>
+        <div className={classNames.label}>
+          <span>{100 - status}%</span>
+        </div>
+      </div>
 
-          <div className={classNames.labelContainer}>
-            <div className={classNames.label}>
-              <span>{leftLabel}</span>
-            </div>
-            <div className={classNames.label}>
-              <span className={classNames.labelHighlighted}>{rightLabel}</span>
-            </div>
-          </div>
-        </>
-      )}
+      <div className={classNames.labelContainer}>
+        <div className={classNames.label}>
+          <span className={classNames.labelHighlighted}>{leftLabel}</span>
+        </div>
 
-      {!right && (
-        <>
-          <div className={classNames.container}>
-            <div className={classNames.label}>
-                <span className={classNames.labelHighlighted}>{status}%</span>
-              </div>
-            <div className={classNames.progressContainer}>
-              <div className={classNames.progressBarL} style={{ width: `${status}%`}}></div>
-            </div>
-            <div className={classNames.label}>
-              <span>{100 - status}%</span>
-            </div>
-          </div>
-
-          <div className={classNames.labelContainer}>
-            <div className={classNames.label}>
-              <span className={classNames.labelHighlighted}>{leftLabel}</span>
-            </div>
-
-            <div className={classNames.label}>
-              <span>{rightLabel}</span>
-            </div>
-          </div>
-        </>
-      )}
+        <div className={classNames.label}>
+          <span>{rightLabel}</span>
+        </div>
+      </div>
     </div>
   );
 }
