@@ -2,6 +2,8 @@ import profilePic from '@/assets/avatar.svg';
 import CardFooter from "@/components/Card/CardFooter";
 import CardHeader from "@/components/Card/CardHeader";
 import Carousel, { CarouselItem } from '@/components/Carousel/Carousel';
+import PolaroidImg from '@/components/PolaroidImg/PolaroidImg';
+import Slide from '@/components/Slide/Slide';
 import content from '@/content/content.json';
 
 const classNames = {
@@ -23,16 +25,22 @@ export default function Page() {
       <div className={classNames.body}>
         <Carousel>
           <CarouselItem id="carousel__slide1">
-            <div>Slide 1</div>
+            <Slide />
           </CarouselItem>
           <CarouselItem id="carousel__slide2">
-            <div>Slide 2</div>
+            <Slide right imgSrc={profilePic} />
           </CarouselItem>
           <CarouselItem id="carousel__slide3">
-            <div>Slide 3</div>
+            <Slide imgSrc={profilePic} />
           </CarouselItem>
           <CarouselItem id="carousel__slide4">
-            <div>Slide 4</div>
+            <Slide right imgSrc={profilePic} />
+          </CarouselItem>
+          <CarouselItem id="carousel__slide5">
+            <Slide imgSrc={profilePic} />
+          </CarouselItem>
+          <CarouselItem id="carousel__slide6">
+            <Slide right />
           </CarouselItem>
         </Carousel>
       </div>

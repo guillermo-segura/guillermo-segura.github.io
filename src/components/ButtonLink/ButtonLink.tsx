@@ -2,6 +2,7 @@ interface ButtonLinkProps {
   label: string;
   href?: string;
   type?: 'primary' | 'secondary';
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
 const twPrimaryClasses = [
@@ -85,9 +86,9 @@ const classnames = {
   secondary: twSecondaryClasses.join(' '),
 }
 
-export default function ButtonLink({ label, type = 'primary', href = '' }: ButtonLinkProps) {
+export default function ButtonLink({ label, type = 'primary', href = '', onClick }: ButtonLinkProps) {
   return (
-    <a href={href} className={classnames[type]}>
+    <a href={href} onClick={onClick} className={classnames[type]}>
       {label}
     </a>
   );
