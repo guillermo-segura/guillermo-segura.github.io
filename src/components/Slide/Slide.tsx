@@ -6,6 +6,8 @@ export interface SlideProps {
   imgSrc?: PolaroidImgProps['imgSrc'];
   imgAlt?: PolaroidImgProps['imgAlt'];
   right?: boolean;
+  header: string;
+  content: string;
 }
 
 const classNames = {
@@ -17,16 +19,16 @@ const classNames = {
   prev: 'absolute bottom-2 left-2',
 }
 
-export default function Slide ({ right = false, imgSrc, imgAlt }: SlideProps) {
+export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {
   if (right) {
     return (
       <div className={classNames.container}>
         <div className={classNames.contentContainerR}>
           <div className={classNames.header}>
-            This is the header
+            {header}
           </div>
           <div>
-            This is some content
+            {content}
           </div>
         </div>
         {imgSrc && <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" />}
@@ -39,10 +41,10 @@ export default function Slide ({ right = false, imgSrc, imgAlt }: SlideProps) {
       {imgSrc && <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" />}
       <div className={classNames.contentContainerL}>
         <div className={classNames.header}>
-          This is the header
+          {header}
         </div>
         <div>
-          This is some content
+          {content}
         </div>
       </div>
     </div>
