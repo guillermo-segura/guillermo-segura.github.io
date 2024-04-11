@@ -18,11 +18,11 @@ export default function CardFooter({ skills = false, traits = false, home = fals
         <IconLink href={GITHUB_URL} imgSrc={gitHubIcon} />
       </div>
 
-      <div className="flex flex-row">
+      {/* <div className="flex flex-row">
         <span className="text-stone-300 font-mono font-sm cursor-pointer p-2">ES 🇪🇸</span>
         <span className="py-2">|</span>
         <span className="font-mono font-sm cursor-pointer p-2">EN 🇬🇧</span>
-      </div>
+      </div> */}
 
       <div className="flex flex-row space-x-4">
         {home && (

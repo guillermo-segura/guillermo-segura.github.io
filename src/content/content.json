@@ -1,7 +1,37 @@
 {
   "me": {
     "description": "My name is Guillermo, and I'm a Software Engineer experienced in delivering on-time, budget-friendly solutions through effective teamwork and a user-first approach!",
-    "header": "Welcome to my site!👋🏽"
+    "header": "Welcome to my site!👋🏽",
+    "slides": {
+      "1": {
+        "header": "Click next to read my story",
+        "content": "You'll find out what's my journey been so far 🗺️"
+      },
+      "2": {
+        "header": "My early days",
+        "content": "As many kids in the '90s, my journey starts with early computers and videogames"
+      },
+      "3": {
+        "header": "Through university",
+        "content": "I considered this a failure for a long time, as I didn't finish my degree. However, I've come to realise that I learned a lot in other areas and was my first contact with programming"
+      },
+      "4": {
+        "header": "Deciding what's next",
+        "content": "I worked in multiple jobs as I planned how I'd kickoff my career"
+      },
+      "5": {
+        "header": "Relocating to Edinburgh",
+        "content": "I decided to move to Edinburgh to go out of my confort zone"
+      },
+      "6": {
+        "header": "Working at Rooser",
+        "content": "Initially as a freelance and then joining the team permanently, this experience sets the ground for my career"
+      },
+      "7": {
+        "header": "What now?",
+        "content": "I'm taking some time for personal development and choosing carefully what my next steps are. Stay tuned!"
+      }
+    }
   },
   "skills": {
     "description": "I've been working as a Software Engineer for the past 5 years, being Rooser the company where I kicked off my career.",

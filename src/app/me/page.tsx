@@ -1,8 +1,10 @@
 import profilePic from '@/assets/avatar.svg';
+import edinburghPic from '@/assets/edinburgh.jpg';
+import rooserPic from '@/assets/rooser.jpg';
 import CardFooter from "@/components/Card/CardFooter";
 import CardHeader from "@/components/Card/CardHeader";
 import Carousel, { CarouselItem } from '@/components/Carousel/Carousel';
-import PolaroidImg from '@/components/PolaroidImg/PolaroidImg';
+import ImgSlide from '@/components/ImgSlide/ImgSlide';
 import Slide from '@/components/Slide/Slide';
 import content from '@/content/content.json';
 
@@ -14,9 +16,9 @@ export default function Page() {
   return (
     <>
       <CardHeader
-        imgSrc={profilePic}
-        imgAlt="This is me!"
-        imgSize={250}
+        // imgSrc={profilePic}
+        // imgAlt="This is me!"
+        // imgSize={250}
         header={content.me.header}
         description={content.me.description}
       />
@@ -26,52 +28,52 @@ export default function Page() {
         <Carousel>
           <CarouselItem id="carousel__slide1">
             <Slide
-              header="Want to see my story?"
-              content="Click next!"
+              header={content.me.slides[1].header}
+              content={content.me.slides[1].content}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide2">
             <Slide
               right
               imgSrc={profilePic}
-              header="My early days"
-              content="As many kids in the '90s, my journey starts with early computers and videogames"
+              header={content.me.slides[2].header}
+              content={content.me.slides[2].content}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide3">
             <Slide
               imgSrc={profilePic}
-              header="Through university"
-              content="I considered this a failure for a long time, as I didn't finish my degree. However, I've come to realise that I learned a lot in other areas and was my first contact with programming"
+              header={content.me.slides[3].header}
+              content={content.me.slides[3].content}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide4">
             <Slide
-              right
-              imgSrc={profilePic}
-              header="Deciding what's next"
-              content="I worked in multiple jobs as I planned how I'd kickoff my career"
+              header={content.me.slides[4].header}
+              content={content.me.slides[4].content}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide5">
-            <Slide
-              imgSrc={profilePic}
-              header="Relocating to Edinburgh"
-              content="I decided to move to Edinburgh to go out of my confort zone"
+            <ImgSlide
+              imgSrc={edinburghPic}
+              imgAlt="asdas"
+              header={content.me.slides[5].header}
+              content={content.me.slides[5].content}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide6">
             <Slide
               right
-              imgSrc={profilePic}
-              header="Working at Rooser"
-              content="Initially as a freelance and then joining the team permanently, this experience sets the ground for my career"
+              imgSrc={rooserPic}
+              header={content.me.slides[6].header}
+              content={content.me.slides[6].content}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide7">
             <Slide
-              header="What now?"
-              content="I'm taking some time for personal development and choosing carefully what my next steps are. Stay tuned!"
+              right
+              header={content.me.slides[7].header}
+              content={content.me.slides[7].content}
             />
           </CarouselItem>
         </Carousel>

@@ -70,7 +70,7 @@ export default function Carousel ({ children }: { children: ReactElement[] }) {
         {children}
       </ol>
       {hasPrev && <div className="absolute bottom-0 left-0"><ButtonLink label="Prev" type="secondary" onClick={onClickPrev}/></div>}
-      {hasNext && <div className="absolute bottom-0 right-0"><ButtonLink label="Next" type="secondary" onClick={onClickNext}/></div>}
+      {hasNext && <div className="absolute bottom-0 right-0 animate-bounce"><ButtonLink label="Next" type="secondary" onClick={onClickNext}/></div>}
       <aside className={classNames.navigation}>
         <ol className={classNames.inlineBlock}>
           {slideIds.map(renderNavigation)}

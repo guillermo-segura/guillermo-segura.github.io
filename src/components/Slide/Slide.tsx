@@ -13,8 +13,10 @@ export interface SlideProps {
 const classNames = {
   container: 'h-full flex flex-row justify-around items-center relative',
   header: 'font-mono font-bold text-xl',
-  contentContainerL: 'w-1/3',
-  contentContainerR: 'w-1/3 text-right',
+  contentL: 'w-1/3',
+  contentR: 'w-1/3 text-right',
+  lgContentL: 'w-2/3 text-center',
+  lgContentR: 'w-2/3 text-center',
   next: 'absolute bottom-2 right-2',
   prev: 'absolute bottom-2 left-2',
 }
@@ -23,7 +25,7 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content 
   if (right) {
     return (
       <div className={classNames.container}>
-        <div className={classNames.contentContainerR}>
+        <div className={imgSrc ? classNames.contentR : classNames.lgContentR}>
           <div className={classNames.header}>
             {header}
           </div>
@@ -39,7 +41,7 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content 
   return (
     <div className={classNames.container}>
       {imgSrc && <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" />}
-      <div className={classNames.contentContainerL}>
+      <div className={imgSrc ? classNames.contentL : classNames.lgContentL}>
         <div className={classNames.header}>
           {header}
         </div>
