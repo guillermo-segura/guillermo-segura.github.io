@@ -1,7 +1,7 @@
 const classNames = {
-  container: 'w-full flex flex-row items-base space-x-2',
-  label: 'font-mono text-sm',
-  labelHighlighted: 'font-bold text-blue-500 drop-shadow-md',
+  container: 'w-full flex flex-row items-base space-x-2 items-center',
+  label: 'text-sm',
+  labelHighlighted: 'font-mono text-blue-500',
   labelContainer: 'flex flex-row justify-between',
   progressContainer: 'box-border w-full h-4 rounded-full border border-dashed border-black p-px',
   progressBarL: 'bg-gradient-to-b from-sky-500 to-blue-500 h-full rounded-full border border-transparent',

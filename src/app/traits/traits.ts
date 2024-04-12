@@ -1,19 +1,19 @@
 const data = {
   preferences: {
     'Hobbies': [
-      'Listening to metal music',
-      'Reading',
-      'Playing videogames',
+      '🎧 Music',
+      '📖 Books',
+      '🎮 Videogames',
     ],
     'Food': [
-      'Mexican',
-      'Japanese',
-      'Mediterranean',
+      '🌮 Mexican',
+      '🍜 Japanese',
+      '🥘 Mediterranean',
     ],
     'Sports': [
-      'Hiking',
-      'Running',
-      'Table tenis',
+      '⛰️ Hiking',
+      '👟 Running',
+      '🏓 Table tenis',
     ],
   },
 };

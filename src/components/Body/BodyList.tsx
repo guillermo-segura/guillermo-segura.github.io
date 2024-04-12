@@ -3,8 +3,8 @@ import BodyHeader from "./BodyHeader";
 const classNames = {
   listContainer: 'flex flex-row justify-around',
   listContainerV: 'flex flex-col justify-around px-12 space-y-4',
-  sectionHeader: 'font-mono font-bold',
-  section: 'list-disc list-inside',
+  sectionHeader: 'font-bold text-md',
+  section: 'list-inside',
 };
 
 export interface BodyListProps {
@@ -26,7 +26,7 @@ export default function BodyList ({ header, description, data, vertical = false 
         <span className={classNames.sectionHeader}>
           {section}
         </span>
-        <ul className={classNames.section} style={{ columnCount: Math.floor(items.length / 3), columnGap: '56px' }}>
+        <ul className={classNames.section}>
           {items.map(renderItem)}
         </ul>
       </div>

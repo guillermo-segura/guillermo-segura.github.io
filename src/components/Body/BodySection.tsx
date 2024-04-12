@@ -1,5 +1,5 @@
 const classNames = {
-  container: 'text-center text-xl mb-6',
+  container: 'text-center text-md mb-6',
 };
 
 export default function BodySection ({ children }: { children: React.ReactNode }) {

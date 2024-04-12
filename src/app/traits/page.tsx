@@ -1,46 +1,63 @@
 import BodyList from "@/components/Body/BodyList";
+import BodyHeader from "@/components/Body/BodyHeader";
+import BodySection from "@/components/Body/BodySection";
 import CardFooter from "@/components/Card/CardFooter";
 import CardHeader from "@/components/Card/CardHeader";
-import content from '@/content/content.json';
-import data from './traits';
-import BodyHeader from "@/components/Body/BodyHeader";
-import Link from "@/components/Link/Link";
-import LoadingBar from "@/components/LoadingBar/LoadingBar";
 import CardBody from "@/components/Card/CardBody";
-import BodySection from "@/components/Body/BodySection";
+import LoadingBar from "@/components/LoadingBar/LoadingBar";
+import BlueLink from "@/components/BlueLink/BlueLink";
+import content from '@/content/content.json';
+
+import data from './traits';
+
+const classNames = {
+  columnsContainer: 'flex flex-row space-x-12',
+  column: 'w-1/2',
+};
 
 export default function Page() {
   return (
     <>
-      <CardHeader
-        header={content.traits.header}
-        // description={content.traits.description}
-      />
+      <CardHeader header={content.traits.header} />
 
       {/* CARD BODY */}
       <CardBody>  
         <BodySection>
-          {content.traits.description}
+          <div className="space-y-2">
+            <div>{content.traits.content[1]}</div>
+            <div>
+              {content.traits.content[2]}
+              <i>{content.traits.content[3]}</i>
+              {content.traits.content[4]}
+            </div>
+            <div>{content.traits.content[5]}</div>
+            
+          </div>
         </BodySection>
-        <div className="flex flex-row w-full space-x-12">
-          <div className="w-1/2">
-            <BodyList
-              data={data.preferences}
-              header="What I like"
-              vertical
-            />
-          </div>   
-          <div className="w-1/2">
-            <BodyHeader>Personality <Link href="https://www.16personalities.com/intj-personality">INTJ-A</Link></BodyHeader>
-            <div className="self-center space-y-8 px-6 my-auto">
-              <LoadingBar leftLabel="Introverted" rightLabel="Extraverted" status={51} />
-              <LoadingBar leftLabel="Intuitive" rightLabel="Observant" status={76} />
-              <LoadingBar leftLabel="Thinking" rightLabel="Feeling" status={55} />
-              <LoadingBar leftLabel="Judging" rightLabel="Prospecting" status={71} />
-              <LoadingBar leftLabel="Assertive" rightLabel="Turbulent" status={81} />
+        <BodyHeader>My traits & personality</BodyHeader>
+        <div className="flex flex-row w-full items-center mb-6 space-x-6">
+          <div className="w-1/2 text-center ">
+            <div>
+              {content.traits.content[6]}
+              &nbsp;
+              <BlueLink href="https://www.16personalities.com/intj-personality">INTJ-A</BlueLink>.
+              &nbsp;
+              {content.traits.content[7]}
             </div>
           </div>
+
+          <div className="w-1/2 space-y-2">
+            <LoadingBar leftLabel="Introverted" rightLabel="Extraverted" status={51} />
+            <LoadingBar leftLabel="Intuitive" rightLabel="Observant" status={76} />
+            <LoadingBar leftLabel="Thinking" rightLabel="Feeling" status={55} />
+            <LoadingBar leftLabel="Judging" rightLabel="Prospecting" status={71} />
+            <LoadingBar leftLabel="Assertive" rightLabel="Turbulent" status={81} />
+          </div>
         </div>
+        <BodyList
+          data={data.preferences}
+          header={content.traits.sectionHeader.whatILike}
+        />   
       </CardBody>  
 
       <CardFooter home skills />

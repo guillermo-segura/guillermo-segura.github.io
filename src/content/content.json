@@ -21,11 +21,11 @@
       },
       "4": {
         "header": "Plan B",
-        "content": "I decided to pursue a career in Software Development, so I planned carefully my next steps: I became a self-taught developer, worked part-time as an IT technician, and got a degree in Cross-platform Software Development."
+        "content": "I decided to pursue a career in Software Development, so I planned carefully my next steps: I became a self-taught developer, worked part-time as an IT technician, and got a diploma in Cross-platform Software Development."
       },
       "5": {
         "header": "Moving to the UK",
-        "content": "I secured an intership in an Edinburgh-based consultancy, so I decided to leave my confort zone and devoted myself to making the most out of this experience. It was my first working experience in Web Development."
+        "content": "I secured an intership in an Edinburgh-based consultancy, so I decided to leave my comfort zone and devoted myself to making the most out of this experience. It was my first working experience in Web Development."
       },
       "6": {
         "header": "Working at Rooser",
@@ -43,7 +43,18 @@
   },
   "traits": {
     "header": "About me",
-    "description": "I consider myself a calm and friendly person that always see the good in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think. A bit of a shy extrovert, I'm comfortable in small groups but I can get nervous in front of bigger audiences; however, that's never stopped me from sharing my ideas. In a team environment, I enjoy helping others and making sure newcomers feel welcomed."
+    "content": {
+      "1": "I consider myself a calm and friendly person that always see the good in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think.",
+      "2": "A bit of a shy extrovert, I'm comfortable in small groups and",
+      "3": " - despite I can get nervous in front of bigger audiences - ",
+      "4": "feel happy to present my ideas to larger and non-technical audiences.",
+      "5": "In a team environment, I enjoy helping others and making sure newcomers feel welcomed.",
+      "6": "You can find my personality description in the following link:",
+      "7": "You can also see my traits on the left ➡️"
+    },
+    "sectionHeader": {
+      "whatILike": "What I like"
+    }
   },
   "buttons": {
     "back": "Go back",

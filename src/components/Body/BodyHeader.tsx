@@ -1,7 +1,7 @@
 const classNames = {
-  bodySeparator: 'text-center border-b-2 border-stone-200 py-2 mb-4',
-  header: 'font-mono text-2xl',
-  description: 'text-stone-500',
+  bodySeparator: 'text-center border-b-2 border-neutral-100 py-2 mb-4',
+  header: 'font-mono text-lg font-bold',
+  description: 'text-stone-500 text-md',
 };
 
 export interface BodyHeaderProps {
