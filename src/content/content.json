@@ -44,5 +44,10 @@
   "traits": {
     "header": "About me",
     "description": "I consider myself a calm and friendly person that always see the good in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think. A bit of a shy extrovert, I'm comfortable in small groups but I can get nervous in front of bigger audiences; however, that's never stopped me from sharing my ideas. In a team environment, I enjoy helping others and making sure newcomers feel welcomed."
+  },
+  "buttons": {
+    "back": "Go back",
+    "aboutMe": "About me",
+    "skills": "My skills"
   }
 }
