@@ -11,8 +11,9 @@ import content from '@/content/content.json';
 import data from './traits';
 
 const classNames = {
-  columnsContainer: 'flex flex-row space-x-12',
-  column: 'w-1/2',
+  columnsContainer: 'flex flex-row w-full items-center mb-6 space-x-6',
+  leftColumn: 'w-1/2 text-center',
+  rightColumn: 'w-1/2 space-y-2',
 };
 
 export default function Page() {
@@ -35,18 +36,16 @@ export default function Page() {
           </div>
         </BodySection>
         <BodyHeader>My traits & personality</BodyHeader>
-        <div className="flex flex-row w-full items-center mb-6 space-x-6">
-          <div className="w-1/2 text-center ">
+        <div className={classNames.columnsContainer}>
+          <div className={classNames.leftColumn}>
             <div>
               {content.traits.content[6]}
               &nbsp;
-              <BlueLink href="https://www.16personalities.com/intj-personality">INTJ-A</BlueLink>.
-              &nbsp;
-              {content.traits.content[7]}
+              <BlueLink href="https://www.16personalities.com/intj-personality">INTJ-A</BlueLink>
             </div>
           </div>
 
-          <div className="w-1/2 space-y-2">
+          <div className={classNames.rightColumn}>
             <LoadingBar leftLabel="Introverted" rightLabel="Extraverted" status={51} />
             <LoadingBar leftLabel="Intuitive" rightLabel="Observant" status={76} />
             <LoadingBar leftLabel="Thinking" rightLabel="Feeling" status={55} />
