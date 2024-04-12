@@ -1,6 +1,8 @@
 'use client'
+
 import { useState } from "react";
 import Image, { ImageProps } from "next/image";
+import Link from "next/link";
 
 interface IconLinkProps {
   href: string;
@@ -15,7 +17,7 @@ export default function IconLink({ href = '', imgSrc }: IconLinkProps) {
   console.log('Hovered', href, hovered);
 
   return (
-    <a
+    <Link
       href={href}
       target="_blank"
       onMouseOver={onMouseOver}
@@ -28,6 +30,6 @@ export default function IconLink({ href = '', imgSrc }: IconLinkProps) {
         height={40}
         className="cursor-pointer"
       />
-    </a>
+    </Link>
   );
 }

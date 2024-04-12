@@ -48,6 +48,9 @@
   "buttons": {
     "back": "Go back",
     "aboutMe": "About me",
-    "skills": "My skills"
+    "skills": "My skills",
+    "prev": "Back",
+    "next": "Next",
+    "start": "Start"
   }
 }

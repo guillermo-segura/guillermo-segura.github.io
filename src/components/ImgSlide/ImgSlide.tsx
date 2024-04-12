@@ -9,10 +9,11 @@ export interface SlideProps {
 }
 
 const classNames = {
-  container: 'h-full w-full flex flex-row justify-center items-center relative',
+  container: 'h-full w-full flex flex-row space-x-6 items-center relative',
   header: 'font-mono font-bold text-xl',
-  contentContainerL: 'w-1/3 mx-6',
-  contentContainerR: 'w-1/3 mx-6 text-right',
+  contentContainerL: 'w-1/2',
+  contentContainerR: 'w-1/2 text-right',
+  imgContainer: 'w-1/2 h-full relative overflow-hidden rounded-xl',
 }
 
 export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {
@@ -27,11 +28,12 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content 
             {content}
           </div>
         </div>
-        <div className="w-1/2 h-full relative overflow-hidden rounded-xl">
+        <div className={classNames.imgContainer}>
           <Image
             src={imgSrc}
             alt={imgAlt}
             fill
+            className="object-cover"
           />
         </div>
       </div>
@@ -40,7 +42,7 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content 
 
   return (
     <div className={classNames.container}>
-      <div className="w-1/2 h-full relative overflow-hidden rounded-xl">
+      <div className={classNames.imgContainer}>
         <Image
           src={imgSrc}
           alt={imgAlt}
