@@ -17,6 +17,15 @@ export interface LoadingBarProps {
 export default function LoadingBar({ leftLabel = '', rightLabel = '', status = 0 }: LoadingBarProps) {
   return (
     <div>
+      <div className={classNames.labelContainer}>
+        <div className={classNames.label}>
+          <span className={classNames.labelHighlighted}>{leftLabel}</span>
+        </div>
+
+        <div className={classNames.label}>
+          <span>{rightLabel}</span>
+        </div>
+      </div>
       <div className={classNames.container}>
         <div className={classNames.label}>
             <span className={classNames.labelHighlighted}>{status}%</span>
@@ -26,16 +35,6 @@ export default function LoadingBar({ leftLabel = '', rightLabel = '', status = 0
         </div>
         <div className={classNames.label}>
           <span>{100 - status}%</span>
-        </div>
-      </div>
-
-      <div className={classNames.labelContainer}>
-        <div className={classNames.label}>
-          <span className={classNames.labelHighlighted}>{leftLabel}</span>
-        </div>
-
-        <div className={classNames.label}>
-          <span>{rightLabel}</span>
         </div>
       </div>
     </div>

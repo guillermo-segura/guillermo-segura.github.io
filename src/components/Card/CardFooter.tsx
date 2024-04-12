@@ -29,7 +29,7 @@ export default function CardFooter({ skills = false, traits = false, home = fals
           <ButtonLink label="Go back" href="/me" type="secondary" />
         )}
         {traits && (
-          <ButtonLink label="My traits" href="/traits" />
+          <ButtonLink label="About me" href="/traits" type="secondary" />
         )}
         {skills && (
           <ButtonLink label="My skills" href="/skills" />

@@ -1,17 +1,19 @@
 const data = {
   preferences: {
-    'What I like': [
-      'Rock/Metal Music',
+    'Hobbies': [
+      'Listening to metal music',
       'Reading',
-      'Hiking',
-      'Videogames',
-      'Cooking',
-      'Movies',
+      'Playing videogames',
     ],
-    "Not a fan of": [
-      'Watching Sports',
-      'Pubs',
-      'Beer',
+    'Food': [
+      'Mexican',
+      'Japanese',
+      'Mediterranean',
+    ],
+    'Sports': [
+      'Hiking',
+      'Running',
+      'Table tenis',
     ],
   },
 };

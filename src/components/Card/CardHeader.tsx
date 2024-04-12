@@ -10,7 +10,7 @@ const classNames = {
 interface CardHeaderProps {
   imgSrc?: string | ImageProps['src'];
   header: string;
-  description: string;
+  description?: string;
   imgAlt?: string;
   imgSize?: number;
 }
@@ -25,9 +25,11 @@ export default function CardHeader({ imgSrc, imgAlt, imgSize, header, descriptio
         <div>
           <h1 className={classNames.header}>{header}</h1>
         </div>
-        <div>
-          <p>{description}</p>
-        </div>
+        {description && (
+          <div className="text-2xl">
+            <p>{description}</p>
+          </div>
+        )}
       </div>
     </div>
   );

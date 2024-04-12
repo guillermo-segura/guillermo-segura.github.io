@@ -13,8 +13,8 @@ export interface SlideProps {
 const classNames = {
   container: 'h-full flex flex-row justify-around items-center relative',
   header: 'font-mono font-bold text-xl',
-  contentL: 'w-1/3',
-  contentR: 'w-1/3 text-right',
+  contentL: 'w-2/3',
+  contentR: 'w-2/3 text-right',
   lgContentL: 'w-2/3 text-center',
   lgContentR: 'w-2/3 text-center',
   next: 'absolute bottom-2 right-2',

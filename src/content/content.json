@@ -1,44 +1,48 @@
 {
   "me": {
-    "description": "My name is Guillermo, and I'm a Software Engineer experienced in delivering on-time, budget-friendly solutions through effective teamwork and a user-first approach!",
-    "header": "Welcome to my site!👋🏽",
+    "header": "Welcome!👋🏽",
+    "description": "My name is Guillermo, and I love ideating and building stuff.",
+    "content": {
+      "1": "I'm a Full-Stack Engineer specialized in React, TypeScript, and Laravel.",
+      "2": "I've cultivated a strong product mindset by engaging with stakeholders and participating in every aspect of the development life cycle."
+    },
     "slides": {
       "1": {
-        "header": "Click next to read my story",
-        "content": "You'll find out what's my journey been so far 🗺️"
+        "header": "Want to read about my journey?",
+        "content": "Click START to see how I became a Software Engineer 💻"
       },
       "2": {
-        "header": "My early days",
-        "content": "As many kids in the '90s, my journey starts with early computers and videogames"
+        "header": "My passion for computers",
+        "content": "It starts in the '90s, when my parents buy our first computer, becoming a core part of my activities and entertainment. As I grow up - and start playing videogames - I start building my own custom computers and scripts."
       },
       "3": {
-        "header": "Through university",
-        "content": "I considered this a failure for a long time, as I didn't finish my degree. However, I've come to realise that I learned a lot in other areas and was my first contact with programming"
+        "header": "Going to university",
+        "content": "This was my first big failure as I didn't complete my Telecom degree - only ~50% of it -. However, this experience helped me identify my weaknesses and laid the groundwork for what my career would become in the future."
       },
       "4": {
-        "header": "Deciding what's next",
-        "content": "I worked in multiple jobs as I planned how I'd kickoff my career"
+        "header": "Plan B",
+        "content": "I decided to pursue a career in Software Development, so I planned carefully my next steps: I became a self-taught developer, worked part-time as an IT technician, and got a degree in Cross-platform Software Development."
       },
       "5": {
-        "header": "Relocating to Edinburgh",
-        "content": "I decided to move to Edinburgh to go out of my confort zone"
+        "header": "Moving to the UK",
+        "content": "I secured an intership in an Edinburgh-based consultancy, so I decided to leave my confort zone and devoted myself to making the most out of this experience. It was my first working experience in Web Development."
       },
       "6": {
         "header": "Working at Rooser",
-        "content": "Initially as a freelance and then joining the team permanently, this experience sets the ground for my career"
+        "content": "I became part of an awesome team that helped me grow both personally and professionally. This experience also helped me develop a product and user-first mindset through an active participation in every step of the software development life cycle."
       },
       "7": {
-        "header": "What now?",
-        "content": "I'm taking some time for personal development and choosing carefully what my next steps are. Stay tuned!"
+        "header": "And now what?",
+        "content": "I decided to take some time off to work on some personal projects - like this site! - and do some personal development. Whatever challenge comes next, I'm looking forward to it and to share my learnings here. Stay tuned!"
       }
     }
   },
   "skills": {
-    "description": "I've been working as a Software Engineer for the past 5 years, being Rooser the company where I kicked off my career.",
-    "header": "These are my skills 💪🏽"
+    "header": "My skills",
+    "description": "Through my journey, I've developed a varied set of skills that have been useful for the many tasks I've accomplished in the past. They also serve as the base of the new skills that I keep working on in order to become an specialized generalist."
   },
   "traits": {
-    "description": "I see myself as a calm and friendly person that always see the good intent in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think. A bit of a shy extrovert, I'm comfortable in small groups but I get a bit nervous in front of big audiences. However, that hasn't stopped me from speaking in from of people when it was required.",
-    "header": "These are my traits"
+    "header": "About me",
+    "description": "I consider myself a calm and friendly person that always see the good in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think. A bit of a shy extrovert, I'm comfortable in small groups but I can get nervous in front of bigger audiences; however, that's never stopped me from sharing my ideas. In a team environment, I enjoy helping others and making sure newcomers feel welcomed."
   }
 }

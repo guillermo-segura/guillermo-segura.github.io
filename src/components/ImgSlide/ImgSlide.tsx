@@ -9,10 +9,10 @@ export interface SlideProps {
 }
 
 const classNames = {
-  container: 'h-full w-full flex flex-row justify-left items-center relative',
+  container: 'h-full w-full flex flex-row justify-center items-center relative',
   header: 'font-mono font-bold text-xl',
-  contentContainerL: 'w-1/3 mx-auto',
-  contentContainerR: 'w-1/3 mx-auto text-right',
+  contentContainerL: 'w-1/3 mx-6',
+  contentContainerR: 'w-1/3 mx-6 text-right',
 }
 
 export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {

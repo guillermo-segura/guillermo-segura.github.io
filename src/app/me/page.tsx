@@ -1,6 +1,8 @@
 import profilePic from '@/assets/avatar.svg';
 import edinburghPic from '@/assets/edinburgh.jpg';
 import rooserPic from '@/assets/rooser.jpg';
+import BodySection from '@/components/Body/BodySection';
+import CardBody from '@/components/Card/CardBody';
 import CardFooter from "@/components/Card/CardFooter";
 import CardHeader from "@/components/Card/CardHeader";
 import Carousel, { CarouselItem } from '@/components/Carousel/Carousel';
@@ -8,23 +10,24 @@ import ImgSlide from '@/components/ImgSlide/ImgSlide';
 import Slide from '@/components/Slide/Slide';
 import content from '@/content/content.json';
 
-const classNames = {
-  body: 'flex flex-col justify-around pt-6 px-12',
-};
-
 export default function Page() {
   return (
     <>
       <CardHeader
-        // imgSrc={profilePic}
-        // imgAlt="This is me!"
-        // imgSize={250}
+        imgSrc={profilePic}
+        imgAlt="This is me!"
+        imgSize={200}
         header={content.me.header}
         description={content.me.description}
       />
 
       {/* CARD BODY */}
-      <div className={classNames.body}>
+      <CardBody>
+        <BodySection>
+          {content.me.content[1]}
+          <br />
+          {content.me.content[2]}
+        </BodySection>
         <Carousel>
           <CarouselItem id="carousel__slide1">
             <Slide
@@ -77,7 +80,7 @@ export default function Page() {
             />
           </CarouselItem>
         </Carousel>
-      </div>
+      </CardBody>
 
       <CardFooter skills traits />
     </>

@@ -1,5 +1,5 @@
 const classNames = {
-  bodySeparator: 'text-center border-b-2 border-stone-200 pt-4 pb-2',
+  bodySeparator: 'text-center border-b-2 border-stone-200 py-2 mb-4',
   header: 'font-mono text-2xl',
   description: 'text-stone-500',
 };
