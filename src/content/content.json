@@ -9,15 +9,27 @@
     "slides": {
       "1": {
         "header": "Want to read about my journey?",
-        "content": "Click START to see how I became a Software Engineer 💻"
+        "content": {
+          "1": "Click",
+          "2": " START ",
+          "3": "to see how I became a Software Engineer 💻"
+        }
       },
       "2": {
         "header": "My passion for computers",
-        "content": "It starts in the '90s, when my parents buy our first computer, becoming a core part of my activities and entertainment. As I grow up - and start playing videogames - I start building my own custom computers and scripts."
+        "content": {
+          "1": "It starts in the '90s, when my parents buy our first computer, becoming a core part of my activities and entertainment. As I grow up",
+          "2": " - and start playing videogames - ",
+          "3": "I start building my first custom computers and scripts."
+        }
       },
       "3": {
         "header": "Going to university",
-        "content": "This was my first big failure as I didn't complete my Telecom degree - only ~50% of it -. However, this experience helped me identify my weaknesses and laid the groundwork for what my career would become in the future."
+        "content": {
+          "1": "This was my first big failure as I didn't complete my Telecom degree",
+          "2": " - only ~50% of it -. ",
+          "3": "However, this experience helped me identify my weaknesses and laid the groundwork for what my career would become in the future."
+        }
       },
       "4": {
         "header": "Plan B",
@@ -29,11 +41,18 @@
       },
       "6": {
         "header": "Working at Rooser",
-        "content": "I became part of an awesome team that helped me grow both personally and professionally. This experience also helped me develop a product and user-first mindset through an active participation in every step of the software development life cycle."
+        "content": {
+          "1": "I became part of an awesome team that helped me grow both personally and professionally.",
+          "2": "This experience also helped me develop a product and user-first mindset through participating in multiple design sprints, user interviews, and having extreme ownership of what we built."
+        }
       },
       "7": {
         "header": "And now what?",
-        "content": "I decided to take some time off to work on some personal projects - like this site! - and do some personal development. Whatever challenge comes next, I'm looking forward to it and to share my learnings here. Stay tuned!"
+        "content": {
+          "1": "I decided to take some time off to work on some personal projects",
+          "2": " - like this site! - ",
+          "3": "and do some personal development. Whatever challenge comes next, I'm looking forward to it and to share my learnings here. Stay tuned! 😄"
+        }
       }
     }
   },

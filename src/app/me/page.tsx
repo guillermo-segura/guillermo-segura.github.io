@@ -32,7 +32,13 @@ export default function Page() {
           <CarouselItem id="carousel__slide1">
             <Slide
               header={content.me.slides[1].header}
-              content={content.me.slides[1].content}
+              content={(
+                <>
+                  {content.me.slides[1].content[1]}
+                  <span className="font-mono font-bold">{content.me.slides[1].content[2]}</span>
+                  {content.me.slides[1].content[3]}
+                </>
+              )}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide2">
@@ -40,14 +46,28 @@ export default function Page() {
               right
               imgSrc={profilePic}
               header={content.me.slides[2].header}
-              content={content.me.slides[2].content}
+              content={(
+                <>
+                  {content.me.slides[2].content[1]}
+                  <i>{content.me.slides[2].content[2]}</i>
+                  {content.me.slides[2].content[3]}
+                </>
+              )}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide3">
             <Slide
               imgSrc={profilePic}
               header={content.me.slides[3].header}
-              content={content.me.slides[3].content}
+              content={(
+                <>
+                  {content.me.slides[3].content[1]}
+                  <i>{content.me.slides[3].content[2]}</i>
+                  <br />
+                  <br />
+                  {content.me.slides[3].content[3]}
+                </>
+              )}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide4">
@@ -69,14 +89,27 @@ export default function Page() {
               right
               imgSrc={rooserPic}
               header={content.me.slides[6].header}
-              content={content.me.slides[6].content}
+              content={(
+                <>
+                  {content.me.slides[6].content[1]}
+                  <br />
+                  <br />
+                  {content.me.slides[6].content[2]}
+                </>
+              )}
             />
           </CarouselItem>
           <CarouselItem id="carousel__slide7">
             <Slide
               right
               header={content.me.slides[7].header}
-              content={content.me.slides[7].content}
+              content={(
+                <>
+                  {content.me.slides[7].content[1]}
+                  <i>{content.me.slides[7].content[2]}</i>
+                  {content.me.slides[7].content[3]}
+                </>
+              )}
             />
           </CarouselItem>
         </Carousel>

@@ -7,7 +7,7 @@ export interface SlideProps {
   imgAlt?: PolaroidImgProps['imgAlt'];
   right?: boolean;
   header: string;
-  content: string;
+  content: string | React.ReactNode;
 }
 
 const classNames = {
