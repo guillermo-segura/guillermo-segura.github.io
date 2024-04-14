@@ -1,7 +1,7 @@
 import Image, { ImageProps } from "next/image";
 
 const classNames = {
-  container: 'p-2 pb-12 shadow-[-4px_4px_12px_rgba(0,0,0,0.2)] relative min-h-max min-w-max transform-gpu bg-gradient-to-bl from-white to-slate-100',
+  container: 'p-2 pb-12 shadow-[-4px_4px_12px_rgba(0,0,0,0.2)] relative h-max w-max transform-gpu bg-gradient-to-bl from-white to-slate-100 self-center',
   tilt: {
     left: 'rotate-2',
     right: '-rotate-2',

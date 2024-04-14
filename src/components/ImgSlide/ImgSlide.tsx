@@ -9,11 +9,11 @@ export interface SlideProps {
 }
 
 const classNames = {
-  container: 'h-full w-full flex flex-row space-x-6 items-center relative',
+  container: 'h-72 w-full flex flex-row space-x-6 items-center relative',
   header: 'font-mono font-bold text-xl',
-  contentContainerL: 'w-1/2',
-  contentContainerR: 'w-1/2 text-right',
-  imgContainer: 'w-1/2 h-full relative overflow-hidden rounded-xl',
+  contentContainerL: 'w-full lg:w-1/2 text-center lg:text-left',
+  contentContainerR: 'w-full lg:w-1/2 text-center lg:text-right',
+  imgContainer: 'w-1/2 h-full relative overflow-hidden rounded-xl hidden lg:block',
 }
 
 export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {

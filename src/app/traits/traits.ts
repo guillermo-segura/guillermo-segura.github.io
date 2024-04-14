@@ -7,7 +7,7 @@ const data = {
     ],
     'Food': [
       '🌮 Mexican',
-      '🍜 Japanese',
+      '🥡 Chinese',
       '🥘 Mediterranean',
     ],
     'Sports': [

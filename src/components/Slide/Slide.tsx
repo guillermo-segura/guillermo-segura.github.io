@@ -6,24 +6,24 @@ export interface SlideProps {
   imgSrc?: PolaroidImgProps['imgSrc'];
   imgAlt?: PolaroidImgProps['imgAlt'];
   right?: boolean;
+  small?: boolean;
   header: string;
   content: string | React.ReactNode;
 }
 
 const classNames = {
-  container: 'h-full flex flex-row space-x-6 items-center relative',
+  container: 'min-h-72 flex flex-row space-x-6 items-center',
+  containerSm: 'min-h-48 flex flex-row space-x-6 items-center',
   header: 'font-mono font-bold text-xl',
-  contentL: 'w-full',
-  contentR: 'w-full text-right',
+  contentL: 'w-full lg:text-left text-center',
+  contentR: 'w-full lg:text-right text-center',
   contentNoImg: 'w-full text-center',
-  next: 'absolute bottom-2 right-2',
-  prev: 'absolute bottom-2 left-2',
 }
 
-export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {
+export default function Slide ({ right = false, imgSrc, imgAlt, header, content, small = false }: SlideProps) {
   if (right) {
     return (
-      <div className={classNames.container}>
+      <div className={small ? classNames.containerSm : classNames.container}>
         <div className={imgSrc ? classNames.contentR : classNames.contentNoImg}>
           <div className={classNames.header}>
             {header}
@@ -32,14 +32,14 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content 
             {content}
           </div>
         </div>
-        {imgSrc && <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" />}
+        {imgSrc && <div className="hidden lg:block"><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" /></div>}
       </div>
     );
   }
 
   return (
-    <div className={classNames.container}>
-      {imgSrc && <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" />}
+    <div className={small ? classNames.containerSm : classNames.container}>
+      {imgSrc && <div className="hidden lg:block"><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" /></div>}
       <div className={imgSrc ? classNames.contentL : classNames.contentNoImg}>
         <div className={classNames.header}>
           {header}

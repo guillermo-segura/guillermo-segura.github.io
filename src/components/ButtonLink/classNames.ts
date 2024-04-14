@@ -16,6 +16,7 @@ export const primary: string = [
   'from-blue-500',
   'to-sky-500',
   'font-mono',
+  'whitespace-nowrap',
 
   'hover:to-sky-600',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
@@ -52,6 +53,7 @@ export const secondary: string = [
   'from-white',
   'to-slate-100',
   'font-mono',
+  'whitespace-nowrap',
   
   'border',
   'border-dashed',

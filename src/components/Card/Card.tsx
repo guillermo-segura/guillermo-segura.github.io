@@ -1,5 +1,5 @@
 const classNames = {
-  container: 'w-3/4 max-w-4xl bg-gradient-to-bl from-white to-stone-100 rounded-lg shadow-lg text-black drop-shadow-xl',
+  container: 'w-full max-w-4xl bg-gradient-to-bl from-white to-stone-100 rounded-lg shadow-lg text-black drop-shadow-xl',
 };
 
 export default function Card({ children }: { children: React.ReactNode }) {

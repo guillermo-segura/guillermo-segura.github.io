@@ -2,10 +2,10 @@ import { ImageProps } from "next/image";
 import PolaroidImg from "../PolaroidImg/PolaroidImg";
 
 const classNames = {
-  container: 'flex flex-row space-x-6 p-12',
+  container: 'flex lg:flex-row flex-col lg:space-x-6 space-y-6 lg:space-y-0  space-x-0 p-12',
   headerContainer: 'flex flex-col space-y-6 self-center w-full',
-  header: 'font-mono font-bold text-6xl',
-  description: 'text-2xl',
+  header: 'font-mono font-bold text-4xl md:text-6xl',
+  description: 'text-xl md:text-2xl',
 };
 
 interface CardHeaderProps {

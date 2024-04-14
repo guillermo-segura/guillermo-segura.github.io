@@ -3,31 +3,29 @@
     "header": "Welcome!👋🏽",
     "description": "My name is Guillermo, and I love ideating and building stuff.",
     "content": {
-      "1": "I'm a Full-Stack Engineer specialized in React, TypeScript, and Laravel.",
-      "2": "I've cultivated a strong product mindset by engaging with stakeholders and participating in every aspect of the development life cycle."
+      "1": "I'm a Full-Stack Engineer with a strong product mindset cultivated by engaging with users and participating in every aspect of the development life cycle."
     },
     "slides": {
       "1": {
-        "header": "Want to read about my journey?",
+        "header": "My journey",
         "content": {
-          "1": "Click",
-          "2": " START ",
-          "3": "to see how I became a Software Engineer 💻"
+          "1": "How I became a Software Engineer 💻"
         }
       },
       "2": {
         "header": "My passion for computers",
         "content": {
-          "1": "It starts in the '90s, when my parents buy our first computer, becoming a core part of my activities and entertainment. As I grow up",
-          "2": " - and start playing videogames - ",
-          "3": "I start building my first custom computers and scripts."
+          "1": "It starts in the '90s, when my parents bought our first computer. It quickly became a core part of my activities and entertainment.",
+          "2": "As I grow up",
+          "3": " - and start playing videogames - ",
+          "4": "I start building my first custom computers and scripts 🪛"
         }
       },
       "3": {
         "header": "Going to university",
         "content": {
-          "1": "This was my first big failure as I didn't complete my Telecom degree",
-          "2": " - only ~50% of it -. ",
+          "1": "This was my first big failure as it cost me time to accept I wasn't going to finish my Telecom degree.",
+          "2": " - only ~45% of it -. ",
           "3": "However, this experience helped me identify my weaknesses and laid the groundwork for what my career would become in the future."
         }
       },
@@ -37,7 +35,7 @@
       },
       "5": {
         "header": "Moving to the UK",
-        "content": "I secured an intership in an Edinburgh-based consultancy, so I decided to leave my comfort zone and devoted myself to making the most out of this experience. It was my first working experience in Web Development."
+        "content": "I secured an intership in an Edinburgh-based consultancy, so I decided to leave my comfort zone and devoted myself to making the most out of this experience. It was my first experience working as a Web Developer 🎉"
       },
       "6": {
         "header": "Working at Rooser",
@@ -58,17 +56,20 @@
   },
   "skills": {
     "header": "My skills",
-    "description": "Through my journey, I've developed a varied set of skills that have been useful for the many tasks I've accomplished in the past. They also serve as the base of the new skills that I keep working on in order to become an specialized generalist."
+    "content": {
+      "1": "Through my journey, I've developed a varied set of skills that have been useful for the many tasks I've accomplished in the past. They also serve as the base of the new skills that I keep working on in order to become an",
+      "2": "specialised generalist"
+    }
   },
   "traits": {
     "header": "About me",
     "content": {
-      "1": "I consider myself a calm and friendly person that always see the good in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think.",
+      "1": "I consider myself a calm and friendly person that always sees the good in people. I don't like to jump into conclussions quickly and enjoy debating ideas in order to learn more about how others think.",
       "2": "A bit of a shy extrovert, I'm comfortable in small groups and",
       "3": " - despite I can get nervous in front of bigger audiences - ",
       "4": "feel happy to present my ideas to larger and non-technical audiences.",
       "5": "In a team environment, I enjoy helping others and making sure newcomers feel welcomed.",
-      "6": "These are my traits and you can find my personality test results here:"
+      "6": "Also, if you're a fan of personality and traits tests, here you can find my results:"
     },
     "sectionHeader": {
       "whatILike": "What I like"

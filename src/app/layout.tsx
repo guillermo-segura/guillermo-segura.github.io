@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const classNames = {
-  container: 'flex min-h-screen flex-col items-center justify-between p-24',
+  container: 'flex min-h-screen flex-col items-center justify-between lg:px-24 md:py-24 md:px-12 p-6',
   body: gradientBg,
 };
 
