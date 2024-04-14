@@ -30,7 +30,7 @@ export default function CardFooter({ skills = false, traits = false, home = fals
 
       <div className={classNames.itemsContainer}>
         {home && (
-          <ButtonLink label={content.buttons.back} href="/me" type="secondary" />
+          <ButtonLink label={content.buttons.back} href="/" type="secondary" />
         )}
         {traits && (
           <ButtonLink label={content.buttons.aboutMe}  href="/traits" />

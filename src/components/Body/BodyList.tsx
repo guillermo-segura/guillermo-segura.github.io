@@ -22,7 +22,7 @@ export default function BodyList ({ header, description, data, vertical = false 
     const renderItem = (item: string) => (<li key={item}>{item}</li>);
 
     return (
-      <div>
+      <div key={section}>
         <span className={classNames.sectionHeader}>
           {section}
         </span>
