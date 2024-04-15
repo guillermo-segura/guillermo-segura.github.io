@@ -7,16 +7,16 @@
       }
     },
     "2": {
-      "header": "My passion for computers",
+      "header": "My passion for computers 🖥️",
       "content": {
         "1": "It started in the '90s when my parents bought our first computer. It quickly became a fundamental part of my activities and entertainment.",
         "2": "As I grew up",
         "3": " - and started playing videogames - ",
-        "4": "I started building my first custom computers and scripts 🪛"
+        "4": "I started building my first custom computers and scripts."
       }
     },
     "3": {
-      "header": "Going to university",
+      "header": "🎓 Going to university",
       "content": {
         "1": "This was my first big failure as it took me time to accept I wasn't going to finish my Telecom degree",
         "2": " - only ~50% of it.",
@@ -24,15 +24,18 @@
       }
     },
     "4": {
-      "header": "My plan B",
+      "header": "💡 My plan B",
       "content": "As I loved coding, I decided to pursue a career in Software Development and planned carefully my next steps: I became a self-taught developer, worked part-time as an IT technician, and got a diploma in Cross-platform Software Development."
     },
     "5": {
-      "header": "Moving to the UK",
-      "content": "I secured an internship in an Edinburgh-based consultancy, so I left my comfort zone and devoted myself to making the most out of this experience. It was my first experience working as a Web Developer 🎉"
+      "header": "Moving to Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "content": {
+        "1": "I secured an internship in an Edinburgh-based consultancy, so I left my comfort zone and devoted myself to making the most out of this opportunity.",
+        "2": "It was my first Web Developer experience 🎉"
+      }
     },
     "6": {
-      "header": "Working at Rooser",
+      "header": "🐟 Working at Rooser",
       "content": {
         "1": "I became part of an awesome team that helped me grow both personally and professionally.",
         "2": "This experience also helped me develop a product and user-first mindset through participating in multiple design sprints, user interviews, and having extreme ownership of what we built."
@@ -43,7 +46,7 @@
       "content": {
         "1": "I decided to take some time off to work on some personal projects",
         "2": " - like this site! - ",
-        "3": "and do some personal development. To the challenges that will come next, I'm looking forward to them and to sharing my learnings here. Stay tuned! 😄"
+        "3": "and do some personal development. To the challenges that will come next, I'm looking forward to them and to sharing my learnings here. Stay tuned! 😉"
       }
     }
   },
@@ -67,12 +70,12 @@
   "traits": {
     "header": "About me",
     "content": {
-      "1": "I consider myself calm and friendly, always seeing the good in people. I don't like to jump to conclusions quickly and enjoy debating ideas to learn more about how others think.",
+      "1": "I consider myself calm and friendly; always seeing the good in people. I don't like to jump to conclusions quickly and enjoy debating ideas to learn more about how others think.",
       "2": "A bit of a shy extrovert, I'm comfortable in small groups and - ",
       "3": "despite getting nervous in front of bigger audiences",
       "4": " - feel happy to present my ideas to larger and non-technical audiences.",
-      "5": "As part of a team, I enjoy helping others as it is always a good learning opportunity and preserves the team's momentum.",
-      "6": "Also, if you're a fan of personality and traits tests, here you can find my results:"
+      "5": "As part of a team, I enjoy helping others as it's always a good learning opportunity and preserves the team's momentum.",
+      "6": "If you're interested in personality and traits tests, here you can find mine:"
     },
     "sectionHeader": {
       "whatILike": "What I like"

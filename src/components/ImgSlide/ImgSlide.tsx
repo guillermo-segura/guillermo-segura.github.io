@@ -5,7 +5,7 @@ export interface ImgSlideProps {
   imgAlt: ImageProps['alt'];
   right?: boolean;
   header: string;
-  content: string;
+  content: string | React.ReactNode;
 }
 
 const classNames = {

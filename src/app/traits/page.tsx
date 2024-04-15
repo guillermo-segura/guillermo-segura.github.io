@@ -100,7 +100,14 @@ export default function Page() {
               imgSrc={edinburghPic}
               imgAlt="Edinburgh image"
               header={content.journey[5].header}
-              content={content.journey[5].content}
+              content={(
+                <>
+                  {content.journey[5].content[1]}
+                  <br />
+                  <br />
+                  {content.journey[5].content[2]}
+                </>
+              )}
             />
           </div>
           <VerticalDivider />
