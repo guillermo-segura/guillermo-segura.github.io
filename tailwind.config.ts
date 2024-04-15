@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',
+      },
       flex: {
         '0-100': '0 0 100%',
       },

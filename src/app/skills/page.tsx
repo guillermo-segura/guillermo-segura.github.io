@@ -10,9 +10,9 @@ import data from './skills';
 const specialisedGeneralistLink = 'https://creative.artisantalent.com/specialized-generalist#:~:text=Specialized%20Generalists%2C%20AKA%20T%2Dshaped,in%20the%20%E2%80%9CT%E2%80%9D).';
 
 const classNames = {
-  skillsContainer: 'flex flex-row space-x-4 mt-12',
-  skillsCard: 'w-1/3 rounded-xl p-4 shadow-md',
-  header: 'text-lg font-mono mb-2 font-bold text-center px-1 w-max mx-auto cursor-pointer',
+  skillsContainer: 'flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-4 mt-12',
+  skillsCard: 'w-full sm:w-1/3 rounded-xl p-4 shadow-md',
+  header: 'text-md xs:text-lg font-mono mb-2 font-bold text-center max-w-max mx-auto cursor-pointer whitespace-wrap',
   green: 'bg-green-300 hover:bg-green-400',
   lightGreen: 'bg-green-100 hover:bg-green-200',
   yellow: 'bg-yellow-100 hover:bg-yellow-200',

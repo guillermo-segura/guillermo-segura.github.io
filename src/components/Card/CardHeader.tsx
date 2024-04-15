@@ -2,8 +2,21 @@ import { ImageProps } from "next/image";
 import PolaroidImg from "../PolaroidImg/PolaroidImg";
 
 const classNames = {
-  container: 'flex lg:flex-row flex-col lg:space-x-6 space-y-6 lg:space-y-0  space-x-0 p-12',
-  headerContainer: 'flex flex-col space-y-6 self-center grow',
+  container: [
+      'flex',
+      'flex-col',
+      'md:space-y-6',
+
+      'lg:flex-row',
+      'lg:space-x-6',
+      'lg:space-y-0',
+
+      'space-x-0',
+      'p-6',
+      'xs:p-12',
+    ].join(' '),
+  imgContainer: 'hidden md:flex md:flex-col',
+  headerContainer: 'flex flex-col space-y-6 lg:self-center grow',
   header: 'font-mono font-bold text-4xl md:text-6xl',
   description: 'text-xl md:text-2xl',
 };
@@ -20,7 +33,9 @@ export default function CardHeader({ imgSrc, imgAlt, imgSize, header, descriptio
   return (
     <div className={classNames.container}>
       {imgSrc && (
-        <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={imgSize} />
+        <div className={classNames.imgContainer}>
+          <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={imgSize} />
+        </div>
       )}
       <div className={classNames.headerContainer}>
         <div className={classNames.header}>

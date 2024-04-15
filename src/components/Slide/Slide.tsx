@@ -12,18 +12,18 @@ export interface SlideProps {
 }
 
 const classNames = {
-  container: 'min-h-72 flex flex-row space-x-6 items-center',
-  containerSm: 'min-h-48 flex flex-row space-x-6 items-center',
+  container: 'flex flex-row xs:space-x-6 items-center',
   header: 'font-mono font-bold text-xl',
-  contentL: 'w-full lg:text-left text-center',
-  contentR: 'w-full lg:text-right text-center',
-  contentNoImg: 'w-full text-center',
+  contentL: 'w-full lg:text-left text-left xs:text-center',
+  contentR: 'w-full lg:text-right text-left xs:text-center',
+  contentNoImg: 'w-full text-left xs:text-center',
+  imgContainer: 'hidden lg:block',
 }
 
 export default function Slide ({ right = false, imgSrc, imgAlt, header, content, small = false }: SlideProps) {
   if (right) {
     return (
-      <div className={small ? classNames.containerSm : classNames.container}>
+      <div className={classNames.container}>
         <div className={imgSrc ? classNames.contentR : classNames.contentNoImg}>
           <div className={classNames.header}>
             {header}
@@ -32,14 +32,14 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content,
             {content}
           </div>
         </div>
-        {imgSrc && <div className="hidden lg:block"><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" /></div>}
+        {imgSrc && <div className={classNames.imgContainer}><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" /></div>}
       </div>
     );
   }
 
   return (
-    <div className={small ? classNames.containerSm : classNames.container}>
-      {imgSrc && <div className="hidden lg:block"><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" /></div>}
+    <div className={classNames.container}>
+      {imgSrc && <div className={classNames.imgContainer}><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" /></div>}
       <div className={imgSrc ? classNames.contentL : classNames.contentNoImg}>
         <div className={classNames.header}>
           {header}

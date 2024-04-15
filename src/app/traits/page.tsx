@@ -21,7 +21,7 @@ const personalityLink = 'https://www.16personalities.com/intj-personality';
 
 const classNames = {
   textSpacing: 'space-y-6',
-  buttonsContainer: 'space-x-6 flex flex-row justify-center',
+  buttonsContainer: 'flex flex-col xs:flex-row space-y-6 xs:space-y-0 xs:space-x-6 justify-center items-center',
   imgSlideContainer: 'lg:my-12',
 };
 
@@ -52,9 +52,8 @@ export default function Page() {
         </div>
       </CardBody>
       <CardBody>  
-        <div>
+        <div className="mt-12">
           <Slide
-            small
             header={content.journey[1].header}
             content={content.journey[1].content[1]}
           />
@@ -90,7 +89,6 @@ export default function Page() {
           />
           <VerticalDivider />
           <Slide
-            small
             header={content.journey[4].header}
             content={content.journey[4].content}
           />
@@ -126,7 +124,6 @@ export default function Page() {
           />
           <VerticalDivider />
           <Slide
-            small
             header={content.journey[7].header}
             content={(
               <>

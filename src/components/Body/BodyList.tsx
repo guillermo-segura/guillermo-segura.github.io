@@ -1,9 +1,9 @@
 import BodyHeader from "./BodyHeader";
 
 const classNames = {
-  listContainer: 'flex flex-row justify-around',
+  listContainer: 'flex flex-col xs:flex-row justify-around space-y-6 xs:space-y-0',
   sectionHeader: 'font-bold text-md',
-  section: 'list-inside text-left',
+  section: 'list-inside text-center xs:text-left',
 };
 
 export interface BodyListProps {

@@ -17,6 +17,7 @@ export const primary: string = [
   'to-sky-500',
   'font-mono',
   'whitespace-nowrap',
+  'max-w-max',
 
   'hover:to-sky-600',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
@@ -54,6 +55,7 @@ export const secondary: string = [
   'to-slate-100',
   'font-mono',
   'whitespace-nowrap',
+  'max-w-max',
   
   'border',
   'border-dashed',

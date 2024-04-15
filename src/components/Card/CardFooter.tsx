@@ -9,8 +9,33 @@ import ButtonLink from '@/components/ButtonLink/ButtonLink';
 import content from '@/content/content.json';
 
 const classNames = {
-  container: 'flex flex-row justify-between items-center border-t border-stone-200 p-6 shadow-inner',
-  itemsContainer: 'flex flex-row space-x-4',
+  container: [
+    'flex',
+    'flex-col-reverse',
+    'justify-between',
+    'items-center',
+    'border-t',
+    'border-stone-200',
+    'shadow-inner',
+    'p-6',
+
+    'xs:flex-row',
+  ].join(' '),
+  iconsContainer: [
+    'flex',
+    'flex-row',
+    'space-x-4',
+    'mt-6',
+    'xs:mt-0',
+  ].join(' '),
+  itemsContainer: [
+    'flex',
+    'flex-col',
+    'space-y-6',
+    'xs:space-y-0',
+    'xs:flex-row',
+    'xs:space-x-4',
+  ].join(' '),
 };
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/g-segura/';
@@ -19,7 +44,7 @@ const GITHUB_URL = 'https://github.com/guillermo-segura';
 export default function CardFooter({ skills = false, traits = false, home = false }) {
   return (
     <div className={classNames.container}>
-      <div className={classNames.itemsContainer}>
+      <div className={classNames.iconsContainer}>
         <IconLink href={LINKEDIN_URL} imgSrc={linkedInIcon} hoveredImgSrc={linkedInBlueIcon} imgAlt="LinkedIn link" />
         <IconLink href={GITHUB_URL} imgSrc={gitHubIcon} hoveredImgSrc={gitHubBlueIcon} imgAlt="GitHub link" />
       </div>

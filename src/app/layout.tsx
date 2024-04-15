@@ -8,13 +8,24 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const classNames = {
-  container: 'flex min-h-screen flex-col items-center justify-between lg:px-24 md:py-24 md:px-12 p-6',
+  container: [
+    'flex',
+    'flex-col',
+    'items-center',
+    'justify-between',
+    'min-h-screen',
+    
+    'xs:py-24',
+    'xs:px-6',
+    'md:px-12',
+    'lg:px-24',
+  ].join(' '),
   body: gradientBg,
 };
 
 export const metadata: Metadata = {
-  title: "My name is Guillermo!",
-  description: "Guillermo's page",
+  title: "Welcome!",
+  description: "Guillermo's homepage",
 };
 
 export default function RootLayout({
