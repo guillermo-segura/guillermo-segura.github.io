@@ -29,8 +29,9 @@ export default function Page() {
 
       {/* CARD BODY */}
       <CardBody blue>  
-        {content.skills.content[1]}
         <span>
+          {content.skills.content[1]}
+          &nbsp;
           <BlueLink href={specialisedGeneralistLink}>
             {content.skills.content[2]}
           </BlueLink>.

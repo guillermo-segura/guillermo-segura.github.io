@@ -2,7 +2,7 @@ import CardBody from '@/components/Card/CardBody';
 import CardFooter from "@/components/Card/CardFooter";
 import CardHeader from "@/components/Card/CardHeader";
 
-import profilePic from '@/assets/avatar.svg';
+import mePic from '@/assets/me.jpeg'
 
 import content from '@/content/content.json';
 
@@ -10,8 +10,8 @@ export default function Page() {
   return (
     <>
       <CardHeader
-        imgSrc={profilePic}
-        imgSize={200}
+        imgSrc={mePic}
+        imgSize={300}
         header={content.me.header}
         description={content.me.description}
       />

@@ -8,9 +8,10 @@ import ImgSlide from '@/components/ImgSlide/ImgSlide';
 import Slide from '@/components/Slide/Slide';
 import VerticalDivider from "@/components/VerticalDivider/VerticalDivider";
 
-import rooserPic from '@/assets/rooser.jpg';
-import edinburghPic from '@/assets/edinburgh.jpg';
-import profilePic from '@/assets/avatar.svg';
+import rooserPic from '@/assets/journey/rooser.jpg';
+import edinburghPic from '@/assets/journey/edinburgh.jpg';
+import oldComputerPic from '@/assets/journey/computers.png';
+import studyingPic from '@/assets/journey/university.jpg';
 
 import content from '@/content/content.json';
 
@@ -21,7 +22,7 @@ const personalityLink = 'https://www.16personalities.com/intj-personality';
 const classNames = {
   textSpacing: 'space-y-6',
   buttonsContainer: 'space-x-6 flex flex-row justify-center',
-  imgSlideContainer: 'my-12',
+  imgSlideContainer: 'lg:my-12',
 };
 
 export default function Page() {
@@ -60,7 +61,7 @@ export default function Page() {
           <VerticalDivider />
           <Slide
             right
-            imgSrc={profilePic}
+            imgSrc={oldComputerPic}
             header={content.journey[2].header}
             content={(
               <>
@@ -75,7 +76,7 @@ export default function Page() {
           />
           <VerticalDivider />
           <Slide
-            imgSrc={profilePic}
+            imgSrc={studyingPic}
             header={content.journey[3].header}
             content={(
               <>
