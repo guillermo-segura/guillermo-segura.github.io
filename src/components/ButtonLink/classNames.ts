@@ -26,8 +26,8 @@ export const primary: string = [
   'after:border',
   'after:border-black',
   'after:rounded-lg',
-  'after:bottom-0.5',
-  'after:left-0.5',
+  'after:bottom-1',
+  'after:left-1',
   'after:w-full',
   'after:h-full',
 
@@ -67,8 +67,8 @@ export const secondary: string = [
   'after:border',
   'after:border-black',
   'after:rounded-lg',
-  'after:bottom-0.5',
-  'after:left-0.5',
+  'after:bottom-1',
+  'after:left-1',
   'after:w-[101%]',
   'after:h-[101%]',
 

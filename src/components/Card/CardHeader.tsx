@@ -3,7 +3,7 @@ import PolaroidImg from "../PolaroidImg/PolaroidImg";
 
 const classNames = {
   container: 'flex lg:flex-row flex-col lg:space-x-6 space-y-6 lg:space-y-0  space-x-0 p-12',
-  headerContainer: 'flex flex-col space-y-6 self-center w-full',
+  headerContainer: 'flex flex-col space-y-6 self-center grow',
   header: 'font-mono font-bold text-4xl md:text-6xl',
   description: 'text-xl md:text-2xl',
 };

@@ -1,6 +1,6 @@
 import Image, { ImageProps} from 'next/image';
 
-export interface SlideProps {
+export interface ImgSlideProps {
   imgSrc: ImageProps['src'];
   imgAlt: ImageProps['alt'];
   right?: boolean;
@@ -16,7 +16,7 @@ const classNames = {
   imgContainer: 'w-1/2 h-full relative overflow-hidden rounded-xl hidden lg:block',
 }
 
-export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {
+export default function ImgSlide ({ right = false, imgSrc, imgAlt, header, content }: ImgSlideProps) {
   if (right) {
     return (
       <div className={classNames.container}>

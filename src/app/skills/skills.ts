@@ -31,7 +31,7 @@ const data = {
     ],
     'Back-end': [
       'AWS',
-      'Elasticsearch',
+      'ElasticSearch',
     ],
     'Tools': [
       'Docker',
