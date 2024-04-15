@@ -9,7 +9,7 @@ export default function BlueLink({ children, href }: LinkProps) {
     <Link
       href={href}
       target="_blank"
-      className="font-mono text-blue-500 hover:bg-gradient-to-bl transition-all hover:from-sky-500 hover:to-blue-500 hover:text-white whitespace-nowrap"
+      className="font-mono text-blue-500 hover:bg-gradient-to-bl hover:from-sky-500 hover:to-blue-500 hover:text-white whitespace-nowrap"
     >
       {children}
     </Link>
