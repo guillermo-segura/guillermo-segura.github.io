@@ -16,8 +16,6 @@ export default function IconLink({ href = '', imgSrc, hoveredImgSrc, imgAlt }: I
   const onMouseOver = () => setHovered(true);
   const onMouseOut = () => setHovered(false);
 
-  console.log('Hovered', href, hovered);
-
   return (
     <Link
       href={href}
