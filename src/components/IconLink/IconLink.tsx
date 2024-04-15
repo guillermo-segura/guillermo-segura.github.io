@@ -6,10 +6,12 @@ import Link from "next/link";
 
 interface IconLinkProps {
   href: string;
+  imgAlt: string;
   imgSrc: string | ImageProps['src'];
+  hoveredImgSrc: string | ImageProps['src'];
 }
 
-export default function IconLink({ href = '', imgSrc }: IconLinkProps) {
+export default function IconLink({ href = '', imgSrc, hoveredImgSrc, imgAlt }: IconLinkProps) {
   const [hovered, setHovered] = useState(false);
   const onMouseOver = () => setHovered(true);
   const onMouseOut = () => setHovered(false);
@@ -24,8 +26,8 @@ export default function IconLink({ href = '', imgSrc }: IconLinkProps) {
       onMouseOut={onMouseOut}
     >
       <Image
-        src={imgSrc}
-        alt=""
+        src={hovered ? hoveredImgSrc : imgSrc}
+        alt={imgAlt}
         width={40}
         height={40}
         className="cursor-pointer"

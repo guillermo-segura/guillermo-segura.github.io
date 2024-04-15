@@ -1,5 +1,7 @@
 import linkedInIcon from '@/assets/icons/linkedin.svg';
-import gitHubIcon from '@/assets/icons/square-github.svg';
+import linkedInBlueIcon from '@/assets/icons/linkedin_blue.svg';
+import gitHubIcon from '@/assets/icons/github.svg';
+import gitHubBlueIcon from '@/assets/icons/github_blue.svg';
 
 import IconLink from '@/components/IconLink/IconLink';
 import ButtonLink from '@/components/ButtonLink/ButtonLink';
@@ -18,8 +20,8 @@ export default function CardFooter({ skills = false, traits = false, home = fals
   return (
     <div className={classNames.container}>
       <div className={classNames.itemsContainer}>
-        <IconLink href={LINKEDIN_URL} imgSrc={linkedInIcon} />
-        <IconLink href={GITHUB_URL} imgSrc={gitHubIcon} />
+        <IconLink href={LINKEDIN_URL} imgSrc={linkedInIcon} hoveredImgSrc={linkedInBlueIcon} imgAlt="LinkedIn link" />
+        <IconLink href={GITHUB_URL} imgSrc={gitHubIcon} hoveredImgSrc={gitHubBlueIcon} imgAlt="GitHub link" />
       </div>
 
       {/* <div className="flex flex-row">
