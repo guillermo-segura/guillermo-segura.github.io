@@ -6,21 +6,20 @@ export interface SlideProps {
   imgSrc?: PolaroidImgProps['imgSrc'];
   imgAlt?: PolaroidImgProps['imgAlt'];
   right?: boolean;
-  small?: boolean;
-  header: string;
+  header: string | React.ReactNode;
   content: string | React.ReactNode;
 }
 
 const classNames = {
   container: 'flex flex-row xs:space-x-6 items-center',
   header: 'font-mono font-bold text-xl',
-  contentL: 'w-full lg:text-left text-left xs:text-center',
-  contentR: 'w-full lg:text-right text-left xs:text-center',
+  contentL: 'w-full md:text-left text-left xs:text-center',
+  contentR: 'w-full md:text-right text-left xs:text-center',
   contentNoImg: 'w-full text-left xs:text-center',
-  imgContainer: 'hidden lg:block',
+  imgContainer: 'hidden md:block',
 }
 
-export default function Slide ({ right = false, imgSrc, imgAlt, header, content, small = false }: SlideProps) {
+export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {
   if (right) {
     return (
       <div className={classNames.container}>

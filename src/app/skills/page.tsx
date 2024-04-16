@@ -12,7 +12,7 @@ const specialisedGeneralistLink = 'https://creative.artisantalent.com/specialize
 const classNames = {
   skillsContainer: 'flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-4 mt-12',
   skillsCard: 'w-full sm:w-1/3 rounded-xl p-4 shadow-md',
-  header: 'text-md xs:text-lg font-mono mb-2 font-bold text-center max-w-max mx-auto cursor-pointer whitespace-wrap',
+  header: 'text-base xs:text-lg font-mono mb-2 font-bold text-center max-w-max mx-auto cursor-pointer whitespace-wrap',
   green: 'bg-green-300 hover:bg-green-400',
   lightGreen: 'bg-green-100 hover:bg-green-200',
   yellow: 'bg-yellow-100 hover:bg-yellow-200',

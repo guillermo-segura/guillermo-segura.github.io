@@ -9,11 +9,11 @@ export interface ImgSlideProps {
 }
 
 const classNames = {
-  container: 'min-h-48 lg:h-72 w-full flex flex-row space-x-6 items-center relative',
+  container: 'flex flex-row md:space-x-6 items-center',
   header: 'font-mono font-bold text-xl',
-  contentContainerL: 'w-full lg:w-1/2 text-center lg:text-left',
-  contentContainerR: 'w-full lg:w-1/2 text-center lg:text-right',
-  imgContainer: 'w-1/2 h-full relative overflow-hidden shadow-md hidden lg:block',
+  contentContainerL: 'w-full md:w-1/2 text-left xs:text-center md:text-left',
+  contentContainerR: 'w-full md:w-1/2 text-left xs:text-center md:text-right',
+  imgContainer: 'w-1/2 h-72 relative shadow-md hidden md:block',
 }
 
 export default function ImgSlide ({ right = false, imgSrc, imgAlt, header, content }: ImgSlideProps) {

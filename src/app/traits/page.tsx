@@ -119,6 +119,9 @@ export default function Page() {
                 <br />
                 <br />
                 {content.journey[6].content[2]}
+                <br />
+                <br />
+                <BlueLink href="https://www.rooser.eu/">Rooser.eu</BlueLink>
               </>
             )}
           />

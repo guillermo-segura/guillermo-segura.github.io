@@ -3,7 +3,7 @@
     "1": {
       "header": "My journey",
       "content": {
-        "1": "How I became a Software Engineer 💻"
+        "1": "How I became a Software Engineer"
       }
     },
     "2": {
@@ -53,12 +53,12 @@
   "me": {
     "header": "Welcome!👋🏽",
     "description": "My name is Guillermo, and I love ideating and building stuff ❤️",
-    "content": "I'm a Full-Stack Engineer with a strong product mindset cultivated by engaging with users, analysing problems, and participating in every aspect of the development life cycle."
+    "content": "I'm a Full-Stack Engineer with a strong product mindset cultivated by engaging with users, analysing problems, and participating in every aspect of the software development life cycle."
   },
   "skills": {
     "header": "My skills",
     "content": {
-      "1": "I'm proud of the diverse skills I've developed throughout my journey. These skills have been instrumental in my past accomplishments and serve as a solid foundation for my goal of becoming a",
+      "1": "I'm proud of the diverse skills I've developed throughout my journey. They've been instrumental in my past accomplishments and serve as a solid foundation for my goal of becoming a",
       "2": "specialised generalist"
     },
     "cards": {

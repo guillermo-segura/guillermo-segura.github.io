@@ -14,7 +14,7 @@ const classNames = {
     'items-center',
     'justify-between',
     'min-h-screen',
-    
+    'p-4',
     'xs:py-24',
     'xs:px-6',
     'md:px-12',

@@ -18,6 +18,8 @@ export const primary: string = [
   'font-mono',
   'whitespace-nowrap',
   'max-w-max',
+  'text-sm',
+  'xs:text-base',
 
   'hover:to-sky-600',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
@@ -56,6 +58,8 @@ export const secondary: string = [
   'font-mono',
   'whitespace-nowrap',
   'max-w-max',
+  'text-sm',
+  'xs:text-base',
   
   'border',
   'border-dashed',

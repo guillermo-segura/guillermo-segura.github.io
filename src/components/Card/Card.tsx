@@ -7,7 +7,7 @@ const classNames = {
     'from-white', 
     'to-stone-100',
 
-    'xs:rounded-lg', 
+    'rounded-lg', 
     'shadow-lg', 
     'text-black',
     'drop-shadow-xl',
