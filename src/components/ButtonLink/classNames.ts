@@ -20,9 +20,12 @@ export const primary: string = [
   'max-w-max',
   'text-sm',
   'xs:text-base',
+  'outline-none',
 
   'hover:to-sky-600',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
+  'focus:to-sky-600',
+  'focus:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
 
   "after:content-['']",
   'after:absolute',
@@ -36,6 +39,8 @@ export const primary: string = [
 
   'hover:after:bottom-px',
   'hover:after:left-px',
+  'focus:after:bottom-px',
+  'focus:after:left-px',
 ].join(' ');
 
 export const secondary: string = [
@@ -60,6 +65,7 @@ export const secondary: string = [
   'max-w-max',
   'text-sm',
   'xs:text-base',
+  'outline-none',
   
   'border',
   'border-dashed',
@@ -67,6 +73,8 @@ export const secondary: string = [
 
   'hover:to-slate-200',
   'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
+  'focus:to-slate-200',
+  'focus:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
 
   "after:content-['']",
   'after:absolute',
@@ -80,4 +88,6 @@ export const secondary: string = [
 
   'hover:after:bottom-0',
   'hover:after:left-0',
+  'focus:after:bottom-0',
+  'focus:after:left-0',
 ].join(' ');

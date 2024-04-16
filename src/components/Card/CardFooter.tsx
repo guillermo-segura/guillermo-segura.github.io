@@ -45,8 +45,20 @@ export default function CardFooter({ skills = false, traits = false, home = fals
   return (
     <div className={classNames.container}>
       <div className={classNames.iconsContainer}>
-        <IconLink href={LINKEDIN_URL} imgSrc={linkedInIcon} hoveredImgSrc={linkedInBlueIcon} imgAlt="LinkedIn link" />
-        <IconLink href={GITHUB_URL} imgSrc={gitHubIcon} hoveredImgSrc={gitHubBlueIcon} imgAlt="GitHub link" />
+        <IconLink
+          id="linkedin_icon"
+          href={LINKEDIN_URL}
+          imgSrc={linkedInIcon}
+          hoveredImgSrc={linkedInBlueIcon}
+          imgAlt="LinkedIn link"
+        />
+        <IconLink
+          id="github_icon"
+          href={GITHUB_URL}
+          imgSrc={gitHubIcon}
+          hoveredImgSrc={gitHubBlueIcon}
+          imgAlt="GitHub link"
+        />
       </div>
 
       {/* <div className="flex flex-row">
