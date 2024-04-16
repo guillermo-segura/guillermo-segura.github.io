@@ -61,6 +61,7 @@ export default function Page() {
           <Slide
             right
             imgSrc={oldComputerPic}
+            imgAlt="Picture of old computers piled up"
             header={content.journey[2].header}
             content={(
               <>
@@ -76,6 +77,7 @@ export default function Page() {
           <VerticalDivider />
           <Slide
             imgSrc={studyingPic}
+            imgAlt="Man covering his face with his hands"
             header={content.journey[3].header}
             content={(
               <>
@@ -97,7 +99,7 @@ export default function Page() {
             <ImgSlide
               right
               imgSrc={edinburghPic}
-              imgAlt="Edinburgh image"
+              imgAlt="Photo of Edinburgh"
               header={content.journey[5].header}
               content={(
                 <>
@@ -112,6 +114,7 @@ export default function Page() {
           <VerticalDivider />
           <Slide
             imgSrc={rooserPic}
+            imgAlt="Rooser logo"
             header={content.journey[6].header}
             content={(
               <>
