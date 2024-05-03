@@ -5,6 +5,7 @@ const data = {
       'React.js',
       'JavaScript',
       'ReactQuery',
+      'Redux',
       'HTML',
       'CSS',
       'Jest',
@@ -17,17 +18,19 @@ const data = {
   },
   A: {
     'Front-end': [
-      'React Native',
       'Cypress',
+      'Next.js',
+      'React Native',
     ],
     'Back-end': [
       'Node.js',
+      'Express.js',
       'GraphQL',
     ],
   },
   B: {
     'Front-end': [
-      'Next.js',
+      'Micro Frontend Architecture',
     ],
     'Back-end': [
       'AWS',
