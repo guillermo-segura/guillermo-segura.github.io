@@ -30,7 +30,7 @@ const data = {
   },
   B: {
     'Front-end': [
-      'Micro Frontend Architecture',
+      'Micro-Frontends',
     ],
     'Back-end': [
       'AWS',
