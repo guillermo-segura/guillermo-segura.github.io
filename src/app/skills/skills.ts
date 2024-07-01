@@ -18,19 +18,21 @@ const data = {
   },
   A: {
     'Front-end': [
-      'Cypress',
+      'MUI',
+      'Formik',
       'Next.js',
+      'Cypress',
       'React Native',
+      'Micro-Frontends',
     ],
     'Back-end': [
+      'GraphQL',
       'Node.js',
       'Express.js',
-      'GraphQL',
     ],
   },
   B: {
     'Front-end': [
-      'Micro-Frontends',
     ],
     'Back-end': [
       'AWS',
