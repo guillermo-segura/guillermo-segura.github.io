@@ -8,6 +8,7 @@ export interface SlideProps {
   right?: boolean;
   header: string | React.ReactNode;
   content: string | React.ReactNode;
+  present?: boolean;
 }
 
 const classNames = {
@@ -17,15 +18,17 @@ const classNames = {
   contentR: 'w-full md:text-right text-left xs:text-center',
   contentNoImg: 'w-full text-left xs:text-center',
   imgContainer: 'hidden md:block',
+  presentLabel: 'text-sm font-thin text-stone-400',
 }
 
-export default function Slide ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) {
+export default function Slide ({ right = false, imgSrc, imgAlt, header, content, present }: SlideProps) {
   if (right) {
     return (
       <div className={classNames.container}>
         <div className={imgSrc ? classNames.contentR : classNames.contentNoImg}>
           <div className={classNames.header}>
             {header}
+            {present && <span className={classNames.presentLabel}>{' Present'}</span>}
           </div>
           <div>
             {content}
@@ -42,6 +45,7 @@ export default function Slide ({ right = false, imgSrc, imgAlt, header, content 
       <div className={imgSrc ? classNames.contentL : classNames.contentNoImg}>
         <div className={classNames.header}>
           {header}
+          {present && <span className={classNames.presentLabel}>{' Present'}</span>}
         </div>
         <div>
           {content}

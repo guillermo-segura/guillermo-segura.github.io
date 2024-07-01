@@ -35,18 +35,25 @@
       }
     },
     "6": {
-      "header": "🐟 Working at Rooser",
+      "header": "🐟 Rooser",
       "content": {
-        "1": "I became part of an awesome Agile team that helped me grow both personally and professionally. As one of their first employees, I quickly become involved in many areas outside of coding, shifting my role from Software Developer to Software Engineer 🎖️",
+        "1": "Became part of an awesome crew that worked towards eliminating seafood waste by providing transparency and certainty into the current market. As one of their first employees, I quickly become involved in many areas outside of coding, shifting my role from Software Developer to Software Engineer 🎖️",
         "2": "This experience also helped me develop a product and user-first mindset through participating in multiple design sprints, user interviews, and having extreme ownership of what we built."
       }
     },
     "7": {
-      "header": "What's next?",
+      "header": "📖 Taking a break",
       "content": {
-        "1": "I decided to take some time off to work on some personal projects",
+        "1": "I decided to take some time off to work on personal projects",
         "2": " - like this site! - ",
-        "3": "and do some personal development. I'm looking forward to upcoming challenges and to sharing my learnings here. Stay tuned! 😉"
+        "3": "and do some personal development. I also tried to relocate to NZ and continue my journey in the other hemisphere, but this had to be postponed as it was not the right moment."
+      }
+    },
+    "8": {
+      "header": "Optix 👀",
+      "content": {
+        "1": "Joined Optix in my first specialised role as a Front-end developer. I was excited as this opportunity allowed me to fill the gaps in some areas I didn't experience while working in a start-up environment.",
+        "2": "On top of that, I met specialised teams full of highly skilled people who set new standards for me every day. Exciting! 🤩"
       }
     }
   },

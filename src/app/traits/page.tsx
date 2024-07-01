@@ -12,6 +12,7 @@ import oldComputersImg from '@/assets/journey/old_computers.png';
 import universityImg from '@/assets/journey/exit_sign.jpg';
 import edinburghImg from '@/assets/journey/edinburgh.jpg';
 import rooserImg from '@/assets/journey/rooser.jpeg';
+import optixImg from '@/assets/journey/optix.png';
 
 import content from '@/content/content.json';
 
@@ -136,6 +137,25 @@ export default function Page() {
                 {content.journey[7].content[1]}
                 <i>{content.journey[7].content[2]}</i>
                 {content.journey[7].content[3]}
+              </>
+            )}
+          />
+          <VerticalDivider />
+          <Slide
+            imgSrc={optixImg}
+            imgAlt="Optix logo"
+            right
+            present
+            header={content.journey[8].header}
+            content={(
+              <>
+                {content.journey[8].content[1]}
+                <br />
+                <br />
+                {content.journey[8].content[2]}
+                <br />
+                <br />
+                <BlueLink href="https://www.optix.co.uk/">Optix.co.uk</BlueLink>
               </>
             )}
           />
