@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import PolaroidImg, { PolaroidImgProps } from '@/components/PolaroidImg/PolaroidImg';
+import { PolaroidImg, PolaroidImgProps } from '@/components/PolaroidImg/PolaroidImg';
 import { Text } from '@/components/Text/Text';
 
 export interface SlideProps {
