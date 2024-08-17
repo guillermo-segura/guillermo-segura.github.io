@@ -32,11 +32,11 @@ const TextRaw = ({ children, variant = 'text', textAlign = 'left', color = 'blac
     case 'h3':
       return <h3 className={[...cn.h3, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</h3>;
     case 'subtext':
-      return <span className={[...cn.subtext, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</span>;
+      return <p className={[...cn.subtext, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</p>;
     case 'label':
-      return <span className={[...cn.label, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</span>;
+      return <p className={[...cn.label, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</p>;
     default:
-      return <span className={[...cn.text, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</span>;
+      return <p className={[...cn.text, ...cn[textAlign], ...cn[color]].join(' ')}>{children}</p>;
   }
 }
 
