@@ -1,9 +1,9 @@
-import BodyList from "@/components/Body/BodyList";
-import BlueLink from "@/components/BlueLink/BlueLink";
+import { BodyList } from "@/components/Body/BodyList";
+import { BlueLink } from "@/components/BlueLink/BlueLink";
 import { ButtonLink } from "@/components/ButtonLink/ButtonLink";
 import { CardHeader, CardSection, CardFooter } from "@/components/Card";
-import ImgSlide from '@/components/ImgSlide/ImgSlide';
-import Slide from '@/components/Slide/Slide';
+import { ImgSlide } from '@/components/ImgSlide/ImgSlide';
+import { Slide } from '@/components/Slide/Slide';
 import VerticalDivider from "@/components/VerticalDivider/VerticalDivider";
 
 import oldComputersImg from '@/assets/journey/old_computers.png';
@@ -12,9 +12,10 @@ import edinburghImg from '@/assets/journey/edinburgh.jpg';
 import rooserImg from '@/assets/journey/rooser.jpeg';
 import optixImg from '@/assets/journey/optix.png';
 
-import content from '@/content/content.json';
+import { traits, journey, buttons } from '@/content/content.json';
 
 import data from './traits';
+import { Text } from "@/components/Text/Text";
 
 const personalityLink = 'https://www.16personalities.com/intj-personality';
 
@@ -27,53 +28,53 @@ const classNames = {
 export default function Page() {
   return (
     <>
-      <CardHeader header={content.traits.header} />
+      <CardHeader header={traits.header} />
 
       {/* CARD BODY */}
-      <CardSection blue>
-        <div className={classNames.textSpacing}>
-          <div>{content.traits.content[1]}</div>
-          <div>
-            {content.traits.content[2]}
-            <i>{content.traits.content[3]}</i>
-            {content.traits.content[4]}
-          </div>
-          <div>{content.traits.content[5]}</div>
-          <div>
-            {content.traits.content[6]}
-            &nbsp;
-            <BlueLink href={personalityLink}>INTJ-A</BlueLink>. 
-          </div>
-        </div>
+      <CardSection blue spaceY={6}>
+        <Text variant="subtext">
+          {traits.content[1]}
+        </Text>
+        <Text variant="subtext">
+          {traits.content[2]}
+          <i>{traits.content[3]}</i>
+          {traits.content[4]}
+        </Text>
+        <Text variant="subtext">
+          {traits.content[5]}
+        </Text>
+        <Text variant="subtext">
+          {traits.content[6]}
+        </Text>
+        <BlueLink href={personalityLink}>INTJ-A</BlueLink>
         <div className={classNames.buttonsContainer}>
           <ButtonLink href="/" type="secondary">
-            {content.buttons.back}
+            {buttons.back}
           </ButtonLink>
           <ButtonLink href="/skills">
-            {content.buttons.skills}
+            {buttons.skills}
           </ButtonLink>
         </div>
       </CardSection>
-      <CardSection>  
-        <div className="mt-12">
+      <CardSection>
           <Slide
-            header={content.journey[1].header}
-            content={content.journey[1].content[1]}
+            header={journey[1].header}
+            content={journey[1].content[1]}
           />
           <VerticalDivider />
           <Slide
             right
             imgSrc={oldComputersImg}
             imgAlt="Picture of old computers piled up"
-            header={content.journey[2].header}
+            header={journey[2].header}
             content={(
               <>
-                {content.journey[2].content[1]}
+                {journey[2].content[1]}
                 <br />
                 <br />
-                {content.journey[2].content[2]}
-                <i>{content.journey[2].content[3]}</i>
-                {content.journey[2].content[4]}
+                {journey[2].content[2]}
+                <i>{journey[2].content[3]}</i>
+                {journey[2].content[4]}
               </>
             )}
           />
@@ -81,21 +82,21 @@ export default function Page() {
           <Slide
             imgSrc={universityImg}
             imgAlt="Man covering his face with his hands"
-            header={content.journey[3].header}
+            header={journey[3].header}
             content={(
               <>
-                {content.journey[3].content[1]}
-                <i>{content.journey[3].content[2]}</i>
+                {journey[3].content[1]}
+                <i>{journey[3].content[2]}</i>
                 <br />
                 <br />
-                {content.journey[3].content[3]}
+                {journey[3].content[3]}
               </>
             )}
           />
           <VerticalDivider />
           <Slide
-            header={content.journey[4].header}
-            content={content.journey[4].content}
+            header={journey[4].header}
+            content={journey[4].content}
           />
           <VerticalDivider />
           <div className={classNames.imgSlideContainer}>
@@ -103,13 +104,13 @@ export default function Page() {
               right
               imgSrc={edinburghImg}
               imgAlt="Photo of Edinburgh"
-              header={content.journey[5].header}
+              header={journey[5].header}
               content={(
                 <>
-                  {content.journey[5].content[1]}
+                  {journey[5].content[1]}
                   <br />
                   <br />
-                  {content.journey[5].content[2]}
+                  {journey[5].content[2]}
                 </>
               )}
             />
@@ -118,27 +119,24 @@ export default function Page() {
           <Slide
             imgSrc={rooserImg}
             imgAlt="Rooser logo"
-            header={content.journey[6].header}
+            header={journey[6].header}
             content={(
               <>
-                {content.journey[6].content[1]}
+                {journey[6].content[1]}
                 <br />
                 <br />
-                {content.journey[6].content[2]}
-                <br />
-                <br />
-                <BlueLink href="https://www.rooser.eu/">Rooser.eu</BlueLink>
+                {journey[6].content[2]}
               </>
             )}
           />
           <VerticalDivider />
           <Slide
-            header={content.journey[7].header}
+            header={journey[7].header}
             content={(
               <>
-                {content.journey[7].content[1]}
-                <i>{content.journey[7].content[2]}</i>
-                {content.journey[7].content[3]}
+                {journey[7].content[1]}
+                <i>{journey[7].content[2]}</i>
+                {journey[7].content[3]}
               </>
             )}
           />
@@ -147,27 +145,24 @@ export default function Page() {
             imgSrc={optixImg}
             imgAlt="Optix logo"
             right
-            present
-            header={content.journey[8].header}
+            header={journey[8].header}
             content={(
               <>
-                {content.journey[8].content[1]}
+                {journey[8].content[1]}
                 <br />
                 <br />
-                {content.journey[8].content[2]}
-                <br />
-                <br />
-                <BlueLink href="https://www.optix.co.uk/">Optix.co.uk</BlueLink>
+                {journey[8].content[2]}
               </>
             )}
           />
-        </div>
+      </CardSection>
 
+      <CardSection>
         <BodyList
           data={data.preferences}
-          header={content.traits.sectionHeader.whatILike}
+          header={traits.sectionHeader.whatILike}
         />
-      </CardSection>  
+      </CardSection>
 
       <CardFooter home skills />
     </>

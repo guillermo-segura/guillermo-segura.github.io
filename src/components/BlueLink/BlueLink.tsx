@@ -1,5 +1,7 @@
-import Link from "next/link";
-import { Text } from "../Text/Text";
+import { memo } from 'react';
+import Link from 'next/link';
+import { Text } from '@/components/Text/Text';
+
 interface LinkProps {
   href: string;
   children: string;
@@ -13,7 +15,7 @@ const cn = {
  ],
 }
 
-export default function BlueLink({ children, href }: LinkProps) {
+const BlueLinkRaw = ({ children, href }: LinkProps) => {
   return (
     <Link
       href={href}
@@ -26,3 +28,5 @@ export default function BlueLink({ children, href }: LinkProps) {
     </Link>
   );
 }
+
+export const BlueLink = memo(BlueLinkRaw);

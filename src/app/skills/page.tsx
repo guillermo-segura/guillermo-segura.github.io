@@ -1,10 +1,8 @@
 import { CardHeader, CardSection, CardFooter } from "@/components/Card";
-import BlueLink from "@/components/BlueLink/BlueLink";
-
-import { skills } from '@/content/content.json';
-
-import data from './skills';
+import { BlueLink } from "@/components/BlueLink/BlueLink";
 import { Text } from "@/components/Text/Text";
+import { skills } from '@/content/content.json';
+import data from './skills';
 
 const specialisedGeneralistLink = 'https://en.wikipedia.org/wiki/T-shaped_skills';
 

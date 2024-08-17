@@ -1,4 +1,6 @@
+import { memo } from 'react';
 import PolaroidImg, { PolaroidImgProps } from '@/components/PolaroidImg/PolaroidImg';
+import { Text } from '@/components/Text/Text';
 
 export interface SlideProps {
   imgSrc?: PolaroidImgProps['imgSrc'];
@@ -6,49 +8,52 @@ export interface SlideProps {
   right?: boolean;
   header: string | React.ReactNode;
   content: string | React.ReactNode;
-  present?: boolean;
 }
 
-const classNames = {
-  container: 'flex flex-row xs:space-x-6 items-center',
-  header: 'font-mono font-bold text-xl',
-  contentL: 'w-full md:text-left text-left xs:text-center',
-  contentR: 'w-full md:text-right text-left xs:text-center',
-  contentNoImg: 'w-full text-left xs:text-center',
+const cn = {
+  container: 'flex flex-row md:space-x-6 items-start',
+  content: 'w-full',
   imgContainer: 'hidden md:block',
-  presentLabel: 'text-sm font-thin text-stone-400',
 }
 
-export default function Slide ({ right = false, imgSrc, imgAlt, header, content, present }: SlideProps) {
+const SlideRaw = ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) => {
   if (right) {
     return (
-      <div className={classNames.container}>
-        <div className={imgSrc ? classNames.contentR : classNames.contentNoImg}>
-          <div className={classNames.header}>
+      <div className={cn.container}>
+        <div className={cn.content}>
+          <Text textAlign='right'>
             {header}
-            {present && <span className={classNames.presentLabel}>{' Present'}</span>}
-          </div>
-          <div>
+          </Text>
+          <Text variant='subtext' textAlign='right'>
             {content}
-          </div>
+          </Text>
         </div>
-        {imgSrc && <div className={classNames.imgContainer}><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" /></div>}
+        {imgSrc && (
+          <div className={cn.imgContainer}>
+            <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" />
+          </div>
+        )}
       </div>
     );
   }
 
   return (
-    <div className={classNames.container}>
-      {imgSrc && <div className={classNames.imgContainer}><PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" /></div>}
-      <div className={imgSrc ? classNames.contentL : classNames.contentNoImg}>
-        <div className={classNames.header}>
+    <div className={cn.container}>
+      {imgSrc && (
+        <div className={cn.imgContainer}>
+          <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" />
+        </div>
+      )}
+      <div className={cn.content}>
+        <Text textAlign={imgSrc ? 'left' : 'center'}>
           {header}
-          {present && <span className={classNames.presentLabel}>{' Present'}</span>}
-        </div>
-        <div>
+        </Text>
+        <Text variant='subtext' textAlign={imgSrc ? 'left' : 'center'}>
           {content}
-        </div>
+        </Text>
       </div>
     </div>
   );
 };
+
+export const Slide = memo(SlideRaw);

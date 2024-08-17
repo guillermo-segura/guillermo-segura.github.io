@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Text } from "../Text/Text";
+import { Text } from '@/components/Text/Text';
 
 const cn = {
   container: [

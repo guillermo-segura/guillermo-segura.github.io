@@ -1,4 +1,6 @@
+import { memo } from 'react';
 import Image, { ImageProps} from 'next/image';
+import { Text } from '@/components/Text/Text';
 
 export interface ImgSlideProps {
   imgSrc: ImageProps['src'];
@@ -10,23 +12,21 @@ export interface ImgSlideProps {
 
 const classNames = {
   container: 'flex flex-row md:space-x-6 items-center',
-  header: 'font-mono font-bold text-xl',
-  contentContainerL: 'w-full md:w-1/2 text-left xs:text-center md:text-left',
-  contentContainerR: 'w-full md:w-1/2 text-left xs:text-center md:text-right',
-  imgContainer: 'w-1/2 h-72 relative shadow-md hidden md:block',
+  content: 'w-full md:w-1/2',
+  imgContainer: 'w-1/2 h-72 relative shadow-card hidden md:block',
 }
 
-export default function ImgSlide ({ right = false, imgSrc, imgAlt, header, content }: ImgSlideProps) {
+const ImgSlideRaw = ({ right = false, imgSrc, imgAlt, header, content }: ImgSlideProps) => {
   if (right) {
     return (
       <div className={classNames.container}>
-        <div className={classNames.contentContainerR}>
-          <div className={classNames.header}>
+        <div className={classNames.content}>
+          <Text textAlign='right'>
             {header}
-          </div>
-          <div>
+          </Text>
+          <Text variant='subtext' textAlign='right'>
             {content}
-          </div>
+          </Text>
         </div>
         <div className={classNames.imgContainer}>
           <Image
@@ -50,14 +50,16 @@ export default function ImgSlide ({ right = false, imgSrc, imgAlt, header, conte
           className="object-cover"
         />
       </div>
-      <div className={classNames.contentContainerL}>
-        <div className={classNames.header}>
+      <div className={classNames.content}>
+        <Text textAlign={imgSrc ? 'left' : 'center'}>
           {header}
-        </div>
-        <div>
+        </Text>
+        <Text variant='subtext' textAlign={imgSrc ? 'left' : 'center'}>
           {content}
-        </div>
+        </Text>
       </div>
     </div>
   );
 };
+
+export const ImgSlide = memo(ImgSlideRaw);

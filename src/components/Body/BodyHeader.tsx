@@ -1,7 +1,8 @@
-const classNames = {
-  bodySeparator: 'text-center border-b-2 border-neutral-100 py-2 mb-4',
-  header: 'font-mono text-lg font-bold',
-  description: 'text-stone-500 text-base',
+import { memo } from 'react';
+import { Text } from '@/components/Text/Text';
+
+const cn = {
+  container: 'border-b-2 border-stone-100 py-2 mb-4',
 };
 
 export interface BodyHeaderProps {
@@ -9,11 +10,14 @@ export interface BodyHeaderProps {
   description?: string;
 }
 
-export default function BodyHeader ({ children, description }: BodyHeaderProps) {
+const BodyHeaderRaw = ({ children }: BodyHeaderProps) => {
   return (
-    <div className={classNames.bodySeparator}>
-      <h2 className={classNames.header}>{children}</h2>
-      {description && <p className={classNames.description}>{description}</p>}
+    <div className={cn.container}>
+      <Text variant="h3" textAlign="center">
+        {children}
+      </Text>
     </div>
   );
 }
+
+export const BodyHeader = memo(BodyHeaderRaw);

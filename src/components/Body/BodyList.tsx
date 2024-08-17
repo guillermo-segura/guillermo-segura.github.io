@@ -1,9 +1,11 @@
-import BodyHeader from "./BodyHeader";
+import { memo } from "react";
+import { BodyHeader } from "./BodyHeader";
+import { Text } from '@/components/Text/Text';
 
-const classNames = {
-  listContainer: 'flex flex-col xs:flex-row justify-around space-y-6 xs:space-y-0',
-  sectionHeader: 'font-bold text-base',
-  section: 'list-inside text-center xs:text-left',
+const cn = {
+  listContainer: 'flex flex-wrap justify-start sm:justify-center',
+  section: 'list-inside',
+  article: 'w-max px-4 py-2',
 };
 
 export interface BodyListProps {
@@ -14,29 +16,37 @@ export interface BodyListProps {
   };
 }
 
-export default function BodyList ({ header, description, data }: BodyListProps) {
+const BodyListRaw = ({ header, description, data }: BodyListProps) => {
   const renderData = (section: string) => {
     const items = data[section];
-    const renderItem = (item: string) => (<li key={item}>{item}</li>);
+    const renderItem = (item: string) => (
+      <li key={item}>
+        <Text variant="subtext">
+          {item}
+        </Text>
+      </li>
+    );
 
     return (
-      <div key={section}>
-        <span className={classNames.sectionHeader}>
+      <article className={cn.article} key={section}>
+        <Text variant="label">
           {section}
-        </span>
-        <ul className={classNames.section}>
+        </Text>
+        <ul className={cn.section}>
           {items.map(renderItem)}
         </ul>
-      </div>
+      </article>
     );
   };
 
   return (
-    <div>
+    <>
       <BodyHeader description={description}>{header}</BodyHeader>
-      <div className={classNames.listContainer}>
+      <div className={cn.listContainer}>
         {Object.keys(data).map(renderData)}
       </div>
-    </div>
+    </>
   );
 }
+
+export const BodyList = memo(BodyListRaw);
