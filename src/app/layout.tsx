@@ -11,10 +11,10 @@ const inter = Inter({ subsets: ["latin"] });
 const gradientBg = [
   'bg-4xl',
   'bg-gradient-to-r',
-  'from-gblue-500',
+  'from-primary-500',
   'via-[#B582EB]',
   'via-[#F36EBE]',
-  'to-[#FF854D]',
+  'to-secondary-500',
   'animate-bg-gradient',
 ];
 const textureBg = [

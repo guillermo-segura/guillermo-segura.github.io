@@ -20,10 +20,16 @@ const config: Config = {
         '3/4': '75%',
       },
       colors: {
-        gblue: {
+        primary: {
           400: '#78B5FC',
           500: '#3F96FC',
           600: '#2C69B0',
+        },
+        secondary: {
+          500: '#FF854D',
+        },
+        dark: {
+          500: '#37383F',
         }
       },
       boxShadow: {

@@ -1,18 +1,20 @@
 import { memo } from "react";
 
+type spaceY = 3 | 6 | 12;
+
 export interface CardSectionProps {
   children: React.ReactNode;
   blue?: boolean
-  inset?: boolean
+  spaceY?: spaceY;
 }
 
 const cn = {
-  container: ['flex', 'flex-col', 'p-6', 'sm:p-12', 'space-y-12', 'overflow-hidden'],
+  container: (spaceY: spaceY) => ['flex', 'flex-col', 'p-6', 'sm:p-12', `space-y-${spaceY}`, 'overflow-hidden'],
   blue: ['bg-blue-100', 'shadow-inner-xl'],
 };
 
-const CardSectionRaw = ({ children, blue = false, inset = false }: CardSectionProps) => (
-  <section className={(blue ? [...cn.container, ...cn.blue] : cn.container).join(' ')}>
+const CardSectionRaw = ({ children, blue = false, spaceY = 12 }: CardSectionProps) => (
+  <section className={(blue ? [...cn.container(spaceY), ...cn.blue] : cn.container(spaceY)).join(' ')}>
     {children}
   </section>
 );

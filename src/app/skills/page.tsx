@@ -9,52 +9,67 @@ import { Text } from "@/components/Text/Text";
 const specialisedGeneralistLink = 'https://en.wikipedia.org/wiki/T-shaped_skills';
 
 const cn = {
-  skillsContainer: 'flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-4',
-  skillsCard: 'w-full sm:w-1/3 rounded-xl p-4 shadow-md',
-  header: 'text-base xs:text-lg font-mono mb-2 font-bold text-center max-w-max mx-auto cursor-pointer whitespace-wrap',
-  green: 'bg-green-200 hover:bg-green-300',
-  lightGreen: 'bg-blue-200 hover:bg-blue-300',
-  yellow: 'bg-yellow-100 hover:bg-yellow-200',
-  tagsContainer: 'flex flex-wrap justify-center',
-  tag: 'px-1.5 py-0.5 w-max rounded-md border border-dashed border-stone-300 m-1 text-sm font-mono',
+  skillsContainer: ['flex', 'flex-col', 'space-y-6', 'sm:flex-row', 'sm:space-y-0', 'sm:space-x-4'],
+  skillsCard: ['w-full', 'sm:w-1/3'],
+  header: ['max-w-max', 'mx-auto', 'p-0.5', 'mb-2'],
+  green: ['bg-green-100'],
+  blue: ['bg-blue-100'],
+  yellow: ['bg-yellow-100'],
+  tagsContainer: ['flex', 'flex-wrap', 'justify-center'],
+  skillChip: ['px-1.5', 'py-0.5', 'w-max', 'rounded-lg', 'border', 'border-dashed', 'border-stone-300', 'm-0.5'],
 }
 
 export default function Page() {
-  const mapSkill = (skill: string) => (<div className={cn.tag} key={skill}>{skill}</div>);
+  const mapSkill = (skill: string) => (
+    <div className={cn.skillChip.join(' ')} key={skill}>
+      <Text variant="chip">
+        {skill}
+      </Text>
+    </div>
+  );
   const mapSkills = (skills: string[]) => skills.map(mapSkill);
   return (
     <>
       <CardHeader header={skills.header} />
 
       {/* CARD BODY */}
-      <CardSection blue>
-        <p>
-          <Text variant="subtext">{skills.content[1]}</Text>
-          <br />
-          <BlueLink href={specialisedGeneralistLink}>
-            <Text variant="subtext">{skills.content[2]}</Text>
-          </BlueLink>
-        </p>
+      <CardSection blue spaceY={6}>
+        <Text variant="subtext">{skills.content[1]}</Text>
+        <BlueLink href={specialisedGeneralistLink}>
+          {skills.content[2]}
+        </BlueLink>
       </CardSection>
       <CardSection>  
-        <div className={cn.skillsContainer}>
-          <div className={cn.skillsCard}>
-            <div className={cn.header.concat(' ', cn.green)}>{skills.cards[1]}</div>
-            <div className={cn.tagsContainer}>
+        <div className={cn.skillsContainer.join(' ')}>
+          <div className={cn.skillsCard.join(' ')}>
+            <div className={[...cn.header, ...cn.green].join(' ')}>
+              <Text variant="label">
+                {skills.cards[1]}
+              </Text>
+            </div>
+            <div className={cn.tagsContainer.join(' ')}>
               {Object.values(data.S).map(mapSkills)}
             </div>
           </div>
 
-          <div className={cn.skillsCard}>
-            <div className={cn.header.concat(' ', cn.lightGreen)}>{skills.cards[2]}</div>
-            <div className={cn.tagsContainer}>
+          <div className={cn.skillsCard.join(' ')}>
+            <div className={[...cn.header, ...cn.blue].join(' ')}>
+              <Text variant="label">
+                {skills.cards[2]}
+              </Text>
+            </div>
+            <div className={cn.tagsContainer.join(' ')}>
               {Object.values(data.A).map(mapSkills)}
             </div>
           </div>
 
-          <div className={cn.skillsCard}>
-            <div className={cn.header.concat(' ', cn.yellow)}>{skills.cards[3]}</div>
-            <div className={cn.tagsContainer}>
+          <div className={cn.skillsCard.join(' ')}>
+            <div className={[...cn.header, ...cn.yellow].join(' ')}>
+              <Text variant="label">
+                {skills.cards[3]}
+              </Text>
+            </div>
+            <div className={cn.tagsContainer.join(' ')}>
               {Object.values(data.B).map(mapSkills)}
             </div>
           </div>

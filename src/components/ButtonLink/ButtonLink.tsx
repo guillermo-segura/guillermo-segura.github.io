@@ -23,13 +23,13 @@ const cn = {
     'transition-all',
   ],
   primary: [
-    'bg-gblue-600',
+    'bg-primary-600',
     
-    'hover:bg-gblue-500',
+    'hover:bg-primary-500',
     
-    'focus:bg-gblue-400',
+    'focus:bg-primary-400',
 
-    'active:bg-gblue-400',
+    'active:bg-primary-400',
   ],
   secondary: [
     'bg-transparent',
