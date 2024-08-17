@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ButtonLink/ButtonLink";
 import { CardHeader, CardSection, CardFooter } from "@/components/Card";
 import { ImgSlide } from '@/components/ImgSlide/ImgSlide';
 import { Slide } from '@/components/Slide/Slide';
-import VerticalDivider from "@/components/VerticalDivider/VerticalDivider";
+import { VerticalDivider } from "@/components/VerticalDivider/VerticalDivider";
 
 import oldComputersImg from '@/assets/journey/old_computers.png';
 import universityImg from '@/assets/journey/exit_sign.jpg';
@@ -20,9 +20,7 @@ import { Text } from "@/components/Text/Text";
 const personalityLink = 'https://www.16personalities.com/intj-personality';
 
 const classNames = {
-  textSpacing: 'space-y-6',
   buttonsContainer: 'flex flex-col xs:flex-row space-y-6 xs:space-y-0 xs:space-x-6 justify-center items-center',
-  imgSlideContainer: 'lg:my-12',
 };
 
 export default function Page() {
@@ -99,22 +97,20 @@ export default function Page() {
             content={journey[4].content}
           />
           <VerticalDivider />
-          <div className={classNames.imgSlideContainer}>
-            <ImgSlide
-              right
-              imgSrc={edinburghImg}
-              imgAlt="Photo of Edinburgh"
-              header={journey[5].header}
-              content={(
-                <>
-                  {journey[5].content[1]}
-                  <br />
-                  <br />
-                  {journey[5].content[2]}
-                </>
-              )}
-            />
-          </div>
+          <ImgSlide
+            right
+            imgSrc={edinburghImg}
+            imgAlt="Photo of Edinburgh"
+            header={journey[5].header}
+            content={(
+              <>
+                {journey[5].content[1]}
+                <br />
+                <br />
+                {journey[5].content[2]}
+              </>
+            )}
+          />
           <VerticalDivider />
           <Slide
             imgSrc={rooserImg}

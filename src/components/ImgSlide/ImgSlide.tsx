@@ -11,7 +11,7 @@ export interface ImgSlideProps {
 }
 
 const classNames = {
-  container: 'flex flex-row md:space-x-6 items-center',
+  container: 'flex flex-row my-6 md:space-x-6 items-center',
   content: 'w-full md:w-1/2',
   imgContainer: 'w-1/2 h-72 relative shadow-card hidden md:block',
 }
