@@ -20,7 +20,8 @@ const gradientBg = [
 const textureBg = [
   'opacity-100',
   "bg-carbon-fibre",
-  'absolute',
+  'fixed',
+  'bg-fixed',
   'top-0',
   'left-0',
   'w-full',
@@ -59,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${classNames.gradientBg.join(' ')}`}>
-        <div className={classNames.textureBg.join(' ')}></div>
+        <div className={classNames.textureBg.join(' ')} />
         <main className={classNames.container.join(' ')}>
           <Card>
             {children}

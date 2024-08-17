@@ -26,11 +26,14 @@ const config: Config = {
           600: '#2C69B0',
         }
       },
+      boxShadow: {
+        "inner-xl": 'inset 0px -12px 8px -10px rgba(0,0,0,0.1),inset 0px 12px 8px -10px rgba(0,0,0,0.1)',
+      },
       backgroundSize: {
         '4xl': '300%'
       },
       animation: {
-        'bg-gradient': 'gradient 30s ease infinite',
+        'bg-gradient': 'gradient 15s ease infinite',
       },
       backgroundImage: {
         'asfalt': "url('https://www.transparenttextures.com/patterns/asfalt-light.png')",
