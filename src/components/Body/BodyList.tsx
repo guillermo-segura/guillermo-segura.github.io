@@ -3,7 +3,7 @@ import { BodyHeader } from "./BodyHeader";
 import { Text } from '@/components/Text/Text';
 
 const cn = {
-  listContainer: 'flex flex-wrap justify-start sm:justify-center',
+  listContainer: 'flex flex-wrap justify-start sm:justify-around',
   section: 'list-inside',
   article: 'w-max px-4 py-2',
 };
