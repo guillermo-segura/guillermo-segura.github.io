@@ -12,7 +12,6 @@ export default function Page() {
         description={content.me.description}
       />
 
-      {/* CARD BODY */}
       <CardBody blue>
         {content.me.content}
       </CardBody>

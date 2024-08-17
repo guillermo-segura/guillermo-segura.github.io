@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import Card from "@/components/Card/Card";
-import { gradientBg } from "@/utils/classnames";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const gradientBg = 'bg-gradient-to-r from-[#F875A7] via-[#75A7F8] to-[#A7F875] bg-4xl animate-bg-gradient';
 
 const classNames = {
   container: [
