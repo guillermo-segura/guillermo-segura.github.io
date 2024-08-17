@@ -1,11 +1,10 @@
+import { memo } from "react";
 import Link from "next/link";
 
-import { primary, secondary } from "./classNames";
 import { Text } from "../Text/Text";
 
 interface ButtonLinkProps {
-  children?: React.ReactNode;
-  label?: string;
+  children: React.ReactNode;
   href?: string;
   type?: 'primary' | 'secondary';
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
@@ -36,11 +35,12 @@ const cn = {
   ],
 }
 
-export default function ButtonLink({ children, label, type = 'primary', href = '', onClick }: ButtonLinkProps) {
+const ButtonLinkRaw = ({ children, type = 'primary', href = '', onClick }: ButtonLinkProps) => {
   return (
     <Link className={[...cn.base, ...cn[type]].join(' ')} href={href} onClick={onClick}>
-      {label && <Text variant="label" color="white">{label}</Text>}
       {children && <Text variant="label" color="white">{children}</Text>}
     </Link>
   );
 }
+
+export const ButtonLink = memo(ButtonLinkRaw);

@@ -1,6 +1,4 @@
-import profilePic from '@/assets/avatar.svg';
 import PolaroidImg, { PolaroidImgProps } from '@/components/PolaroidImg/PolaroidImg';
-import ButtonLink from '../ButtonLink/ButtonLink';
 
 export interface SlideProps {
   imgSrc?: PolaroidImgProps['imgSrc'];

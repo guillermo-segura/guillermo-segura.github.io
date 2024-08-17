@@ -1,6 +1,6 @@
 import BodyList from "@/components/Body/BodyList";
 import BlueLink from "@/components/BlueLink/BlueLink";
-import ButtonLink from "@/components/ButtonLink/ButtonLink";
+import { ButtonLink } from "@/components/ButtonLink/ButtonLink";
 import { CardHeader, CardSection, CardFooter } from "@/components/Card";
 import ImgSlide from '@/components/ImgSlide/ImgSlide';
 import Slide from '@/components/Slide/Slide';
@@ -46,8 +46,12 @@ export default function Page() {
           </div>
         </div>
         <div className={classNames.buttonsContainer}>
-          <ButtonLink label={content.buttons.back} href="/" type="secondary" />
-          <ButtonLink label={content.buttons.skills} href="/skills" />
+          <ButtonLink href="/" type="secondary">
+            {content.buttons.back}
+          </ButtonLink>
+          <ButtonLink href="/skills">
+            {content.buttons.skills}
+          </ButtonLink>
         </div>
       </CardSection>
       <CardSection>  

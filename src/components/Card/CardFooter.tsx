@@ -4,7 +4,7 @@ import gitHubIcon from '@/assets/icons/github.svg';
 import gitHubBlueIcon from '@/assets/icons/github_blue.svg';
 
 import IconLink from '@/components/IconLink/IconLink';
-import ButtonLink from '@/components/ButtonLink/ButtonLink';
+import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
 
 import content from '@/content/content.json';
 import { memo } from 'react';
