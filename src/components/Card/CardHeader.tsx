@@ -1,16 +1,17 @@
-const classNames = {
+import { memo } from "react";
+import { Text } from "../Text/Text";
+
+const cn = {
   container: [
       'flex',
       'flex-col',
 
-      'space-y-4',
-      'md:space-y-6',
+      'space-y-2',
+      'sm:space-y-4',
 
-      'p-6',
-      'xs:p-12',
-    ].join(' '),
-  header: ['font-mono', 'font-bold', 'text-4xl', 'md:text-6xl'].join(' '),
-  description: 'text-xl md:text-2xl',
+      'p-4',
+      'sm:p-12',
+    ],
 };
 
 interface CardHeaderProps {
@@ -18,17 +19,17 @@ interface CardHeaderProps {
   description?: string;
 }
 
-export default function CardHeader({ header, description }: CardHeaderProps) {
-  return (
-    <div className={classNames.container}>
-      <div className={classNames.header}>
-        {header}
-      </div>
-      {description && (
-        <div className={classNames.description}>
-          {description}
-        </div>
-      )}
+const CardHeaderRaw = ({ header, description }: CardHeaderProps) => (
+  <header className={cn.container.join(' ')}>
+    <div>
+      <Text variant="h1">{header}</Text>
     </div>
-  );
-}
+    {description && (
+      <div>
+        <Text variant="text">{description}</Text>
+      </div>
+    )}
+  </header>
+);
+
+export const CardHeader = memo(CardHeaderRaw);

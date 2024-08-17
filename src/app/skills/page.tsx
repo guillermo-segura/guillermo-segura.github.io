@@ -1,6 +1,6 @@
 import CardFooter from "@/components/Card/CardFooter";
-import CardHeader from "@/components/Card/CardHeader";
-import CardBody from "@/components/Card/CardBody";
+import { CardHeader } from "@/components/Card/CardHeader";
+import { CardSection } from '@/components/Card/CardSection';
 import BlueLink from "@/components/BlueLink/BlueLink";
 
 import content from '@/content/content.json';
@@ -28,7 +28,7 @@ export default function Page() {
       <CardHeader header={content.skills.header} />
 
       {/* CARD BODY */}
-      <CardBody blue>  
+      <CardSection blue>  
         <span>
           {content.skills.content[1]}
           &nbsp;
@@ -36,8 +36,8 @@ export default function Page() {
             {content.skills.content[2]}
           </BlueLink>.
         </span>
-      </CardBody>
-      <CardBody>  
+      </CardSection>
+      <CardSection>  
         <div className={classNames.skillsContainer}>
           <div className={classNames.skillsCard}>
             <div className={classNames.header.concat(' ', classNames.green)}>{content.skills.cards[1]}</div>
@@ -60,7 +60,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </CardBody>
+      </CardSection>
 
       {/* CARD FOOTER */}
       <CardFooter home traits />

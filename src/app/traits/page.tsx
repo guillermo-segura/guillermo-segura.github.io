@@ -1,8 +1,8 @@
 import BodyList from "@/components/Body/BodyList";
 import BlueLink from "@/components/BlueLink/BlueLink";
 import ButtonLink from "@/components/ButtonLink/ButtonLink";
-import CardHeader from "@/components/Card/CardHeader";
-import CardBody from "@/components/Card/CardBody";
+import { CardHeader } from "@/components/Card/CardHeader";
+import { CardSection } from '@/components/Card/CardSection';
 import CardFooter from "@/components/Card/CardFooter";
 import ImgSlide from '@/components/ImgSlide/ImgSlide';
 import Slide from '@/components/Slide/Slide';
@@ -32,7 +32,7 @@ export default function Page() {
       <CardHeader header={content.traits.header} />
 
       {/* CARD BODY */}
-      <CardBody blue>
+      <CardSection blue>
         <div className={classNames.textSpacing}>
           <div>{content.traits.content[1]}</div>
           <div>
@@ -51,8 +51,8 @@ export default function Page() {
           <ButtonLink label={content.buttons.back} href="/" type="secondary" />
           <ButtonLink label={content.buttons.skills} href="/skills" />
         </div>
-      </CardBody>
-      <CardBody>  
+      </CardSection>
+      <CardSection>  
         <div className="mt-12">
           <Slide
             header={content.journey[1].header}
@@ -165,7 +165,7 @@ export default function Page() {
           data={data.preferences}
           header={content.traits.sectionHeader.whatILike}
         />
-      </CardBody>  
+      </CardSection>  
 
       <CardFooter home skills />
     </>

@@ -1,6 +1,7 @@
-import CardBody from '@/components/Card/CardBody';
+import { CardHeader } from "@/components/Card/CardHeader";
+import { CardSection } from '@/components/Card/CardSection';
 import CardFooter from "@/components/Card/CardFooter";
-import CardHeader from "@/components/Card/CardHeader";
+import { Text } from "@/components/Text/Text";
 
 import content from '@/content/content.json';
 
@@ -12,9 +13,9 @@ export default function Page() {
         description={content.me.description}
       />
 
-      <CardBody blue>
-        {content.me.content}
-      </CardBody>
+      <CardSection blue>
+        <Text variant="subtext">{content.me.content}</Text>
+      </CardSection>
 
       <CardFooter skills traits />
     </>

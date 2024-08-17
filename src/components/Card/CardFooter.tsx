@@ -18,6 +18,7 @@ const classNames = {
     'border-stone-200',
     'shadow-inner',
     'p-6',
+    'sm:px-12',
 
     'xs:flex-row',
   ].join(' '),
