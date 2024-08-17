@@ -10,16 +10,16 @@ export interface TextProps {
 }
 
 const cn = {
-  h1: ['font-serif', 'font-bold', 'text-2xl', 'sm:text-6xl'],
-  h2: ['font-serif', 'font-semibold', 'text-1xl', 'sm:text-5xl'],
-  h3: ['font-serif', 'font-medium', 'text-xl', 'sm:text-4xl'],
+  h1: ['font-serif', 'font-bold', 'text-2xl', 'sm:text-6xl', 'drop-shadow-md'],
+  h2: ['font-serif', 'font-semibold', 'text-1xl', 'sm:text-5xl', 'drop-shadow-md'],
+  h3: ['font-serif', 'font-medium', 'text-xl', 'sm:text-4xl', 'drop-shadow-md'],
   subtext: ['text-md', 'sm:text-xl', 'font-light'],
   label: ['text-sm', 'sm:text-md', 'font-bold', 'uppercase', 'tracking-wide'],
   text: ['text-lg', 'sm:text-2xl'],
   center: ['text-center'],
   left: ['text-left'],
   right: ['text-right'],
-  black: ['text-slate-800'],
+  black: ['text-[#37383F]'],
   white: ['text-white'],
 };
 

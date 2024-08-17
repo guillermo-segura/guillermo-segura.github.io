@@ -3,7 +3,7 @@ import Image, { ImageProps } from "next/image";
 type Color = 'red' | 'blue' | 'yellow' | 'green' | 'purple' | 'orange';
 
 const classNames = {
-  container: 'p-2 pb-12 relative h-max w-max transform-gpu bg-gradient-to-bl from-white to-slate-100 self-center',
+  container: 'p-2 pb-12 relative h-max w-max transform-gpu bg-gradient-to-bl from-white to-stone-100 self-center',
   tilt: {
     left: 'shadow-[-4px_4px_12px_rgba(0,0,0,0.2)] rotate-2 bg-gradient-to-bl',
     right: 'shadow-[4px_4px_12px_rgba(0,0,0,0.2)] -rotate-2 bg-gradient-to-br',

@@ -6,7 +6,28 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const gradientBg = 'bg-gradient-to-r from-[#F875A7] via-[#75A7F8] to-[#A7F875] bg-4xl animate-bg-gradient';
+// https://mycolor.space/gradient3
+// https://www.transparenttextures.com/
+const gradientBg = [
+  'bg-4xl',
+  'bg-gradient-to-r',
+  'from-gblue-500',
+  'via-[#B582EB]',
+  'via-[#F36EBE]',
+  'to-[#FF854D]',
+  'animate-bg-gradient',
+];
+const textureBg = [
+  'opacity-100',
+  "bg-carbon-fibre",
+  'absolute',
+  'top-0',
+  'left-0',
+  'w-full',
+  'h-full',
+  'pointer-events-none',
+  'opacity-80',
+];
 
 const classNames = {
   container: [
@@ -20,8 +41,9 @@ const classNames = {
     'xs:px-6',
     'md:px-12',
     'lg:px-24',
-  ].join(' '),
-  body: gradientBg,
+  ],
+  gradientBg,
+  textureBg,
 };
 
 export const metadata: Metadata = {
@@ -36,8 +58,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${classNames.body}`}>
-        <main className={classNames.container}>
+      <body className={`${inter.className} ${classNames.gradientBg.join(' ')}`}>
+        <div className={classNames.textureBg.join(' ')}></div>
+        <main className={classNames.container.join(' ')}>
           <Card>
             {children}
           </Card>

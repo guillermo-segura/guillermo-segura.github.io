@@ -5,7 +5,7 @@ const cn = {
     'w-full', 
     'max-w-4xl', 
 
-    'bg-gradient-to-bl', 
+    'bg-gradient-to-tr', 
     'from-white', 
     'to-stone-100',
 

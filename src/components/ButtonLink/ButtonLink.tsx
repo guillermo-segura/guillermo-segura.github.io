@@ -16,29 +16,49 @@ const cn = {
     'py-2.5',
     'rounded-lg',
     'cursor-pointer',
-    'bg-blue-500',
-    // 'bg-gradient-to-tr',
-    // 'from-blue-500',
-    // 'to-sky-500',
-    // 'outline-none',
-
-    // 'hover:to-sky-600',
-    // 'hover:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
-    // 'focus:to-sky-600',
-    // 'focus:shadow-[-4px_4px_5px_rgba(0,0,0,0.3)]',
+    'bg-gradient-to-t',
+    'focus:shadow-inner',
+    'active:shadow-inner',
+    'outline-none',
+    'transition-all',
+    'duration-300',
   ],
   primary: [
+    'from-gblue-500',
+    'to-gblue-500',
+    'outline-none',
+    
+    'hover:to-gblue-600',
+    
+    'focus:shadow-inner',
+    'focus:from-gblue-600',
+    'focus:to-gblue-700',
 
+    'active:shadow-inner',
+    'active:from-gblue-600',
+    'active:to-gblue-700',
   ],
   secondary: [
+    'from-transparent',
+    'to-transparent',
+    'outline-none',
+    
+    'hover:to-stone-100',
+    
+    'focus:shadow-inner',
+    'focus:from-stone-100',
+    'focus:to-stone-200',
 
+    'active:shadow-inner',
+    'active:from-stone-100',
+    'active:to-stone-200',
   ],
 }
 
 const ButtonLinkRaw = ({ children, type = 'primary', href = '', onClick }: ButtonLinkProps) => {
   return (
     <Link className={[...cn.base, ...cn[type]].join(' ')} href={href} onClick={onClick}>
-      {children && <Text variant="label" color="white">{children}</Text>}
+      {children && <Text variant="label" color={ type === 'primary' ? 'white' : 'black'}>{children}</Text>}
     </Link>
   );
 }

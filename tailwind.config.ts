@@ -19,11 +19,22 @@ const config: Config = {
         '1/2': '50%',
         '3/4': '75%',
       },
+      colors: {
+        gblue: {
+          500: '#3F96FC',
+          600: '#3887E2',
+          700: '#2C69B0',
+        }
+      },
       backgroundSize: {
         '4xl': '300%'
       },
       animation: {
-        'bg-gradient': 'gradient 15s ease infinite',
+        'bg-gradient': 'gradient 30s ease infinite',
+      },
+      backgroundImage: {
+        'asfalt': "url('https://www.transparenttextures.com/patterns/asfalt-light.png')",
+        'carbon-fibre': "url('https://www.transparenttextures.com/patterns/carbon-fibre-big.png')",
       },
       keyframes: {
         gradient: {
