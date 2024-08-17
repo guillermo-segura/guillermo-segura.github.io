@@ -7,8 +7,9 @@ import IconLink from '@/components/IconLink/IconLink';
 import ButtonLink from '@/components/ButtonLink/ButtonLink';
 
 import content from '@/content/content.json';
+import { memo } from 'react';
 
-const classNames = {
+const cn = {
   container: [
     'flex',
     'flex-col-reverse',
@@ -21,14 +22,14 @@ const classNames = {
     'sm:px-12',
 
     'xs:flex-row',
-  ].join(' '),
+  ],
   iconsContainer: [
     'flex',
     'flex-row',
     'space-x-4',
     'mt-6',
     'xs:mt-0',
-  ].join(' '),
+  ],
   itemsContainer: [
     'flex',
     'flex-col',
@@ -36,16 +37,16 @@ const classNames = {
     'xs:space-y-0',
     'xs:flex-row',
     'xs:space-x-4',
-  ].join(' '),
+  ],
 };
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/g-segura/';
 const GITHUB_URL = 'https://github.com/guillermo-segura';
 
-export default function CardFooter({ skills = false, traits = false, home = false }) {
+const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
   return (
-    <div className={classNames.container}>
-      <div className={classNames.iconsContainer}>
+    <footer className={cn.container.join(' ')}>
+      <div className={cn.iconsContainer.join(' ')}>
         <IconLink
           id="linkedin_icon"
           href={LINKEDIN_URL}
@@ -68,17 +69,25 @@ export default function CardFooter({ skills = false, traits = false, home = fals
         <span className="font-mono font-sm cursor-pointer p-2">EN 🇬🇧</span>
       </div> */}
 
-      <div className={classNames.itemsContainer}>
+      <div className={cn.itemsContainer.join(' ')}>
         {home && (
-          <ButtonLink label={content.buttons.back} href="/" type="secondary" />
+          <ButtonLink href="/" type="secondary">
+            {content.buttons.back}
+          </ButtonLink>
         )}
         {traits && (
-          <ButtonLink label={content.buttons.aboutMe}  href="/traits" />
+          <ButtonLink href="/traits">
+            {content.buttons.aboutMe}
+          </ButtonLink>
         )}
         {skills && (
-          <ButtonLink label={content.buttons.skills}  href="/skills" />
+          <ButtonLink href="/skills">
+            {content.buttons.skills}
+          </ButtonLink>
         )}
       </div>
-    </div>
+    </footer>
   );
 }
+
+export const CardFooter = memo(CardFooterRaw);

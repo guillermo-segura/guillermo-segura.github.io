@@ -1,4 +1,6 @@
-const classNames = {
+import { memo } from "react";
+
+const cn = {
   container: [
     'w-full', 
     'max-w-4xl', 
@@ -11,13 +13,15 @@ const classNames = {
     'shadow-lg', 
     'text-black',
     'drop-shadow-xl',
-  ].join(' '),
+  ],
 };
 
-export default function Card({ children }: { children: React.ReactNode }) {
+const CardRaw = ({ children }: { children: React.ReactNode }) => {
   return (
-      <div className={classNames.container}>
+      <div className={cn.container.join(' ')}>
         {children}
       </div>
   );
 }
+
+export const Card = memo(CardRaw);

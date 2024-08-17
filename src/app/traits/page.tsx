@@ -1,9 +1,7 @@
 import BodyList from "@/components/Body/BodyList";
 import BlueLink from "@/components/BlueLink/BlueLink";
 import ButtonLink from "@/components/ButtonLink/ButtonLink";
-import { CardHeader } from "@/components/Card/CardHeader";
-import { CardSection } from '@/components/Card/CardSection';
-import CardFooter from "@/components/Card/CardFooter";
+import { CardHeader, CardSection, CardFooter } from "@/components/Card";
 import ImgSlide from '@/components/ImgSlide/ImgSlide';
 import Slide from '@/components/Slide/Slide';
 import VerticalDivider from "@/components/VerticalDivider/VerticalDivider";

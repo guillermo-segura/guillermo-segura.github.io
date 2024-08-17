@@ -1,6 +1,4 @@
-import CardFooter from "@/components/Card/CardFooter";
-import { CardHeader } from "@/components/Card/CardHeader";
-import { CardSection } from '@/components/Card/CardSection';
+import { CardHeader, CardSection, CardFooter } from "@/components/Card";
 import BlueLink from "@/components/BlueLink/BlueLink";
 
 import content from '@/content/content.json';

@@ -1,6 +1,4 @@
-import { CardHeader } from "@/components/Card/CardHeader";
-import { CardSection } from '@/components/Card/CardSection';
-import CardFooter from "@/components/Card/CardFooter";
+import { CardHeader, CardSection, CardFooter } from "@/components/Card";
 import { Text } from "@/components/Text/Text";
 
 import content from '@/content/content.json';
