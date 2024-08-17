@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${classNames.gradientBg.join(' ')}`}>
-        <div className={classNames.textureBg.join(' ')} />
+        {/* <div className={classNames.textureBg.join(' ')} /> */}
         <main className={classNames.container.join(' ')}>
           <Card>
             {children}
