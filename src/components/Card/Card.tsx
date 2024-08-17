@@ -5,14 +5,13 @@ const cn = {
     'w-full', 
     'max-w-4xl', 
 
-    'bg-gradient-to-tr', 
+    'bg-gradient-to-t', 
     'from-white', 
     'to-stone-100',
 
     'rounded-lg', 
-    'shadow-lg', 
+    'shadow-card', 
     'text-black',
-    'drop-shadow-xl',
   ],
 };
 

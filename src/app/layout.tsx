@@ -28,6 +28,7 @@ const textureBg = [
   'h-full',
   'pointer-events-none',
   'opacity-80',
+  "-z-10"
 ];
 
 const classNames = {
