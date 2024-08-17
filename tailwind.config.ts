@@ -21,9 +21,9 @@ const config: Config = {
       },
       colors: {
         gblue: {
+          400: '#78B5FC',
           500: '#3F96FC',
-          600: '#3887E2',
-          700: '#2C69B0',
+          600: '#2C69B0',
         }
       },
       backgroundSize: {

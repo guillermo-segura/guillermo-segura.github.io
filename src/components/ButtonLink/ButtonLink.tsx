@@ -16,42 +16,26 @@ const cn = {
     'py-2.5',
     'rounded-lg',
     'cursor-pointer',
-    'bg-gradient-to-t',
+    'hover:shadow-inner',
     'focus:shadow-inner',
     'active:shadow-inner',
     'outline-none',
     'transition-all',
-    'duration-300',
   ],
   primary: [
-    'from-gblue-500',
-    'to-gblue-500',
-    'outline-none',
+    'bg-gblue-600',
     
-    'hover:to-gblue-600',
+    'hover:bg-gblue-500',
     
-    'focus:shadow-inner',
-    'focus:from-gblue-600',
-    'focus:to-gblue-700',
+    'focus:bg-gblue-400',
 
-    'active:shadow-inner',
-    'active:from-gblue-600',
-    'active:to-gblue-700',
+    'active:bg-gblue-400',
   ],
   secondary: [
-    'from-transparent',
-    'to-transparent',
-    'outline-none',
-    
-    'hover:to-stone-100',
-    
-    'focus:shadow-inner',
-    'focus:from-stone-100',
-    'focus:to-stone-200',
-
-    'active:shadow-inner',
-    'active:from-stone-100',
-    'active:to-stone-200',
+    'bg-transparent',
+    'hover:bg-stone-50',
+    'focus:bg-stone-100',
+    'active:bg-stone-100',
   ],
 }
 

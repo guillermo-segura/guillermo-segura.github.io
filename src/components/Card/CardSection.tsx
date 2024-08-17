@@ -6,7 +6,7 @@ export interface CardSectionProps {
 }
 
 const cn = {
-  container: ['flex', 'flex-col', 'p-6', 'sm:p-12', 'space-y-12'],
+  container: ['flex', 'flex-col', 'p-6', 'sm:p-12', 'space-y-12', 'shadow-inner'],
   blue: ['bg-blue-100'],
 };
 
