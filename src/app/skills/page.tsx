@@ -1,74 +1,51 @@
-import { CardHeader, CardSection, CardFooter } from "@/components/Card";
-import { BlueLink } from "@/components/BlueLink/BlueLink";
-import { Text } from "@/components/Text/Text";
+import { CardHeader, CardSection, CardFooter } from '@/components/Card';
+import { BlueLink } from '@/components/BlueLink/BlueLink';
+import { Text } from '@/components/Text/Text';
 import { skills } from '@/content/content.json';
-import data from './skills';
-import { Chip } from "@/components/Chip/Chip";
+import { ChipList } from '@/components/Chip';
+import { topSkills, avgSkills, wipSkills } from './skills';
+import { joinStringArrays } from '@/utils';
 
-const specialisedGeneralistLink = 'https://en.wikipedia.org/wiki/T-shaped_skills';
+const T_SHAPE_WIKI_LINK = 'https://en.wikipedia.org/wiki/T-shaped_skills';
 
-const cn = {
-  skillsContainer: ['flex', 'flex-col', 'space-y-6', 'sm:flex-row', 'sm:space-y-0', 'sm:space-x-4'],
-  skillsCard: ['w-full', 'sm:w-1/3'],
-  header: ['max-w-max', 'mx-auto', 'p-0.5', 'mb-2'],
-  green: ['bg-green-100'],
-  blue: ['bg-blue-100'],
-  yellow: ['bg-yellow-100'],
-  tagsContainer: ['flex', 'flex-wrap', 'justify-center'],
+const style = {
+  listsContainer: [
+    'flex',
+    'flex-col',
+    'space-y-6',
+    'sm:flex-row',
+    'sm:space-y-0',
+    'sm:space-x-4',
+  ],
+  list: ['w-full', 'sm:w-1/3'],
 }
 
 export default function Page() {
-  const mapSkill = (skill: string) => (<Chip label={skill} />);
-  const mapSkills = (skills: string[]) => skills.map(mapSkill);
   return (
     <>
       <CardHeader header={skills.header} />
 
-      {/* CARD BODY */}
       <CardSection blue spaceY={6}>
         <Text variant="subtext">{skills.content[1]}</Text>
-        <BlueLink href={specialisedGeneralistLink}>
+        <BlueLink href={T_SHAPE_WIKI_LINK}>
           {skills.content[2]}
         </BlueLink>
       </CardSection>
+
       <CardSection>  
-        <div className={cn.skillsContainer.join(' ')}>
-          <div className={cn.skillsCard.join(' ')}>
-            <div className={[...cn.header, ...cn.green].join(' ')}>
-              <Text variant="label">
-                {skills.cards[1]}
-              </Text>
-            </div>
-            <div className={cn.tagsContainer.join(' ')}>
-              {Object.values(data.S).map(mapSkills)}
-            </div>
+        <div className={joinStringArrays(style.listsContainer)}>
+          <div className={joinStringArrays(style.list)}>
+            <ChipList label={skills.cards[1]} labelColor="green" items={topSkills} />
           </div>
-
-          <div className={cn.skillsCard.join(' ')}>
-            <div className={[...cn.header, ...cn.blue].join(' ')}>
-              <Text variant="label">
-                {skills.cards[2]}
-              </Text>
-            </div>
-            <div className={cn.tagsContainer.join(' ')}>
-              {Object.values(data.A).map(mapSkills)}
-            </div>
+          <div className={joinStringArrays(style.list)}>
+            <ChipList label={skills.cards[2]} labelColor="blue" items={avgSkills} />
           </div>
-
-          <div className={cn.skillsCard.join(' ')}>
-            <div className={[...cn.header, ...cn.yellow].join(' ')}>
-              <Text variant="label">
-                {skills.cards[3]}
-              </Text>
-            </div>
-            <div className={cn.tagsContainer.join(' ')}>
-              {Object.values(data.B).map(mapSkills)}
-            </div>
+          <div className={joinStringArrays(style.list)}>
+            <ChipList label={skills.cards[3]} labelColor="yellow" items={wipSkills} />
           </div>
         </div>
       </CardSection>
 
-      {/* CARD FOOTER */}
       <CardFooter home traits />
     </>
   );

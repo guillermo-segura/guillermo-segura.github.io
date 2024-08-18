@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from "react";
-import Image, { ImageProps } from "next/image";
-import Link from "next/link";
+import { memo, useState } from 'react';
+import Image, { ImageProps } from 'next/image';
+import Link from 'next/link';
 
 interface IconLinkProps {
   id: string;
@@ -12,7 +12,7 @@ interface IconLinkProps {
   hoveredImgSrc: string | ImageProps['src'];
 }
 
-export default function IconLink({ id, href = '', imgSrc, hoveredImgSrc, imgAlt }: IconLinkProps) {
+const IconLinkRaw = ({ id, imgSrc, hoveredImgSrc, imgAlt, href = '' }: IconLinkProps) => {
   const [hovered, setHovered] = useState(false);
   const onMouseOver = () => setHovered(true);
   const onMouseOut = () => setHovered(false);
@@ -38,3 +38,5 @@ export default function IconLink({ id, href = '', imgSrc, hoveredImgSrc, imgAlt 
     </Link>
   );
 }
+
+export const IconLink = memo(IconLinkRaw);

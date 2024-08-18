@@ -10,25 +10,25 @@ export interface ImgSlideProps {
   content: string | React.ReactNode;
 }
 
-const classNames = {
+const style = {
   container: 'flex flex-row my-6 md:space-x-6 items-center',
   content: 'w-full md:w-1/2',
   imgContainer: 'w-1/2 h-72 relative shadow-card hidden md:block',
 }
 
-const ImgSlideRaw = ({ right = false, imgSrc, imgAlt, header, content }: ImgSlideProps) => {
+const ImgSlideRaw = ({ imgSrc, imgAlt, header, content, right = false }: ImgSlideProps) => {
   if (right) {
     return (
-      <div className={classNames.container}>
-        <div className={classNames.content}>
-          <Text textAlign='right'>
+      <article className={style.container}>
+        <div className={style.content}>
+          <Text textAlign="right">
             {header}
           </Text>
-          <Text variant='subtext' textAlign='right'>
+          <Text variant="subtext" textAlign="right">
             {content}
           </Text>
         </div>
-        <div className={classNames.imgContainer}>
+        <div className={style.imgContainer}>
           <Image
             src={imgSrc}
             alt={imgAlt}
@@ -36,13 +36,15 @@ const ImgSlideRaw = ({ right = false, imgSrc, imgAlt, header, content }: ImgSlid
             className="object-cover"
           />
         </div>
-      </div>
+      </article>
     );
   }
 
+  const textAlign = imgSrc ? 'left' : 'center';
+
   return (
-    <div className={classNames.container}>
-      <div className={classNames.imgContainer}>
+    <article className={style.container}>
+      <div className={style.imgContainer}>
         <Image
           src={imgSrc}
           alt={imgAlt}
@@ -50,15 +52,15 @@ const ImgSlideRaw = ({ right = false, imgSrc, imgAlt, header, content }: ImgSlid
           className="object-cover"
         />
       </div>
-      <div className={classNames.content}>
-        <Text textAlign={imgSrc ? 'left' : 'center'}>
+      <div className={style.content}>
+        <Text textAlign={textAlign}>
           {header}
         </Text>
-        <Text variant='subtext' textAlign={imgSrc ? 'left' : 'center'}>
+        <Text variant="subtext" textAlign={textAlign}>
           {content}
         </Text>
       </div>
-    </div>
+    </article>
   );
 };
 

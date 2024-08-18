@@ -1,5 +1,5 @@
-import { CardHeader, CardSection, CardFooter } from "@/components/Card";
-import { Text } from "@/components/Text/Text";
+import { CardHeader, CardSection, CardFooter } from '@/components/Card';
+import { Text } from '@/components/Text/Text';
 
 import { me } from '@/content/content.json';
 

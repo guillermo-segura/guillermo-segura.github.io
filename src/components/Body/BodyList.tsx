@@ -1,51 +1,34 @@
-import { memo } from "react";
-import { BodyHeader } from "./BodyHeader";
+import { memo, useCallback } from 'react';
 import { Text } from '@/components/Text/Text';
 
-const cn = {
-  listContainer: 'flex flex-wrap justify-start sm:justify-around',
+const style = {
   section: 'list-inside',
   article: 'w-max px-4 py-2',
 };
 
 export interface BodyListProps {
-  header: string;
-  description?: string;
-  data: {
-    [key: string]: string[];
-  };
+  label: string;
+  items?: string[];
 }
 
-const BodyListRaw = ({ header, description, data }: BodyListProps) => {
-  const renderData = (section: string) => {
-    const items = data[section];
-    const renderItem = (item: string) => (
-      <li key={item}>
-        <Text variant="subtext">
-          {item}
-        </Text>
-      </li>
-    );
-
-    return (
-      <article className={cn.article} key={section}>
-        <Text variant="label">
-          {section}
-        </Text>
-        <ul className={cn.section}>
-          {items.map(renderItem)}
-        </ul>
-      </article>
-    );
-  };
+const BodyListRaw = ({ label, items = [] }: BodyListProps) => {
+  const renderItem = useCallback((item: string) => (
+    <li key={item}>
+      <Text variant="subtext">
+        {item}
+      </Text>
+    </li>
+  ), []);
 
   return (
-    <>
-      <BodyHeader description={description}>{header}</BodyHeader>
-      <div className={cn.listContainer}>
-        {Object.keys(data).map(renderData)}
-      </div>
-    </>
+    <article className={style.article} key={label}>
+      <Text variant="label">
+        {label}
+      </Text>
+      <ul className={style.section}>
+        {items.map(renderItem)}
+      </ul>
+    </article>
   );
 }
 

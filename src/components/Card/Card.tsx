@@ -1,6 +1,7 @@
-import { memo } from "react";
+import { joinStringArrays } from '@/utils';
+import { memo } from 'react';
 
-const cn = {
+const style = {
   container: [
     'w-full', 
     'max-w-4xl', 
@@ -17,7 +18,7 @@ const cn = {
 
 const CardRaw = ({ children }: { children: React.ReactNode }) => {
   return (
-      <div className={cn.container.join(' ')}>
+      <div className={joinStringArrays(style.container)}>
         {children}
       </div>
   );

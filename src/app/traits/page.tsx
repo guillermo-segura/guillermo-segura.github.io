@@ -1,26 +1,34 @@
-import { BodyList } from "@/components/Body/BodyList";
-import { BlueLink } from "@/components/BlueLink/BlueLink";
-import { ButtonLink } from "@/components/ButtonLink/ButtonLink";
-import { CardHeader, CardSection, CardFooter } from "@/components/Card";
+import { BodyHeader,
+  BodyListGroup } from '@/components/Body';
+import { BlueLink } from '@/components/BlueLink/BlueLink';
+import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
+import { CardHeader, CardSection, CardFooter } from '@/components/Card';
 import { ImgSlide } from '@/components/ImgSlide/ImgSlide';
 import { Slide } from '@/components/Slide/Slide';
-import { VerticalDivider } from "@/components/VerticalDivider/VerticalDivider";
+import { VerticalDivider } from '@/components/VerticalDivider/VerticalDivider';
 
-import oldComputersImg from '@/assets/journey/old_computers.png';
-import universityImg from '@/assets/journey/exit_sign.jpg';
-import edinburghImg from '@/assets/journey/edinburgh.jpg';
-import rooserImg from '@/assets/journey/rooser.jpeg';
-import optixImg from '@/assets/journey/optix.png';
+import { oldComputersImg, universityImg, edinburghImg, rooserImg, optixImg } from '@/assets/journey';
 
 import { traits, journey, buttons } from '@/content/content.json';
 
+import { Text } from '@/components/Text/Text';
+import { LineBreak } from '@/components/LineBreak/LineBreak';
+import { joinStringArrays } from '@/utils';
 import data from './traits';
-import { Text } from "@/components/Text/Text";
 
-const personalityLink = 'https://www.16personalities.com/intj-personality';
+const PERSONALITY_LINK = 'https://www.16personalities.com/intj-personality';
 
-const classNames = {
-  buttonsContainer: 'flex flex-col xs:flex-row space-y-6 xs:space-y-0 xs:space-x-6 justify-center items-center',
+const style = {
+  buttonsContainer: [
+    'flex',
+    'flex-col',
+    'xs:flex-row',
+    'space-y-6',
+    'xs:space-y-0',
+    'xs:space-x-6',
+    'justify-center',
+    'items-center',
+  ],
 };
 
 export default function Page() {
@@ -28,24 +36,20 @@ export default function Page() {
     <>
       <CardHeader header={traits.header} />
 
-      {/* CARD BODY */}
       <CardSection blue spaceY={6}>
         <Text variant="subtext">
           {traits.content[1]}
-        </Text>
-        <Text variant="subtext">
+          <LineBreak />
           {traits.content[2]}
           <i>{traits.content[3]}</i>
           {traits.content[4]}
-        </Text>
-        <Text variant="subtext">
+          <LineBreak />
           {traits.content[5]}
-        </Text>
-        <Text variant="subtext">
+          <LineBreak />
           {traits.content[6]}
         </Text>
-        <BlueLink href={personalityLink}>INTJ-A</BlueLink>
-        <div className={classNames.buttonsContainer}>
+        <BlueLink href={PERSONALITY_LINK}>INTJ-A</BlueLink>
+        <div className={joinStringArrays(style.buttonsContainer)}>
           <ButtonLink href="/" type="secondary">
             {buttons.back}
           </ButtonLink>
@@ -54,6 +58,7 @@ export default function Page() {
           </ButtonLink>
         </div>
       </CardSection>
+
       <CardSection>
           <Slide
             header={journey[1].header}
@@ -68,8 +73,7 @@ export default function Page() {
             content={(
               <>
                 {journey[2].content[1]}
-                <br />
-                <br />
+                <LineBreak />
                 {journey[2].content[2]}
                 <i>{journey[2].content[3]}</i>
                 {journey[2].content[4]}
@@ -85,8 +89,7 @@ export default function Page() {
               <>
                 {journey[3].content[1]}
                 <i>{journey[3].content[2]}</i>
-                <br />
-                <br />
+                <LineBreak />
                 {journey[3].content[3]}
               </>
             )}
@@ -105,8 +108,7 @@ export default function Page() {
             content={(
               <>
                 {journey[5].content[1]}
-                <br />
-                <br />
+                <LineBreak />
                 {journey[5].content[2]}
               </>
             )}
@@ -119,8 +121,7 @@ export default function Page() {
             content={(
               <>
                 {journey[6].content[1]}
-                <br />
-                <br />
+                <LineBreak />
                 {journey[6].content[2]}
               </>
             )}
@@ -145,8 +146,7 @@ export default function Page() {
             content={(
               <>
                 {journey[8].content[1]}
-                <br />
-                <br />
+                <LineBreak />
                 {journey[8].content[2]}
               </>
             )}
@@ -154,10 +154,10 @@ export default function Page() {
       </CardSection>
 
       <CardSection>
-        <BodyList
-          data={data.preferences}
-          header={traits.sectionHeader.whatILike}
-        />
+        <BodyHeader>
+          {traits.sectionHeader.whatILike}
+        </BodyHeader>
+        <BodyListGroup data={data.preferences}/>
       </CardSection>
 
       <CardFooter home skills />

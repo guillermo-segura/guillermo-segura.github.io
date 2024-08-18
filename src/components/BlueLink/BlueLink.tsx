@@ -7,7 +7,7 @@ interface LinkProps {
   children: string;
 }
 
-const cn = {
+const style = {
   link: [
     'whitespace-wrap',
     'outline-none',
@@ -20,7 +20,7 @@ const BlueLinkRaw = ({ children, href }: LinkProps) => {
     <Link
       href={href}
       target="_blank"
-      className={cn.link.join(' ')}
+      className={style.link.join(' ')}
     >
       <Text variant="link">
         {children}

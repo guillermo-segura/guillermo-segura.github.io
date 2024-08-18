@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-import { Card } from "@/components/Card";
-import "./globals.css";
+import { Card } from '@/components/Card';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 // https://mycolor.space/gradient3
 // https://www.transparenttextures.com/

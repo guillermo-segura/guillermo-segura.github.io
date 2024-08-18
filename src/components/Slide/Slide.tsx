@@ -10,7 +10,7 @@ export interface SlideProps {
   content: string | React.ReactNode;
 }
 
-const cn = {
+const style = {
   container: 'flex flex-row md:space-x-6 items-start',
   content: 'w-full',
   imgContainer: 'hidden md:block',
@@ -19,40 +19,40 @@ const cn = {
 const SlideRaw = ({ right = false, imgSrc, imgAlt, header, content }: SlideProps) => {
   if (right) {
     return (
-      <div className={cn.container}>
-        <div className={cn.content}>
-          <Text textAlign='right'>
+      <article className={style.container}>
+        <div className={style.content}>
+          <Text textAlign="right">
             {header}
           </Text>
-          <Text variant='subtext' textAlign='right'>
+          <Text variant="subtext" textAlign="right">
             {content}
           </Text>
         </div>
-        {imgSrc && (
-          <div className={cn.imgContainer}>
+        {imgSrc && imgAlt && (
+          <div className={style.imgContainer}>
             <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="left" />
           </div>
         )}
-      </div>
+      </article>
     );
   }
-
+  const textAlign = imgSrc ? 'left' : 'center';
   return (
-    <div className={cn.container}>
-      {imgSrc && (
-        <div className={cn.imgContainer}>
+    <article className={style.container}>
+      {imgSrc && imgAlt && (
+        <div className={style.imgContainer}>
           <PolaroidImg imgSrc={imgSrc} imgAlt={imgAlt} size={200} tilt="right" />
         </div>
       )}
-      <div className={cn.content}>
-        <Text textAlign={imgSrc ? 'left' : 'center'}>
+      <div className={style.content}>
+        <Text textAlign={textAlign}>
           {header}
         </Text>
-        <Text variant='subtext' textAlign={imgSrc ? 'left' : 'center'}>
+        <Text variant="subtext" textAlign={textAlign}>
           {content}
         </Text>
       </div>
-    </div>
+    </article>
   );
 };
 

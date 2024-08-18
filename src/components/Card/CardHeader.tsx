@@ -1,7 +1,8 @@
-import { memo } from "react";
+import { memo } from 'react';
 import { Text } from '@/components/Text/Text';
+import { joinStringArrays } from '@/utils';
 
-const cn = {
+const style = {
   container: [
       'flex',
       'flex-col',
@@ -20,14 +21,10 @@ interface CardHeaderProps {
 }
 
 const CardHeaderRaw = ({ header, description }: CardHeaderProps) => (
-  <header className={cn.container.join(' ')}>
-    <div>
-      <Text variant="h1">{header}</Text>
-    </div>
+  <header className={joinStringArrays(style.container)}>
+    <Text variant="h1">{header}</Text>
     {description && (
-      <div>
-        <Text variant="text">{description}</Text>
-      </div>
+      <Text variant="text">{description}</Text>
     )}
   </header>
 );

@@ -3,13 +3,14 @@ import linkedInBlueIcon from '@/assets/icons/linkedin_blue.svg';
 import gitHubIcon from '@/assets/icons/github.svg';
 import gitHubBlueIcon from '@/assets/icons/github_blue.svg';
 
-import IconLink from '@/components/IconLink/IconLink';
+import { IconLink } from '@/components/IconLink/IconLink';
 import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
 
-import content from '@/content/content.json';
+import { buttons } from '@/content/content.json';
 import { memo } from 'react';
+import { joinStringArrays } from '@/utils';
 
-const cn = {
+const style = {
   container: [
     'flex',
     'flex-col-reverse',
@@ -41,8 +42,8 @@ const GITHUB_URL = 'https://github.com/guillermo-segura';
 
 const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
   return (
-    <footer className={cn.container.join(' ')}>
-      <div className={cn.iconsContainer.join(' ')}>
+    <footer className={joinStringArrays(style.container)}>
+      <div className={joinStringArrays(style.iconsContainer)}>
         <IconLink
           id="linkedin_icon"
           href={LINKEDIN_URL}
@@ -65,20 +66,20 @@ const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
         <span className="font-mono font-sm cursor-pointer p-2">EN 🇬🇧</span>
       </div> */}
 
-      <div className={cn.itemsContainer.join(' ')}>
+      <div className={joinStringArrays(style.itemsContainer)}>
         {home && (
           <ButtonLink href="/" type="secondary">
-            {content.buttons.back}
+            {buttons.back}
           </ButtonLink>
         )}
         {traits && (
           <ButtonLink href="/traits">
-            {content.buttons.aboutMe}
+            {buttons.aboutMe}
           </ButtonLink>
         )}
         {skills && (
           <ButtonLink href="/skills">
-            {content.buttons.skills}
+            {buttons.skills}
           </ButtonLink>
         )}
       </div>
