@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ['latin'] });
 // https://mycolor.space/gradient3
 const animatedBg = [
   'bg-dot',
-  'animate-bg-gradient',
+  'bg-dot-size',
+  'animate-bg-dot-animation',
+  'bg-dark-500',
   'bg-blend-overlay',
 ];
 

@@ -37,13 +37,19 @@ const config: Config = {
         "card": "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         "polaroid": "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px",
       },
+      backgroundImage: {
+        dot: 'radial-gradient(#FFFFFF 1px, transparent 1px);',
+      },
+      backgroundSize: {
+        'dot-size': '24px 24px',
+      },
       animation: {
-        'bg-gradient': 'gradient 120s linear infinite',
+        'bg-dot-animation': 'dot-animation 120s linear infinite',
       },
       keyframes: {
-        gradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '100%': { backgroundPosition: '200% 50%' },
+        'dot-animation': {
+          '0%': { backgroundPosition: '50% 0%' },
+          '100%': { backgroundPosition: '50% 100%' },
         }
       }
     },

@@ -1,18 +1,18 @@
 import { CardHeader, CardSection, CardFooter } from '@/components/Card';
 import { Text } from '@/components/Text/Text';
 
-import { home } from '@/content/content.json';
+import content from '@/content/content.json';
 
 export default function Page() {
   return (
     <>
       <CardHeader
-        header={home.header}
-        description={home.description}
+        header={content.home.header}
+        description={content.home.description}
       />
 
       <CardSection blue>
-        <Text variant="subtext">{home.content}</Text>
+        <Text variant="subtext">{content.home.content}</Text>
       </CardSection>
 
       <CardFooter skills traits />

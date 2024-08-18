@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import linkedInIcon from '@/assets/icons/linkedin.svg';
 import linkedInBlueIcon from '@/assets/icons/linkedin_blue.svg';
 import gitHubIcon from '@/assets/icons/github.svg';
@@ -5,10 +6,9 @@ import gitHubBlueIcon from '@/assets/icons/github_blue.svg';
 
 import { IconLink } from '@/components/IconLink/IconLink';
 import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
-
-import { buttons } from '@/content/content.json';
-import { memo } from 'react';
 import { joinStringArrays } from '@/utils';
+
+import content from '@/content/content.json';
 
 const style = {
   container: [
@@ -69,17 +69,17 @@ const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
       <div className={joinStringArrays(style.itemsContainer)}>
         {home && (
           <ButtonLink href="/" type="secondary">
-            {buttons.back}
+            {content.buttons.back}
           </ButtonLink>
         )}
         {traits && (
           <ButtonLink href="/traits">
-            {buttons.aboutMe}
+            {content.buttons.aboutMe}
           </ButtonLink>
         )}
         {skills && (
           <ButtonLink href="/skills">
-            {buttons.skills}
+            {content.buttons.skills}
           </ButtonLink>
         )}
       </div>

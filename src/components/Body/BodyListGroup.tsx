@@ -13,7 +13,7 @@ export interface BodyListProps {
 
 const BodyListGroupRaw = ({ data }: BodyListProps) => {
   const renderData = useCallback((section: string) => (
-      <BodyList label={section} items={data[section]} />
+      <BodyList label={section} items={data[section]} key={section} />
   ), [data]);
 
   return (
