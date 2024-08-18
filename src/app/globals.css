@@ -18,6 +18,11 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .bg-dot {
+    background-image: radial-gradient(rgba(55,56,63, 0.6) 1px, transparent 1px), linear-gradient(to right, #3f96fc, #aa87ec, #e278ca, #fd749e, #ff8074, #ff8074, #ff8074, #ff8074, #fd749e, #e278ca, #aa87ec, #3f96fc);
+    background-size: 24px 24px, 300% 300%;
+  }
 }
 
 * {

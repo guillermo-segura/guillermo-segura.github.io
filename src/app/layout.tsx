@@ -7,28 +7,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 // https://mycolor.space/gradient3
-// https://www.transparenttextures.com/
-const gradientBg = [
-  'bg-4xl',
-  'bg-gradient-to-r',
-  'from-primary-500',
-  'via-[#B582EB]',
-  'via-[#F36EBE]',
-  'to-secondary-500',
+const animatedBg = [
+  'bg-dot',
   'animate-bg-gradient',
-];
-const textureBg = [
-  'opacity-100',
-  "bg-carbon-fibre",
-  'fixed',
-  'bg-fixed',
-  'top-0',
-  'left-0',
-  'w-full',
-  'h-full',
-  'pointer-events-none',
-  'opacity-80',
-  "-z-10"
+  'bg-blend-overlay',
 ];
 
 const classNames = {
@@ -44,8 +26,7 @@ const classNames = {
     'md:px-12',
     'lg:px-24',
   ],
-  gradientBg,
-  textureBg,
+  animatedBg,
 };
 
 export const metadata: Metadata = {
@@ -60,8 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${classNames.gradientBg.join(' ')}`}>
-        {/* <div className={classNames.textureBg.join(' ')} /> */}
+      <body className={`${inter.className} ${classNames.animatedBg.join(' ')}`}>
         <main className={classNames.container.join(' ')}>
           <Card>
             {children}
