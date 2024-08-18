@@ -1,7 +1,24 @@
 {
+  "home": {
+    "header": "Hello! 👋🏽",
+    "description": "My name is Guillermo, and I love ideating and building stuff 💡",
+    "content": "I'm a Software Engineer with a strong product mindset cultivated by engaging with users, analysing problems, and participating in every aspect of the software development life cycle."
+  },
+  "skills": {
+    "header": "My skills",
+    "content": {
+      "1": "I'm proud of the diverse skills I've developed throughout my journey. They've been instrumental in my past accomplishments and serve as a solid foundation for my goal of becoming a T-shaped professional.",
+      "2": "What is a T-shaped person?"
+    },
+    "cards": {
+      "1": "😎 Experienced",
+      "2": "🙂 Working knowledge",
+      "3": "🤓 Work in progress"
+    }
+  },
   "journey": {
     "1": {
-      "header": "My journey",
+      "header": "My journey 🗺️",
       "content": {
         "1": "How I became a Software Engineer"
       }
@@ -12,66 +29,48 @@
         "1": "It started in the '90s when my parents bought our first computer. It quickly became a fundamental part of my activities and entertainment.",
         "2": "As I grew up",
         "3": " - and started playing videogames - ",
-        "4": "I started building my first custom computers and scripts."
+        "4": "I started building custom computers and scripts."
       }
     },
     "3": {
       "header": "🎓 Going to university",
       "content": {
-        "1": "I initially considered this my first big failure, as it took me time to accept I wasn't going to finish my Telecom degree",
-        "2": " - only ~50% of it.",
-        "3": "However, I've come to appreciate this experience as it helped me identify my weaknesses and laid the groundwork for what my career would become in the future; I took my first coding steps here 👣"
+        "1": "This was my first hard lesson, as I didn't complete my Telecom degree and it cost me time to accept it.",
+        "2": "Thanks to my time at the university, however, I identified some of my strengths and weaknesses, and the experience laid the groundwork for what my career would become in the future."
       }
     },
     "4": {
-      "header": "💡 My plan B",
-      "content": "As I loved coding, I decided to pursue a career in Software Development, and planned carefully my next steps: I became a self-taught developer, worked part-time as an IT technician, and got a diploma in Cross-platform Software Development."
+      "header": "Plan B",
+      "content": "As I loved coding, I decided to pursue a career in Software Development and traced a plan to achieve it: I became a self-taught developer, worked part-time as an IT technician, and got a diploma in Cross-platform Software Development."
     },
     "5": {
       "header": "Moving to Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
       "content": {
         "1": "I secured an internship in an Edinburgh-based consultancy, so I left my comfort zone and devoted myself to making the most out of this opportunity.",
-        "2": "It was my first Web Developer experience 🎉"
+        "2": "I got my first Web Developer role 🎉"
       }
     },
     "6": {
-      "header": "🐟 Rooser",
+      "header": "🐟 Eliminating Seafood Waste",
       "content": {
-        "1": "Became part of an awesome crew that worked towards eliminating seafood waste by providing transparency and certainty into the current market. As one of their first employees, I quickly become involved in many areas outside of coding, shifting my role from Software Developer to Software Engineer 🎖️",
-        "2": "This experience also helped me develop a product and user-first mindset through participating in multiple design sprints, user interviews, and having extreme ownership of what we built."
+        "1": "I became part of an awesome crew at Rooser that worked very hard to bring transparency and certainty into the seafood industry. As one of their first employees, I quickly became involved in many areas apart from development, shifting my role from Software Developer to Software Engineer 🎖️",
+        "2": "This experience also helped me develop a product and user-first mindset through participating in multiple design sprints, user interviews, and having extreme ownership of what we built and delivered to our users."
       }
     },
     "7": {
-      "header": "📖 Taking a break",
+      "header": "Deciding my next steps",
       "content": {
         "1": "I decided to take some time off to work on personal projects",
         "2": " - like this site! - ",
-        "3": "and do some personal development. I also tried to relocate to NZ and continue my journey in the other hemisphere, but this had to be postponed as it was not the right moment."
+        "3": "and upskill. I also explored the option of relocating to New Zealand and continue my journey in the other hemisphere, but the timing was not the right one, so it had to be postponed indefinitely."
       }
     },
     "8": {
       "header": "Optix 👀",
       "content": {
-        "1": "Joined Optix in my first specialised role as a Front-end developer. I was excited as this opportunity allowed me to fill the gaps in some areas I didn't experience while working in a start-up environment.",
-        "2": "On top of that, I met specialised teams full of highly skilled people who set new standards for me every day. Exciting! 🤩"
+        "1": "Got my first specialised role as a Front-end Developer 🎖️",
+        "2": "This opportunity allowed me to fill the gaps in some of the areas I couln't experience in a start-up environment and, on top of that, gave me the change to work closely with exceptionally skilled people who set new standards for me every day 🤩"
       }
-    }
-  },
-  "me": {
-    "header": "Welcome!👋🏽",
-    "description": "My name is Guillermo, and I love ideating and building stuff ❤️",
-    "content": "I'm a Full-Stack Engineer with a strong product mindset cultivated by engaging with users, analysing problems, and participating in every aspect of the software development life cycle."
-  },
-  "skills": {
-    "header": "My skills",
-    "content": {
-      "1": "I'm proud of the diverse skills I've developed throughout my journey. They've been instrumental in my past accomplishments and serve as a solid foundation for my goal of becoming a specialised generalist.",
-      "2": "What is a specialised generalist?"
-    },
-    "cards": {
-      "1": "Experienced at 💪🏼",
-      "2": "Working knowledge 👌🏼",
-      "3": "Work in progress 🚧"
     }
   },
   "traits": {
@@ -82,18 +81,15 @@
       "3": "despite getting nervous in front of bigger audiences",
       "4": " - feel happy to present my ideas to larger and non-technical audiences.",
       "5": "When it comes to working as part of a team, I enjoy helping others as it's always a good learning opportunity and preserves the team's momentum.",
-      "6": "If you're interested in personality and trait tests, here you can find mine:"
+      "6": "If you're into personality tests, here you can find mine:"
     },
     "sectionHeader": {
       "whatILike": "What I like"
     }
   },
   "buttons": {
-    "back": "Go back",
+    "back": "Back",
     "aboutMe": "About me",
-    "skills": "My skills",
-    "prev": "Back",
-    "next": "Next",
-    "start": "Start"
+    "skills": "Skills"
   }
 }

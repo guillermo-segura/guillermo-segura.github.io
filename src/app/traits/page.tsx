@@ -88,9 +88,8 @@ export default function Page() {
             content={(
               <>
                 {journey[3].content[1]}
-                <i>{journey[3].content[2]}</i>
                 <LineBreak />
-                {journey[3].content[3]}
+                {journey[3].content[2]}
               </>
             )}
           />
