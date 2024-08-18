@@ -3,6 +3,7 @@ import { BlueLink } from "@/components/BlueLink/BlueLink";
 import { Text } from "@/components/Text/Text";
 import { skills } from '@/content/content.json';
 import data from './skills';
+import { Chip } from "@/components/Chip/Chip";
 
 const specialisedGeneralistLink = 'https://en.wikipedia.org/wiki/T-shaped_skills';
 
@@ -14,17 +15,10 @@ const cn = {
   blue: ['bg-blue-100'],
   yellow: ['bg-yellow-100'],
   tagsContainer: ['flex', 'flex-wrap', 'justify-center'],
-  skillChip: ['px-1.5', 'py-0.5', 'w-max', 'rounded-lg', 'border', 'border-dashed', 'border-stone-300', 'm-0.5'],
 }
 
 export default function Page() {
-  const mapSkill = (skill: string) => (
-    <div className={cn.skillChip.join(' ')} key={skill}>
-      <Text variant="chip">
-        {skill}
-      </Text>
-    </div>
-  );
+  const mapSkill = (skill: string) => (<Chip label={skill} />);
   const mapSkills = (skills: string[]) => skills.map(mapSkill);
   return (
     <>
