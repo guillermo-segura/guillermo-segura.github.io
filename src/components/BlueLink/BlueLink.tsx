@@ -23,7 +23,7 @@ const BlueLinkRaw = ({ children, href }: LinkProps) => {
       className={style.link.join(' ')}
     >
       <Text variant="link">
-        {children}
+        🌐 {children}
       </Text>
     </Link>
   );

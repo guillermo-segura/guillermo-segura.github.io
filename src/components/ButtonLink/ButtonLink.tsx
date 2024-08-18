@@ -6,8 +6,9 @@ import { joinStringArrays } from '@/utils';
 interface ButtonLinkProps {
   children: React.ReactNode;
   href?: string;
-  type?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary';
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+  blank?: boolean;
 };
 
 const cn = {
@@ -21,6 +22,7 @@ const cn = {
     'active:shadow-inner',
     'w-max',
     'h-max',
+    'whitespace-nowrap',
     'outline-none',
     'transition-all',
   ],
@@ -38,10 +40,10 @@ const cn = {
   ],
 }
 
-const ButtonLinkRaw = ({ children, type = 'primary', href = '', onClick }: ButtonLinkProps) => {
+const ButtonLinkRaw = ({ children, onClick, variant = 'primary', href = '', blank = false }: ButtonLinkProps) => {
   return (
-    <Link className={joinStringArrays(cn.base, cn[type])} href={href} onClick={onClick}>
-      {children && <Text variant="label" color={type === 'primary' ? 'white' : 'black'}>{children}</Text>}
+    <Link className={joinStringArrays(cn.base, cn[variant])} href={href} onClick={onClick} target={blank ? '_blank' : undefined}>
+      {children && <Text variant="label" color={variant === 'primary' ? 'white' : 'black'}>{children}</Text>}
     </Link>
   );
 }

@@ -41,7 +41,7 @@ const style = {
 const LINKEDIN_URL = 'https://www.linkedin.com/in/g-segura/';
 const GITHUB_URL = 'https://github.com/guillermo-segura';
 
-const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
+const CardFooterRaw = ({ skills = false, traits = false, home = false, blog = false }) => {
   return (
     <footer className={joinStringArrays(style.container)}>
       <div className={joinStringArrays(style.iconsContainer)}>
@@ -69,7 +69,7 @@ const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
 
       <div className={joinStringArrays(style.itemsContainer)}>
         {home && (
-          <ButtonLink href="/" type="secondary">
+          <ButtonLink href="/" variant="secondary">
             {content.buttons.back}
           </ButtonLink>
         )}
@@ -81,6 +81,11 @@ const CardFooterRaw = ({ skills = false, traits = false, home = false }) => {
         {skills && (
           <ButtonLink href="/skills">
             {content.buttons.skills}
+          </ButtonLink>
+        )}
+        {false && (
+          <ButtonLink href="/blog">
+            {content.buttons.blog}
           </ButtonLink>
         )}
       </div>

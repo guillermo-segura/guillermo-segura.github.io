@@ -46,7 +46,7 @@ export default function Page() {
         </div>
       </CardSection>
 
-      <CardFooter home traits />
+      <CardFooter home traits blog />
     </>
   );
 }

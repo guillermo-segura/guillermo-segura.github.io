@@ -15,7 +15,7 @@ export default function Page() {
         <Text variant="subtext">{content.home.content}</Text>
       </CardSection>
 
-      <CardFooter skills traits />
+      <CardFooter skills traits blog />
     </>
   );
 }

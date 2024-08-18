@@ -16,6 +16,13 @@
       "3": "🤓 Work in progress"
     }
   },
+  "blog": {
+    "header": "My blog",
+    "content": {
+      "1": "Here you can find some of the articles I've shared online. If you want to find them all, check out my Medium profile.",
+      "2": "My Medium profile"
+    }
+  },
   "journey": {
     "1": {
       "header": "My journey",
@@ -90,6 +97,7 @@
   "buttons": {
     "back": "Back",
     "aboutMe": "About me",
-    "skills": "Skills"
+    "skills": "Skills",
+    "blog": "Blog"
   }
 }

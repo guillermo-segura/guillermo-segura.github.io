@@ -48,9 +48,11 @@ export default function Page() {
           <LineBreak />
           {content.traits.content[6]}
         </Text>
-        <BlueLink href={PERSONALITY_LINK}>INTJ-A</BlueLink>
+        <BlueLink href={PERSONALITY_LINK}>
+          INTJ-A
+        </BlueLink>
         <div className={joinStringArrays(style.buttonsContainer)}>
-          <ButtonLink href="/" type="secondary">
+          <ButtonLink href="/" variant="secondary">
             {content.buttons.back}
           </ButtonLink>
           <ButtonLink href="/skills">
@@ -159,7 +161,7 @@ export default function Page() {
         <BodyListGroup data={data.preferences}/>
       </CardSection>
 
-      <CardFooter home skills />
+      <CardFooter home skills blog />
     </>
   );
 }
