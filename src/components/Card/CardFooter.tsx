@@ -31,6 +31,7 @@ const style = {
     'flex',
     'flex-col',
     'space-y-6',
+    'items-center',
     'xs:space-y-0',
     'xs:flex-row',
     'xs:space-x-4',

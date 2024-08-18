@@ -19,6 +19,8 @@ const cn = {
     'hover:shadow-inner',
     'focus:shadow-inner',
     'active:shadow-inner',
+    'w-max',
+    'h-max',
     'outline-none',
     'transition-all',
   ],

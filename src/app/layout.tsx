@@ -7,6 +7,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 // https://mycolor.space/gradient3
+// https://favicon.io/favicon-generator/
 const animatedBg = [
   'bg-dot',
   'bg-dot-size',
