@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { joinStringArrays } from '@/utils';
 
-export type Variant = 'h1' | 'h2' | 'h3' | 'text' | 'subtext' | 'label' | 'link' | 'chip';
+export type Variant = 'h1' | 'h2' | 'h3' | 'text' | 'subtext' | 'label' | 'link' | 'chip' | 'copyright';
 
 export interface TextProps {
   children: React.ReactNode;
@@ -60,6 +60,11 @@ const style = {
     'underline',
     'underline-offset-8',
     'decoration-dotted',
+  ],
+  copyright: [
+    'text-xs',
+    'uppercase',
+    'tracking-wide',
   ],
   chip: [
     'font-mono',

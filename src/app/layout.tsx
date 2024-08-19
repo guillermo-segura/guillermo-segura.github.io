@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import { Card } from '@/components/Card';
+import { Text } from '@/components/Text/Text';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -21,9 +22,9 @@ const classNames = {
     'flex',
     'flex-col',
     'items-center',
-    'justify-between',
     'min-h-screen',
     'p-4',
+    'space-y-6',
     'xs:py-24',
     'xs:px-6',
     'md:px-12',
@@ -49,6 +50,9 @@ export default function RootLayout({
           <Card>
             {children}
           </Card>
+          <Text variant="copyright" color="white" textAlign="center">
+            © {new Date().getFullYear()} Guillermo Segura. All rights reserved.
+          </Text>
         </main>
       </body>
     </html>

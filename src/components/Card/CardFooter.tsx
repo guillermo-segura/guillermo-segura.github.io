@@ -61,12 +61,6 @@ const CardFooterRaw = ({ skills = false, traits = false, home = false, blog = fa
         />
       </div>
 
-      {/* <div className="flex flex-row">
-        <span className="text-stone-300 font-mono font-sm cursor-pointer p-2">ES 🇪🇸</span>
-        <span className="py-2">|</span>
-        <span className="font-mono font-sm cursor-pointer p-2">EN 🇬🇧</span>
-      </div> */}
-
       <div className={joinStringArrays(style.itemsContainer)}>
         {home && (
           <ButtonLink href="/" variant="secondary">
