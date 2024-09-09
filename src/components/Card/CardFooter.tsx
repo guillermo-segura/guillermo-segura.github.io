@@ -77,7 +77,7 @@ const CardFooterRaw = ({ skills = false, traits = false, home = false, blog = fa
             {content.buttons.skills}
           </ButtonLink>
         )}
-        {false && (
+        {blog && (
           <ButtonLink href="/blog">
             {content.buttons.blog}
           </ButtonLink>

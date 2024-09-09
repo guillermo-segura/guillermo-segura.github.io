@@ -8,7 +8,7 @@ const style = {
   pin: ['absolute', 'rounded-full', '-top-3'],
   pinHead: {
     size: ['w-5', 'h-5'],
-    left: ['left-1/2', 'ml-2', 'shadow-[-4px_4px_5px_rgba(0,0,0,0.5)]', 'bg-red-500'],
+    left: ['left-1/2', 'ml-2', 'shadow-[-4px_4px_5px_rgba(0,0,0,0.5)]'],
     right: ['right-1/2', 'mr-2', 'shadow-[4px_4px_5px_rgba(0,0,0,0.5)]'],
     color: {
       red: ['bg-red-500'],

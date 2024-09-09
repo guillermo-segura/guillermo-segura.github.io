@@ -31,19 +31,11 @@ export default function Page() {
       <CardSection>
         <div className={joinStringArrays(style.blogsContainer)}>
           <div className={joinStringArrays(style.blog)}>
-            <BlogCard />
-          </div>
-          <div className={joinStringArrays(style.blog)}>
-            <BlogCard />
-          </div>
-          <div className={joinStringArrays(style.blog)}>
-            <BlogCard />
-          </div>
-          <div className={joinStringArrays(style.blog)}>
-            <BlogCard />
-          </div>
-          <div className={joinStringArrays(style.blog)}>
-            <BlogCard />
+            <BlogCard
+              title="Your Career as a Road: How not to Get Lost"
+              description="Short article about career progression and how to overcome the difficulties of not knowing what to do next."
+              url="https://medium.com/design-bootcamp/your-career-as-a-road-how-not-to-get-lost-3b0601af64cd"
+            />
           </div>
         </div>
       </CardSection>

@@ -7,8 +7,7 @@ const style = {
   container: [
     'flex',
     'flex-col',
-    'items-center',
-    'space-y-6',
+    'items-right',
     'p-4',
     'w-full', 
     'rounded-lg',
@@ -28,24 +27,32 @@ const style = {
   ]
 };
 
-const BlogCardRaw = () => {
+export interface BlogCardProps {
+  title: string;
+  description: string;
+  url: string;
+}
+
+const BlogCardRaw = ({ title, description, url }: BlogCardProps) => {
   return (
     <article className={joinStringArrays(style.container)}>
       <div>
         <div className={joinStringArrays(style.title)}>
           <Text>
-            Article name ✍🏼
+            {title}
           </Text>
         </div>
         <div>
           <Text variant="subtext">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis suscipit ultricies. Duis et ex vitae justo vestibulum aliquet quis dignissim metus.
+            {description}
           </Text>
         </div>
       </div>
-      <ButtonLink blank href="https://medium.com/@viltran.co" variant="secondary">
-        Read more
-      </ButtonLink>
+      <div className="flex flex-row mx-auto">
+        <ButtonLink blank href={url} variant="secondary">
+          Read more
+        </ButtonLink>
+      </div>
     </article>
   );
 }
