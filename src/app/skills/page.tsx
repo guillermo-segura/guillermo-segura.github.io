@@ -1,7 +1,7 @@
 import { CardHeader, CardSection, CardFooter } from '@/components/Card';
 import { BlueLink } from '@/components/BlueLink/BlueLink';
 import { Text } from '@/components/Text/Text';
-import content from '@/content/content.json';
+import content from '@/content/skills.json';
 import { ChipList } from '@/components/Chip';
 import { topSkills, avgSkills, wipSkills } from './skills';
 import { joinStringArrays } from '@/utils';
@@ -23,25 +23,25 @@ const style = {
 export default function Page() {
   return (
     <>
-      <CardHeader header={content.skills.header} />
+      <CardHeader header={content.header} />
 
       <CardSection blue spaceY={6}>
-        <Text variant="subtext">{content.skills.content[1]}</Text>
+        <Text variant="subtext">{content.content[1]}</Text>
         <BlueLink href={T_SHAPE_WIKI_LINK}>
-          {content.skills.content[2]}
+          {content.content[2]}
         </BlueLink>
       </CardSection>
 
       <CardSection>  
         <div className={joinStringArrays(style.listsContainer)}>
           <div className={joinStringArrays(style.list)}>
-            <ChipList label={content.skills.cards[1]} labelColor="green" items={topSkills} />
+            <ChipList label={content.cards[1]} labelColor="green" items={topSkills} />
           </div>
           <div className={joinStringArrays(style.list)}>
-            <ChipList label={content.skills.cards[2]} labelColor="blue" items={avgSkills} />
+            <ChipList label={content.cards[2]} labelColor="blue" items={avgSkills} />
           </div>
           <div className={joinStringArrays(style.list)}>
-            <ChipList label={content.skills.cards[3]} labelColor="yellow" items={wipSkills} />
+            <ChipList label={content.cards[3]} labelColor="yellow" items={wipSkills} />
           </div>
         </div>
       </CardSection>

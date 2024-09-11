@@ -1,0 +1,14 @@
+{
+  "header": "My blog",
+  "content": {
+    "1": "I decided to start writing to improve how I present my ideas and to share my experiences, hoping they are helpful to others. I've always feared I had nothing valuable to offer, but I believe I can eventually prove my fear wrong with practice.",
+    "2": "My Medium profile"
+  },
+  "articles": [
+    {
+      "title": "Your Career as a Road: How not to Get Lost",
+      "description": "Short article about career progression and how to overcome the difficulties of not knowing what to do next.",
+      "url": "https://medium.com/design-bootcamp/your-career-as-a-road-how-not-to-get-lost-3b0601af64cd"
+    }
+  ]
+}

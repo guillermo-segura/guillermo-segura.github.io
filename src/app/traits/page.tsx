@@ -1,6 +1,4 @@
-import { BodyHeader,
-  BodyListGroup } from '@/components/Body';
-import { BlueLink } from '@/components/BlueLink/BlueLink';
+import { BodyHeader, BodyListGroup } from '@/components/Body';
 import { ButtonLink } from '@/components/ButtonLink/ButtonLink';
 import { CardHeader, CardSection, CardFooter } from '@/components/Card';
 import { ImgSlide } from '@/components/ImgSlide/ImgSlide';
@@ -10,13 +8,12 @@ import { VerticalDivider } from '@/components/VerticalDivider/VerticalDivider';
 import { oldComputersImg, universityImg, edinburghImg, rooserImg, optixImg } from '@/assets/journey';
 
 import content from '@/content/content.json';
+import traitsContent from '@/content/traits.json';
 
 import { Text } from '@/components/Text/Text';
 import { LineBreak } from '@/components/LineBreak/LineBreak';
 import { joinStringArrays } from '@/utils';
 import data from './traits';
-
-const PERSONALITY_LINK = 'https://www.16personalities.com/intj-personality';
 
 const style = {
   buttonsContainer: [
@@ -34,23 +31,20 @@ const style = {
 export default function Page() {
   return (
     <>
-      <CardHeader header={content.traits.header} />
+      <CardHeader header={traitsContent.header} />
 
       <CardSection blue spaceY={6}>
         <Text variant="subtext">
-          {content.traits.content[1]}
+          {traitsContent.content[1]}
           <LineBreak />
-          {content.traits.content[2]}
-          <i>{content.traits.content[3]}</i>
-          {content.traits.content[4]}
+          {traitsContent.content[2]}
+          <i>{traitsContent.content[3]}</i>
+          {traitsContent.content[4]}
           <LineBreak />
-          {content.traits.content[5]}
+          {traitsContent.content[5]}
           <LineBreak />
-          {content.traits.content[6]}
+          {traitsContent.content[6]}
         </Text>
-        <BlueLink href={PERSONALITY_LINK}>
-          INTJ-A
-        </BlueLink>
         <div className={joinStringArrays(style.buttonsContainer)}>
           <ButtonLink href="/" variant="secondary">
             {content.buttons.back}
@@ -156,7 +150,7 @@ export default function Page() {
 
       <CardSection>
         <BodyHeader>
-          {content.traits.sectionHeader.whatILike}
+          {traitsContent.sectionHeader.whatILike}
         </BodyHeader>
         <BodyListGroup data={data.preferences}/>
       </CardSection>
