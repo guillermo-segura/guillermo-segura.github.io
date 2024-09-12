@@ -8,11 +8,12 @@ export default function Page() {
     <>
       <CardHeader
         header={content.header}
-        description={content.description}
+        description={content.subheader}
       />
 
-      <CardSection blue>
-        <Text variant="subtext">{content.content}</Text>
+      <CardSection blue spaceY={6}>
+        <Text variant="subtext">{content.description}</Text>
+        <Text variant="subtext">{content.reachOut}</Text>
       </CardSection>
 
       <CardFooter skills traits blog />
