@@ -1,13 +1,9 @@
 import { CardHeader, CardSection, CardFooter } from '@/components/Card';
-import { BlueLink } from '@/components/BlueLink/BlueLink';
-import { Text } from '@/components/Text/Text';
-import content from '@/content/skills.json';
 import { ChipList } from '@/components/Chip';
-import { topSkills, avgSkills, wipSkills } from './skills';
+import { Text } from '@/components/Text/Text';
 import { joinStringArrays } from '@/utils';
-import { LineBreak } from '@/components/LineBreak/LineBreak';
-
-const T_SHAPE_WIKI_LINK = 'https://en.wikipedia.org/wiki/T-shaped_skills';
+import content from '@/content/skills.json';
+import { topSkills, avgSkills, wipSkills } from './skills';
 
 const style = {
   listsContainer: [
