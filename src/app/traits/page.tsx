@@ -36,13 +36,16 @@ export default function Page() {
       <CardSection blue spaceY={6}>
         <Text variant="subtext">
           {traitsContent.content[1]}
-          <LineBreak />
+        </Text>
+        <Text variant="subtext">
           {traitsContent.content[2]}
           <i>{traitsContent.content[3]}</i>
           {traitsContent.content[4]}
-          <LineBreak />
+        </Text>
+        <Text variant="subtext">
           {traitsContent.content[5]}
-          <LineBreak />
+        </Text>
+        <Text variant="subtext">
           {traitsContent.content[6]}
         </Text>
         <div className={joinStringArrays(style.buttonsContainer)}>

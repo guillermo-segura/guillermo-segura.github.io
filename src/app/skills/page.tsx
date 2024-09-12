@@ -5,6 +5,7 @@ import content from '@/content/skills.json';
 import { ChipList } from '@/components/Chip';
 import { topSkills, avgSkills, wipSkills } from './skills';
 import { joinStringArrays } from '@/utils';
+import { LineBreak } from '@/components/LineBreak/LineBreak';
 
 const T_SHAPE_WIKI_LINK = 'https://en.wikipedia.org/wiki/T-shaped_skills';
 
@@ -27,9 +28,7 @@ export default function Page() {
 
       <CardSection blue spaceY={6}>
         <Text variant="subtext">{content.content[1]}</Text>
-        <BlueLink href={T_SHAPE_WIKI_LINK}>
-          {content.content[2]}
-        </BlueLink>
+        <Text variant="subtext">{content.content[2]}</Text>
       </CardSection>
 
       <CardSection>  
