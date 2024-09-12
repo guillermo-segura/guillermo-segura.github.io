@@ -40,8 +40,6 @@ export default function Page() {
           </div>
         </div>
       </CardSection>
-
-      <CardFooter home traits blog />
     </>
   );
 }

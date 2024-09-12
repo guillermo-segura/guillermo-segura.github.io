@@ -22,8 +22,6 @@ export default function Page() {
             />
         ))}
       </CardSection>
-
-      <CardFooter home traits skills />
     </>
   );
 }

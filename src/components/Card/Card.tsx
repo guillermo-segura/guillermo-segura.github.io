@@ -6,7 +6,7 @@ const style = {
     'w-full', 
     'max-w-4xl', 
 
-    'bg-gradient-to-t', 
+    'bg-gradient-to-b', 
     'from-white', 
     'to-stone-100',
 
@@ -18,9 +18,9 @@ const style = {
 
 const CardRaw = ({ children }: { children: React.ReactNode }) => {
   return (
-      <div className={joinStringArrays(style.container)}>
-        {children}
-      </div>
+    <div className={joinStringArrays(style.container)}>
+      {children}
+    </div>
   );
 }
 

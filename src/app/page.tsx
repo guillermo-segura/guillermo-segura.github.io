@@ -15,8 +15,6 @@ export default function Page() {
         <Text variant="subtext">{content.description}</Text>
         <Text variant="subtext">{content.reachOut}</Text>
       </CardSection>
-
-      <CardFooter skills traits blog />
     </>
   );
 }

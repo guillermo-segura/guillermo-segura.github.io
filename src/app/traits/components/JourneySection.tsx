@@ -6,7 +6,7 @@ import { VerticalDivider } from '@/components/VerticalDivider/VerticalDivider';
 
 import { oldComputersImg, universityImg, edinburghImg, rooserImg, optixImg } from '@/assets/journey';
 
-import content from '@/content/content.json';
+import content from '@/content/journey.json';
 
 import { LineBreak } from '@/components/LineBreak/LineBreak';
 

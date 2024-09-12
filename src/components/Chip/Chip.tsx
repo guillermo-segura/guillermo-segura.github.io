@@ -14,7 +14,6 @@ const style = {
     'm-0.5',
     'bg-white',
     'transition-all',
-    'duration-500',
     'hover:border-dark-500',
     'cursor-pointer',
   ],

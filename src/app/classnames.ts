@@ -14,7 +14,6 @@ export const container = [
   'items-center',
   'min-h-screen',
   'p-4',
-  'space-y-6',
   'xs:py-24',
   'xs:px-6',
   'md:px-12',

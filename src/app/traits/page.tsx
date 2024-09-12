@@ -30,8 +30,6 @@ export default function Page() {
       <JourneySection />
 
       <PreferencesSection />
-
-      <CardFooter home skills blog />
     </>
   );
 }
