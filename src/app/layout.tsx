@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 
 import { Card, CardFooter } from "@/components/Card";
 import { CopyrightBanner } from "@/components/CopyrightBanner/CopyrightBanner";
@@ -13,7 +13,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Welcome!",
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={joinStringArrays([inter.className], animatedBg)}>
+      <body className={joinStringArrays([nunito.className], animatedBg)}>
         <main className={joinStringArrays(container)}>
           <Navbar />
           <Card>
