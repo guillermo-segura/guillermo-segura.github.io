@@ -18,7 +18,8 @@ export default function Page() {
             key={article.title}
             title={article.title}
             description={article.description}
-            url={article.url}
+            time={article.time}
+            href={article.href}
           />
         ))}
       </CardSection>

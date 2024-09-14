@@ -7,8 +7,9 @@
   "articles": [
     {
       "title": "Your Career as a Road: How not to Get Lost",
+      "time": "5 min read",
       "description": "Short article about career progression and how to overcome the difficulties of not knowing what to do next.",
-      "url": "https://medium.com/design-bootcamp/your-career-as-a-road-how-not-to-get-lost-3b0601af64cd"
+      "href": "https://medium.com/design-bootcamp/your-career-as-a-road-how-not-to-get-lost-3b0601af64cd"
     }
   ]
 }

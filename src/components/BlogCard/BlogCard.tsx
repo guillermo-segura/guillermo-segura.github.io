@@ -1,50 +1,53 @@
 import { joinStringArrays } from "@/utils";
 import { memo } from "react";
 import { Text } from "../Text/Text";
-import { ButtonLink } from "../ButtonLink/ButtonLink";
+import { faMedium } from "@fortawesome/free-brands-svg-icons/faMedium";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const style = {
   container: [
     "flex",
     "flex-col",
-    "items-right",
     "p-4",
     "w-full",
     "rounded-lg",
     "border",
     "border-dashed",
-    "border-stone-300",
+    "border-dark-100",
+    "transition-all",
+    "cursor-pointer",
+
     "hover:bg-white",
     "hover:border-dark-500",
-    "transition-all",
-    "duration-300",
   ],
-  title: ["border-b-2", "border-stone-100", "py-2", "mb-4"],
+  content: ["space-y-2"],
 };
 
 export interface BlogCardProps {
   title: string;
   description: string;
-  url: string;
+  time: string;
+  href: string;
 }
 
-const BlogCardRaw = ({ title, description, url }: BlogCardProps) => {
+const BlogCardRaw = ({ title, description, time, href }: BlogCardProps) => {
   return (
-    <article className={joinStringArrays(style.container)}>
-      <div>
-        <div className={joinStringArrays(style.title)}>
-          <Text>{title}</Text>
-        </div>
-        <div>
-          <Text variant="subtext">{description}</Text>
-        </div>
+    <Link
+      href={href}
+      target="_blank"
+      className={joinStringArrays(style.container)}
+    >
+      <Text>
+        <FontAwesomeIcon icon={faMedium} />
+        &nbsp;
+        {title}
+      </Text>
+      <div className={joinStringArrays(style.content)}>
+        <Text variant="label">{time}</Text>
+        <Text variant="subtext">{description}</Text>
       </div>
-      <div className="flex flex-row mx-auto">
-        <ButtonLink blank href={url} variant="secondary">
-          Read more
-        </ButtonLink>
-      </div>
-    </article>
+    </Link>
   );
 };
 
