@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { ReactNode } from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-import { Card, CardFooter } from '@/components/Card';
-import { CopyrightBanner } from '@/components/CopyrightBanner/CopyrightBanner';
-import { Navbar } from '@/components/Navbar/Navbar';
-import { container, animatedBg } from '@/app/classnames';
-import { joinStringArrays } from '@/utils';
-import './globals.css';
+import { Card, CardFooter } from "@/components/Card";
+import { CopyrightBanner } from "@/components/CopyrightBanner/CopyrightBanner";
+import { Navbar } from "@/components/Navbar/Navbar";
+import { container, animatedBg } from "@/app/classnames";
+import { joinStringArrays } from "@/utils";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Welcome!",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -27,7 +28,7 @@ export default function RootLayout({
           <Navbar />
           <Card>
             {children}
-            <CardFooter/>
+            <CardFooter />
           </Card>
           <CopyrightBanner />
         </main>

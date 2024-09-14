@@ -1,47 +1,47 @@
-'use client';
-import { memo, useCallback, useRef } from 'react';
-import Link from 'next/link';
-import { joinStringArrays } from '@/utils';
+"use client";
+import { memo, useCallback, useRef, ReactNode } from "react";
+import Link from "next/link";
+import { joinStringArrays } from "@/utils";
 
 interface NavbarButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   href?: string;
   isActive: boolean;
-};
+}
 
 const cn = {
   base: [
-    'px-4',
-    'py-1',
-    'my-1',
-    'rounded-lg',
-    'shadow-card',
-    'whitespace-nowrap',
-    'outline-none',
-    'transition-all',
-    'text-sm',
-    'sm:text-md',
-    'font-bold',
-    'uppercase',
-    'tracking-wide',
+    "px-4",
+    "py-1",
+    "my-1",
+    "rounded-lg",
+    "shadow-card",
+    "whitespace-nowrap",
+    "outline-none",
+    "transition-all",
+    "text-sm",
+    "sm:text-md",
+    "font-bold",
+    "uppercase",
+    "tracking-wide",
   ],
-  active: [
-    'bg-primary-600',
-    'text-white',
-    'cursor-default',
-  ],
+  active: ["bg-primary-600", "text-white", "cursor-default"],
   inctive: [
-    'bg-white',
-    'hover:bg-primary-500',
-    'focus:bg-primary-500',
-    'hover:text-white',
-    'focus:text-white',
-    'text-dark-500',
-    'cursor-pointer',
+    "bg-white",
+    "hover:bg-primary-500",
+    "focus:bg-primary-500",
+    "hover:text-white",
+    "focus:text-white",
+    "text-dark-500",
+    "cursor-pointer",
   ],
-}
+};
 
-const NavbarButtonRaw = ({ children, isActive, href = '' }: NavbarButtonProps) => {
+const NavbarButtonRaw = ({
+  children,
+  isActive,
+  href = "",
+}: NavbarButtonProps) => {
   const ref = useRef<HTMLAnchorElement | null>(null);
   const onClick = useCallback(() => ref.current?.blur(), []);
   return (
@@ -54,6 +54,6 @@ const NavbarButtonRaw = ({ children, isActive, href = '' }: NavbarButtonProps) =
       {children}
     </Link>
   );
-}
+};
 
 export const NavbarButton = memo(NavbarButtonRaw);

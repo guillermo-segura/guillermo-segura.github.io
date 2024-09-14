@@ -1,5 +1,5 @@
-import { memo } from 'react';
-import { Text } from '@/components/Text/Text';
+import { memo } from "react";
+import { Text } from "@/components/Text/Text";
 
 const CopyrightBannerRaw = () => (
   <div className="mt-6">

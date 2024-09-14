@@ -1,2 +1,2 @@
-export { Chip } from './Chip';
-export { ChipList } from './ChipList';
+export { Chip } from "./Chip";
+export { ChipList } from "./ChipList";

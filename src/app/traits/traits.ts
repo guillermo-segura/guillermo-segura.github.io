@@ -1,20 +1,8 @@
 const data = {
   preferences: {
-    'Hobbies': [
-      '🎧 Music',
-      '📖 Books',
-      '🎮 Videogames',
-    ],
-    'Food': [
-      '🌮 Mexican',
-      '🥡 Chinese',
-      '🥘 Mediterranean',
-    ],
-    'Sports': [
-      '⛰️ Hiking',
-      '👟 Running',
-      '🏓 Table tenis',
-    ],
+    Hobbies: ["🎧 Music", "📖 Books", "🎮 Videogames"],
+    Food: ["🌮 Mexican", "🥡 Chinese", "🥘 Mediterranean"],
+    Sports: ["⛰️ Hiking", "👟 Running", "🏓 Table tenis"],
   },
 };
 

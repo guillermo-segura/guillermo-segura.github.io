@@ -1,2 +1,2 @@
-export { getRandomValue } from './getRandomValue';
-export { joinStringArrays } from './joinStringArrays';
+export { getRandomValue } from "./getRandomValue";
+export { joinStringArrays } from "./joinStringArrays";

@@ -1,7 +1,7 @@
-import { BlogCard } from '@/components/BlogCard/BlogCard';
-import { CardHeader, CardSection, CardFooter } from '@/components/Card';
-import { Text } from '@/components/Text/Text';
-import content from '@/content/blog.json';
+import { BlogCard } from "@/components/BlogCard/BlogCard";
+import { CardHeader, CardSection } from "@/components/Card";
+import { Text } from "@/components/Text/Text";
+import content from "@/content/blog.json";
 
 export default function Page() {
   return (
@@ -14,12 +14,12 @@ export default function Page() {
 
       <CardSection spaceY={6}>
         {content.articles.map((article) => (
-            <BlogCard
-              key={article.title}
-              title={article.title}
-              description={article.description}
-              url={article.url}
-            />
+          <BlogCard
+            key={article.title}
+            title={article.title}
+            description={article.description}
+            url={article.url}
+          />
         ))}
       </CardSection>
     </>

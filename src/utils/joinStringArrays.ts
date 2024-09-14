@@ -16,6 +16,5 @@
  * );
  * // Returns "apple banana cherry date fig grape"
  */
-export const joinStringArrays = (...args: string[][]): string => (
-  Array.from(new Set(args.flat())).join(' ')
-);
+export const joinStringArrays = (...args: string[][]): string =>
+  Array.from(new Set(args.flat())).join(" ");

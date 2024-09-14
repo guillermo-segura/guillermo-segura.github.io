@@ -1,1 +1,6 @@
-export const LineBreak = () => (<><br /><br /></>);
+export const LineBreak = () => (
+  <>
+    <br />
+    <br />
+  </>
+);
