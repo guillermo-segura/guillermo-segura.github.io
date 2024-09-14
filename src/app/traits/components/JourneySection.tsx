@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { CardSection } from "@/components/Card";
-import { ImgSlide } from "@/components/ImgSlide/ImgSlide";
+import { RightImgSlide } from "@/components/ImgSlide";
 import { Slide, RightSlide, LeftSlide } from "@/components/Slide";
 import { Text } from "@/components/Text/Text";
 import { VerticalDivider } from "@/components/VerticalDivider/VerticalDivider";
@@ -14,8 +14,6 @@ import {
 } from "@/assets/journey";
 
 import content from "@/content/journey.json";
-
-import { LineBreak } from "@/components/LineBreak/LineBreak";
 
 const JourneySectionRaw = () => (
   <CardSection>
@@ -63,19 +61,18 @@ const JourneySectionRaw = () => (
 
     <VerticalDivider />
 
-    <ImgSlide
-      right
+    <RightImgSlide
       imgSrc={edinburghImg}
       imgAlt="Photo of Edinburgh"
       header={content.journey[5].header}
-      content={
-        <>
-          {content.journey[5].content[1]}
-          <LineBreak />
-          {content.journey[5].content[2]}
-        </>
-      }
-    />
+    >
+      <Text variant="subtext" textAlign="right">
+        {content.journey[5].content[1]}
+      </Text>
+      <Text variant="subtext" textAlign="right">
+        {content.journey[5].content[2]}
+      </Text>
+    </RightImgSlide>
 
     <VerticalDivider />
 
