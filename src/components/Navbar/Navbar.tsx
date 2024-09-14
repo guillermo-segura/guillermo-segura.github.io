@@ -11,7 +11,6 @@ import {
   faCode,
   IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { container, buttons } from "./classnames";
 
 interface NavItem {
@@ -51,7 +50,7 @@ const NavbarRaw = () => {
         key={item.label}
         href={item.path}
         isActive={pathname === item.path}
-        icon={<FontAwesomeIcon icon={item.icon} />}
+        icon={item.icon}
       >
         {item.label}
       </NavbarButton>

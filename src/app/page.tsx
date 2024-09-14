@@ -10,7 +10,6 @@ export default function Page() {
 
       <CardSection blue spaceY={6}>
         <Text variant="subtext">{content.description}</Text>
-        <Text variant="subtext">{content.reachOut}</Text>
       </CardSection>
     </>
   );

@@ -1,45 +1,68 @@
-import { memo } from "react";
-import linkedInIcon from "@/assets/icons/linkedin.svg";
-import linkedInBlueIcon from "@/assets/icons/linkedin_blue.svg";
-import gitHubIcon from "@/assets/icons/github.svg";
-import gitHubBlueIcon from "@/assets/icons/github_blue.svg";
-
-import { IconLink } from "@/components/IconLink/IconLink";
+import { memo, useCallback } from "react";
+import {
+  faMediumM,
+  faGithub,
+  faLinkedinIn,
+  IconDefinition,
+} from "@fortawesome/free-brands-svg-icons";
+import { BrandLink } from "@/components/BrandLink/BrandLink";
+import { Text } from "@/components/Text/Text";
 import { joinStringArrays } from "@/utils";
+import content from "@/content/home.json";
 
 const style = {
   container: [
     "flex",
+    "flex-col",
     "justify-between",
     "items-center",
+    "space-y-4",
     "p-6",
     "sm:px-12",
-    "xs:flex-row",
   ],
-  iconsContainer: ["flex", "flex-row", "space-x-4", "mt-6", "xs:mt-0"],
+  iconsContainer: ["flex", "flex-row", "space-x-6"],
 };
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/g-segura/";
-const GITHUB_URL = "https://github.com/guillermo-segura";
+interface BrandItem {
+  path: string;
+  icon: IconDefinition;
+  label: string;
+}
+
+const brandItems: BrandItem[] = [
+  {
+    path: "https://www.linkedin.com/in/g-segura/",
+    icon: faLinkedinIn,
+    label: "LinkedIn",
+  },
+  {
+    path: "https://github.com/guillermo-segura",
+    icon: faGithub,
+    label: "GitHub",
+  },
+  {
+    path: "https://medium.com/@viltran.co",
+    icon: faMediumM,
+    label: "Medium",
+  },
+];
 
 const CardFooterRaw = () => {
+  const mapItemButtons = useCallback(
+    (item: BrandItem) => (
+      <BrandLink key={item.label} href={item.path} icon={item.icon}>
+        {item.label}
+      </BrandLink>
+    ),
+    [],
+  );
   return (
     <footer className={joinStringArrays(style.container)}>
+      <div>
+        <Text variant="subtext">{content.reachOut}</Text>
+      </div>
       <div className={joinStringArrays(style.iconsContainer)}>
-        <IconLink
-          id="linkedin_icon"
-          href={LINKEDIN_URL}
-          imgSrc={linkedInIcon}
-          hoveredImgSrc={linkedInBlueIcon}
-          imgAlt="LinkedIn link"
-        />
-        <IconLink
-          id="github_icon"
-          href={GITHUB_URL}
-          imgSrc={gitHubIcon}
-          hoveredImgSrc={gitHubBlueIcon}
-          imgAlt="GitHub link"
-        />
+        {brandItems.map(mapItemButtons)}
       </div>
     </footer>
   );

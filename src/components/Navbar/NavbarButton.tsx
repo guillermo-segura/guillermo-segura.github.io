@@ -1,11 +1,13 @@
 "use client";
-import { memo, useCallback, useRef, ReactNode } from "react";
+import { memo, useCallback, useRef } from "react";
 import Link from "next/link";
+import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { joinStringArrays } from "@/utils";
 
 interface NavbarButtonProps {
   children: string;
-  icon: ReactNode;
+  icon: IconDefinition;
   isActive?: boolean;
   href?: string;
 }
@@ -49,8 +51,9 @@ const NavbarButtonRaw = ({
       className={joinStringArrays(cn.base, isActive ? cn.active : cn.inctive)}
       href={href}
       onClick={onClick}
+      tabIndex={isActive ? -1 : undefined}
     >
-      <span className={joinStringArrays(cn.icon)}>{icon}</span>
+      <FontAwesomeIcon icon={icon} className={joinStringArrays(cn.icon)} />
       <span className={joinStringArrays(cn.label)}>{children}</span>
     </Link>
   );
