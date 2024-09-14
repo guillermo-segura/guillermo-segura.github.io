@@ -18,7 +18,7 @@ const style = {
     `space-y-${spaceY}`,
     "overflow-hidden",
   ],
-  blue: ["bg-blue-100", "shadow-inner-xl"],
+  blue: ["bg-primary-100", "shadow-inner-xl"],
 };
 
 const CardSectionRaw = ({

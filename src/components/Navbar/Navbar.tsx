@@ -4,6 +4,13 @@ import content from "@/content/actions.json";
 import { NavbarButton } from "./NavbarButton";
 import { usePathname } from "next/navigation";
 import { joinStringArrays } from "@/utils";
+import {
+  faHouse,
+  faUser,
+  faPen,
+  faRocket,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const cn = {
   navContainer: [
@@ -24,16 +31,32 @@ const NavbarRaw = () => {
   return (
     <nav className={joinStringArrays(cn.navContainer)}>
       <div className={joinStringArrays(cn.buttonsContainer)}>
-        <NavbarButton href="/" isActive={pathname === "/"}>
+        <NavbarButton
+          href="/"
+          isActive={pathname === "/"}
+          icon={<FontAwesomeIcon icon={faHouse} />}
+        >
           {content.home}
         </NavbarButton>
-        <NavbarButton href="/traits" isActive={pathname === "/traits"}>
+        <NavbarButton
+          href="/traits"
+          isActive={pathname === "/traits"}
+          icon={<FontAwesomeIcon icon={faUser} />}
+        >
           {content.aboutMe}
         </NavbarButton>
-        <NavbarButton href="/skills" isActive={pathname === "/skills"}>
+        <NavbarButton
+          href="/skills"
+          isActive={pathname === "/skills"}
+          icon={<FontAwesomeIcon icon={faRocket} />}
+        >
           {content.skills}
         </NavbarButton>
-        <NavbarButton href="/blog" isActive={pathname === "/blog"}>
+        <NavbarButton
+          href="/blog"
+          isActive={pathname === "/blog"}
+          icon={<FontAwesomeIcon icon={faPen} />}
+        >
           {content.blog}
         </NavbarButton>
       </div>

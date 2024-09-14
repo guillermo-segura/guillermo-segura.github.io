@@ -7,6 +7,7 @@ interface NavbarButtonProps {
   children: ReactNode;
   href?: string;
   isActive: boolean;
+  icon?: ReactNode;
 }
 
 const cn = {
@@ -19,28 +20,26 @@ const cn = {
     "whitespace-nowrap",
     "outline-none",
     "transition-all",
-    "text-sm",
-    "sm:text-md",
-    "font-bold",
-    "uppercase",
+    "text-md",
+    "sm:text-lg",
     "tracking-wide",
   ],
-  active: ["bg-primary-600", "text-white", "cursor-default"],
+  active: ["bg-primary-500", "text-white", "cursor-default"],
   inctive: [
     "bg-white",
-    "hover:bg-primary-500",
-    "focus:bg-primary-500",
-    "hover:text-white",
-    "focus:text-white",
+    "hover:bg-blue-100",
+    "focus:bg-blue-100",
     "text-dark-500",
     "cursor-pointer",
   ],
+  icon: ["mr-2.5"],
 };
 
 const NavbarButtonRaw = ({
   children,
   isActive,
   href = "",
+  icon,
 }: NavbarButtonProps) => {
   const ref = useRef<HTMLAnchorElement | null>(null);
   const onClick = useCallback(() => ref.current?.blur(), []);
@@ -51,6 +50,7 @@ const NavbarButtonRaw = ({
       href={href}
       onClick={onClick}
     >
+      <span className={joinStringArrays(cn.icon)}>{icon}</span>
       {children}
     </Link>
   );
