@@ -36,7 +36,9 @@ const BodyListRaw = ({ label, items = [] }: BodyListProps) => {
   return (
     <article className={joinStringArrays(style.article)} key={label}>
       <Text variant="label">{label}</Text>
-      <ul className={joinStringArrays(style.section)}>{items.map(renderItem)}</ul>
+      <ul className={joinStringArrays(style.section)}>
+        {items.map(renderItem)}
+      </ul>
     </article>
   );
 };

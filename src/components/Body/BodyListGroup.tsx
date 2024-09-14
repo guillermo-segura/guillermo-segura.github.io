@@ -3,7 +3,15 @@ import { BodyList } from "./BodyList";
 import { joinStringArrays } from "@/utils";
 
 const style = {
-  listContainer: ["flex", "flex-col", "justify-around", "items-center", "md:flex-row", "space-y-4", "md:space-y-0"],
+  listContainer: [
+    "flex",
+    "flex-col",
+    "justify-around",
+    "items-center",
+    "md:flex-row",
+    "space-y-4",
+    "md:space-y-0",
+  ],
 };
 
 export interface BodyListProps {

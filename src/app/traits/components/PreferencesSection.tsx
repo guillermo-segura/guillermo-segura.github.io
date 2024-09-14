@@ -8,7 +8,9 @@ import content from "@/content/traits.json";
 
 const PreferencesSectionRaw = () => (
   <CardSection withShadow blue spaceY={6}>
-    <Text variant="h3" textAlign="center">{content.sectionHeader.whatILike}</Text>
+    <Text variant="h3" textAlign="center">
+      {content.sectionHeader.whatILike}
+    </Text>
     <BodyListGroup data={data.preferences} />
   </CardSection>
 );
