@@ -1,5 +1,5 @@
 "use client";
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import content from "@/content/actions.json";
 import { NavbarButton } from "./NavbarButton";
 import { usePathname } from "next/navigation";
@@ -8,57 +8,60 @@ import {
   faHouse,
   faUser,
   faPen,
-  faRocket,
+  faCode,
+  IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { container, buttons } from "./classnames";
 
-const cn = {
-  navContainer: [
-    "w-full",
-    "max-w-4xl",
-    "sticky",
-    "top-0",
-    "z-10",
-    "bg-dark-500",
-    "p-2",
-    "bg-opacity-30",
-  ],
-  buttonsContainer: ["flex", "flex-wrap", "space-x-2", "justify-center"],
-};
+interface NavItem {
+  path: string;
+  icon: IconDefinition;
+  label: string;
+}
+
+const navItems: NavItem[] = [
+  {
+    path: "/",
+    icon: faHouse,
+    label: content.home,
+  },
+  {
+    path: "/traits",
+    icon: faUser,
+    label: content.aboutMe,
+  },
+  {
+    path: "/skills",
+    icon: faCode,
+    label: content.skills,
+  },
+  {
+    path: "/blog",
+    icon: faPen,
+    label: content.blog,
+  },
+];
 
 const NavbarRaw = () => {
   const pathname = usePathname();
+  const mapItemButtons = useCallback(
+    (item: NavItem) => (
+      <NavbarButton
+        key={item.label}
+        href={item.path}
+        isActive={pathname === item.path}
+        icon={<FontAwesomeIcon icon={item.icon} />}
+      >
+        {item.label}
+      </NavbarButton>
+    ),
+    [pathname],
+  );
   return (
-    <nav className={joinStringArrays(cn.navContainer)}>
-      <div className={joinStringArrays(cn.buttonsContainer)}>
-        <NavbarButton
-          href="/"
-          isActive={pathname === "/"}
-          icon={<FontAwesomeIcon icon={faHouse} />}
-        >
-          {content.home}
-        </NavbarButton>
-        <NavbarButton
-          href="/traits"
-          isActive={pathname === "/traits"}
-          icon={<FontAwesomeIcon icon={faUser} />}
-        >
-          {content.aboutMe}
-        </NavbarButton>
-        <NavbarButton
-          href="/skills"
-          isActive={pathname === "/skills"}
-          icon={<FontAwesomeIcon icon={faRocket} />}
-        >
-          {content.skills}
-        </NavbarButton>
-        <NavbarButton
-          href="/blog"
-          isActive={pathname === "/blog"}
-          icon={<FontAwesomeIcon icon={faPen} />}
-        >
-          {content.blog}
-        </NavbarButton>
+    <nav className={joinStringArrays(container)}>
+      <div className={joinStringArrays(buttons)}>
+        {navItems.map(mapItemButtons)}
       </div>
     </nav>
   );

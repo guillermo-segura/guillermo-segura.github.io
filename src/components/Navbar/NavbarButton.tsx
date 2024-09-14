@@ -4,42 +4,42 @@ import Link from "next/link";
 import { joinStringArrays } from "@/utils";
 
 interface NavbarButtonProps {
-  children: ReactNode;
+  children: string;
+  icon: ReactNode;
+  isActive?: boolean;
   href?: string;
-  isActive: boolean;
-  icon?: ReactNode;
 }
 
 const cn = {
   base: [
     "px-4",
     "py-1",
-    "my-1",
     "rounded-lg",
-    "shadow-card",
+    "shadow-md",
     "whitespace-nowrap",
     "outline-none",
     "transition-all",
-    "text-md",
-    "sm:text-lg",
+    "text-lg",
     "tracking-wide",
   ],
   active: ["bg-primary-500", "text-white", "cursor-default"],
   inctive: [
     "bg-white",
-    "hover:bg-blue-100",
-    "focus:bg-blue-100",
+    "hover:bg-primary-100",
+    "focus:bg-primary-100",
+    "hover:shadow-lg",
     "text-dark-500",
     "cursor-pointer",
   ],
-  icon: ["mr-2.5"],
+  icon: ["sm:mr-2.5"],
+  label: ["hidden", "sm:inline"],
 };
 
 const NavbarButtonRaw = ({
   children,
-  isActive,
-  href = "",
   icon,
+  isActive = false,
+  href = "/",
 }: NavbarButtonProps) => {
   const ref = useRef<HTMLAnchorElement | null>(null);
   const onClick = useCallback(() => ref.current?.blur(), []);
@@ -51,7 +51,7 @@ const NavbarButtonRaw = ({
       onClick={onClick}
     >
       <span className={joinStringArrays(cn.icon)}>{icon}</span>
-      {children}
+      <span className={joinStringArrays(cn.label)}>{children}</span>
     </Link>
   );
 };
