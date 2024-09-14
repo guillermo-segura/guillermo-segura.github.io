@@ -16,7 +16,7 @@ import {
 import content from "@/content/journey.json";
 
 const JourneySectionRaw = () => (
-  <CardSection>
+  <CardSection spaceY={12}>
     <Slide header={content.journey[1].header}>
       <Text variant="subtext" textAlign="center">
         {content.journey[1].content[1]}

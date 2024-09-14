@@ -1,8 +1,9 @@
 import { memo, useCallback } from "react";
 import { BodyList } from "./BodyList";
+import { joinStringArrays } from "@/utils";
 
 const style = {
-  listContainer: "flex flex-wrap justify-start sm:justify-around",
+  listContainer: ["flex", "flex-col", "justify-around", "items-center", "md:flex-row", "space-y-4", "md:space-y-0"],
 };
 
 export interface BodyListProps {
@@ -20,7 +21,7 @@ const BodyListGroupRaw = ({ data }: BodyListProps) => {
   );
 
   return (
-    <div className={style.listContainer}>
+    <div className={joinStringArrays(style.listContainer)}>
       {Object.keys(data).map(renderData)}
     </div>
   );

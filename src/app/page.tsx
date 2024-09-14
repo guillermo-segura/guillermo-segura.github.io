@@ -8,7 +8,7 @@ export default function Page() {
     <>
       <CardHeader header={content.header} description={content.subheader} />
 
-      <CardSection blue spaceY={6}>
+      <CardSection blue withShadow spaceY={6}>
         <Text variant="subtext">{content.description}</Text>
       </CardSection>
     </>

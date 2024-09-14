@@ -6,6 +6,7 @@ type spaceY = 3 | 6 | 12;
 export interface CardSectionProps {
   children: ReactNode;
   blue?: boolean;
+  withShadow?: boolean;
   spaceY?: spaceY;
 }
 
@@ -18,18 +19,21 @@ const style = {
     `space-y-${spaceY}`,
     "overflow-hidden",
   ],
-  blue: ["bg-primary-100", "shadow-inner-xl"],
+  blue: ["bg-primary-100"],
+  shadow: ["shadow-inner-xl"],
 };
 
 const CardSectionRaw = ({
   children,
   blue = false,
+  withShadow = false,
   spaceY = 12,
 }: CardSectionProps) => (
   <section
     className={joinStringArrays(
       style.container(spaceY),
       blue ? style.blue : [],
+      withShadow ? style.shadow : [],
     )}
   >
     {children}

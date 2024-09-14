@@ -1,9 +1,21 @@
 import { memo, useCallback } from "react";
 import { Text } from "@/components/Text/Text";
+import { joinStringArrays } from "@/utils";
 
 const style = {
-  section: "list-inside",
-  article: "w-max px-4 py-2",
+  section: ["list-inside", "space-y-1"],
+  article: [
+    "w-max",
+    "p-4",
+    "border-dashed",
+    "border",
+    "border-dark-100",
+    "rounded-lg",
+    "hover:bg-white",
+    "hover:border-dark-500",
+    "space-y-2",
+    "transition-all",
+  ],
 };
 
 export interface BodyListProps {
@@ -22,9 +34,9 @@ const BodyListRaw = ({ label, items = [] }: BodyListProps) => {
   );
 
   return (
-    <article className={style.article} key={label}>
+    <article className={joinStringArrays(style.article)} key={label}>
       <Text variant="label">{label}</Text>
-      <ul className={style.section}>{items.map(renderItem)}</ul>
+      <ul className={joinStringArrays(style.section)}>{items.map(renderItem)}</ul>
     </article>
   );
 };
