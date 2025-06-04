@@ -36,6 +36,7 @@ const BlogCardRaw = ({ title, description, time, href }: BlogCardProps) => {
     <Link
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       className={joinStringArrays(style.container)}
     >
       <Text>
