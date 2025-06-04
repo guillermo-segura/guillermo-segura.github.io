@@ -41,6 +41,7 @@ const BrandLinkRaw = ({ children, icon, href = "/" }: BrandLinkProps) => {
       href={href}
       onClick={onClick}
       target="_blank"
+      rel="noopener noreferrer"
     >
       <span className={joinStringArrays(cn.iconContainer)}>
         <FontAwesomeIcon icon={icon} className={joinStringArrays(cn.icon)} />
