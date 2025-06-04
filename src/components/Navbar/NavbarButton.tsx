@@ -25,7 +25,7 @@ const cn = {
     "tracking-wide",
   ],
   active: ["bg-primary-500", "text-white", "cursor-default"],
-  inctive: [
+  inactive: [
     "bg-white",
     "hover:bg-primary-100",
     "focus:bg-primary-100",
@@ -48,7 +48,7 @@ const NavbarButtonRaw = ({
   return (
     <Link
       ref={ref}
-      className={joinStringArrays(cn.base, isActive ? cn.active : cn.inctive)}
+      className={joinStringArrays(cn.base, isActive ? cn.active : cn.inactive)}
       href={href}
       onClick={onClick}
       tabIndex={isActive ? -1 : undefined}
